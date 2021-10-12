@@ -1,6 +1,4 @@
-package JiyiCarnival.entertainment.shooting;
-
-import JiyiCarnival.entertainment.shooting.MementoIF;
+package JiyiCarnival.entertainment.shooting.memento;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +10,7 @@ import java.util.List;
  * 一个负责人对象可以存储多个备忘录对象，根据下标检索到对应的备忘录
  */
 public class RecordCaretaker {
-    private List<MementoIF> states=new ArrayList<MementoIF>();
+    private List<MementoIF> states=new ArrayList<>();
     private int index;
 
     /**

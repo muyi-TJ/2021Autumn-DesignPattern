@@ -1,4 +1,4 @@
-package JiyiCarnival.entertainment.shooting;
+package JiyiCarnival.entertainment.shooting.memento;
 
 /**
  * @author Rounds-Chen

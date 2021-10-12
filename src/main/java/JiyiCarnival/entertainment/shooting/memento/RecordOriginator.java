@@ -1,6 +1,4 @@
-package JiyiCarnival.entertainment.shooting;
-
-import JiyiCarnival.entertainment.shooting.MementoIF;
+package JiyiCarnival.entertainment.shooting.memento;
 
 /**
  * @author Rounds-Chen
@@ -23,6 +21,11 @@ public class RecordOriginator {
         this.score=score;
     }
 
+    public void printCurrentRecord(){
+        System.out.println("\t玩家昵称："+nickName);
+        System.out.format("\t玩家得分：%d\n\n",score);
+    }
+
 
     /**
      * 创建一个备忘录对象
@@ -34,7 +37,7 @@ public class RecordOriginator {
 
     /**
      * 恢复到指定备忘录状态
-     * @param memento
+     * @param memento 指定的备忘录对象
      */
     public void restoreMemento(MementoIF memento){
         this.setRecord(((Memento)memento).getNickName(),((Memento)memento).getScore());
