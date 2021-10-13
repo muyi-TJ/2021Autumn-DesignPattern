@@ -17,11 +17,18 @@ public class JiyiCarnival
 
     }
 
+    /**
+     *
+     * @return 单例实体
+     */
     public static JiyiCarnival getInstance()
     {
         return instance;
     }
 
+    /**
+     * 显示信息函数
+     */
     public void getInfo()
     {
         System.out.println("当前的游乐园是："+this.toString());
