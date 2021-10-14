@@ -19,6 +19,7 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <argLine>-Dfile.encoding=UTF-8</argLine>
     </properties>
 
     <build>
