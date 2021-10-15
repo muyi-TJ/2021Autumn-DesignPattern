@@ -31,13 +31,13 @@ public class CarDetectMachine extends Subject {
     public void CarIn(){
         if(RestParkingSpace>0) RestParkingSpace--;
         else state=false;
-        System.out.println("检测到车辆驶入停车场...");
+        System.out.println("检测到车辆准备驶入停车场...");
         notifyObserver(true);
     }
     public void CarOut(){
         RestParkingSpace++;
         state=true;
-        System.out.println("检测到车辆驶出停车场...");
+        System.out.println("检测到车辆准备驶出停车场...");
         notifyObserver(false);
     }
 

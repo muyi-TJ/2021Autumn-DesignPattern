@@ -20,5 +20,6 @@ public class observerTest {
         carDetectMachine.CarIn();
         carDetectMachine.CarIn();
         carDetectMachine.CarOut();
+        carDetectMachine.CarIn();
     }
 }

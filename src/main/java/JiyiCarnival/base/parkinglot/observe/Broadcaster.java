@@ -8,10 +8,10 @@ public class Broadcaster implements Observer{
     @Override
     public void update(boolean flg) {
         if(!DetectMachine.getState()){
-            System.out.println("【播报器】停车场已满，请排队等待");
+            System.out.println("【播报器】十分抱歉，停车场已满");
             return;
         }
-       if(flg) System.out.println("【播报器】欢迎您来到停车场，祝您游玩愉快");
-       else System.out.println("【播报器】欢迎您下次再来");
+       if(flg) System.out.println("【播报器】欢迎您来到停车场，祝您游玩愉快!");
+       else System.out.println("【播报器】欢迎您下次再来!");
     }
 }
