@@ -1,8 +1,5 @@
 package JiyiCarnival.business.foodstand.factory;
-/**
- *@author Caviar011230
- * 抽象类小吃类
- */
-abstract public class Snack {
+
+public interface Snack {
     abstract void get();
 }
