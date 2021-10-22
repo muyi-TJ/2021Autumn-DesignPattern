@@ -15,9 +15,9 @@ public class FactoryTest {
     @Test
     public void test(){
         System.out.println("工厂方法模式测试：");
-        CandiedFruitFactory candiedFruitFactory = new CandiedFruitFactory();
-        CokeFactory cokeFactory = new CokeFactory();
-        FriedChickenFactory friedChickenFactory = new FriedChickenFactory();
+        SnackFactory candiedFruitFactory = new CandiedFruitFactory();
+        SnackFactory cokeFactory = new CokeFactory();
+        SnackFactory friedChickenFactory = new FriedChickenFactory();
 
         candiedFruitFactory.produce().get();
         cokeFactory.produce().get();
