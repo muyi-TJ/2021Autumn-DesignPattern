@@ -18,12 +18,8 @@ public class Broadcast {
         this.pendingMessages = new LinkedList<>();
     }
 
-    public boolean isRunning() {
-        return !pendingMessages.isEmpty();
-    }
-
     public void init() {
-        System.out.println("广播站开始播报");
+
         if (updateThread == null) {
             updateThread = new Thread(() -> {
                 while (!Thread.currentThread().isInterrupted()) {
@@ -48,7 +44,8 @@ public class Broadcast {
         updateThread = null;
     }
 
-    public void addMessage(Message m) {
+    public synchronized void addMessage(Message m) {
+        init();
         pendingMessages.add(m);
     }
 
