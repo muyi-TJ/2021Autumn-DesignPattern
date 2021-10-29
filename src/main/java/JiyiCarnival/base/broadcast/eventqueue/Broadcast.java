@@ -1,5 +1,7 @@
 package JiyiCarnival.base.broadcast.eventqueue;
 
+import JiyiCarnival.Output;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -53,6 +55,9 @@ public class Broadcast {
         if (pendingMessages.isEmpty()) {
             return;
         }
-        System.out.println("广播信息:" + pendingMessages.poll());
+        Output.output(this.getClass().toString(),
+                "update",
+                String.valueOf(System.identityHashCode(this)),
+                "广播信息:" + pendingMessages.poll());
     }
 }

@@ -6,7 +6,7 @@ import org.junit.Test;
 public class EventQueueTest {
     @Test
     public void test() throws InterruptedException {
-        System.out.println("\n事件队列模式测试:");
+        System.out.println("事件队列模式测试:");
         System.out.println("广播站开始播报");
         Broadcast broadcast = new Broadcast();
         broadcast.init();
