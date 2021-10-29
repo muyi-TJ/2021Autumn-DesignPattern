@@ -10,13 +10,8 @@ public class ChainOfResponsibilityTest {
     public void test(){
         System.out.println("责任链模式测试：");
         SlideHandler slideChain = ChainOfResponsibility.getChainOfSlide();
-        int[] correctSteps = new int[]{1,2,3,4};
-        int[] wrongSteps = new int[]{4,3,2,1};
-        for(int step:correctSteps){
-            System.out.println("Request step:" + step);
+        int[] steps = new int[]{1,2,3,4};
+        for(int step:steps)
             slideChain.handleRequest(new Request(step));
-            System.out.println("---------------");
-        }
-
     }
 }

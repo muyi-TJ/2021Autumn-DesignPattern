@@ -1,5 +1,7 @@
 package JiyiCarnival.entertainment.hotairballoon.adapter;
 
+import JiyiCarnival.Output;
+
 /**
  * @author WKATZZL
  *
@@ -45,7 +47,11 @@ public class HotAirBalloonAdapter implements Flyable{
      */
     @Override
     public void fly(){
-        System.out.println(name + "乘坐热气球在空中飞行");
+        Output.output(this.getClass().toString(),
+                "fly",
+                String.valueOf(System.identityHashCode(this)),
+                name + "乘坐热气球在空中飞行"
+        );
     }
 
 }
