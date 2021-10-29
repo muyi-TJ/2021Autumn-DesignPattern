@@ -8,8 +8,9 @@ public class NullStaff extends AbstractStaff
 {
     NullStaff(String name)
     {
-        this.name=name;
+        this.name = name;
     }
+
     @Override
     public boolean isNull()
     {
@@ -19,6 +20,6 @@ public class NullStaff extends AbstractStaff
     @Override
     public String getInfo()
     {
-        return name+" 查无此人";
+        return name + " 查无此人";
     }
 }

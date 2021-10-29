@@ -21,7 +21,7 @@ public class NullObjectTest extends TestCase
         }
         for(AbstractStaff staff:staffs)
         {
-            System.out.println(staff.getInfo());
+            staff.outPut();
         }
     }
 }

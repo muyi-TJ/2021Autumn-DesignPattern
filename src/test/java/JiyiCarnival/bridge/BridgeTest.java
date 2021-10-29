@@ -12,8 +12,8 @@ public class BridgeTest extends TestCase
     public void test()
     {
         System.out.println("桥接模式测试：");
-        FlowerFirework flowerFirework=new FlowerFirework(new Blue());
-        HeartFirework heartFirework =new HeartFirework(new Red());
+        FlowerFirework flowerFirework = new FlowerFirework(new Blue());
+        HeartFirework heartFirework = new HeartFirework(new Red());
 
         flowerFirework.letOff();
         heartFirework.letOff();

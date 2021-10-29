@@ -17,19 +17,19 @@ public class ItemFactory extends AbstractFactory
     @Override
     public Item getItem(String item)
     {
-        if(item==null)
+        if (item == null)
         {
             return null;
         }
-        if(item=="StageFog")
+        if (item == "StageFog")
         {
             return new StageFog();
         }
-        else if(item=="Sprinkler")
+        else if (item == "Sprinkler")
         {
             return new Sprinkler();
         }
-        else  if(item=="ColouredRibbon")
+        else if (item == "ColouredRibbon")
         {
             return new ColouredRibbon();
         }

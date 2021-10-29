@@ -8,7 +8,7 @@ public class RealStaff extends AbstractStaff
 {
     public RealStaff(String name)
     {
-        this.name=name;
+        this.name = name;
     }
 
     @Override
@@ -20,6 +20,6 @@ public class RealStaff extends AbstractStaff
     @Override
     public String getInfo()
     {
-        return StaffInfo.GetInfo((name));
+        return StaffInfo.getInfo((name));
     }
 }

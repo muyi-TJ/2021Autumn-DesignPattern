@@ -8,6 +8,7 @@ public abstract class AbstractFactory
 {
     /**
      * 获取灯光
+     *
      * @param lighting 灯光类型
      * @return 灯光对象
      */
@@ -15,6 +16,7 @@ public abstract class AbstractFactory
 
     /**
      * 获取物品
+     *
      * @param item 物品种类
      * @return 物品对象
      */

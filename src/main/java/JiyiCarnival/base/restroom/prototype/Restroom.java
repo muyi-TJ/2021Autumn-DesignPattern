@@ -1,22 +1,22 @@
 package JiyiCarnival.base.restroom.prototype;
 
 
+import JiyiCarnival.Output;
+
 /**
  * @author muyi
- *
  * 卫生间
  */
 public class Restroom implements Cloneable
 {
-    protected String type="亲子卫生间";
+    protected String type = "亲子卫生间";
 
     /**
-     *
      * @param type 卫生间类型
      */
-    public Restroom (String type)
+    public Restroom(String type)
     {
-        this.type=type;
+        this.type = type;
     }
 
     /**
@@ -24,16 +24,20 @@ public class Restroom implements Cloneable
      */
     public void getType()
     {
-        System.out.println(type);
+        Output.output(this.getClass().toString(),
+                "getType",
+                String.valueOf(System.identityHashCode(this)),
+                type
+        );
     }
 
     @Override
     public Restroom clone()
     {
-        Restroom obj=null;
+        Restroom obj = null;
         try
         {
-            obj=(Restroom) super.clone();
+            obj = (Restroom) super.clone();
         }
         catch (CloneNotSupportedException e)
         {
@@ -41,7 +45,6 @@ public class Restroom implements Cloneable
         }
         return obj;
     }
-
 
 
 }

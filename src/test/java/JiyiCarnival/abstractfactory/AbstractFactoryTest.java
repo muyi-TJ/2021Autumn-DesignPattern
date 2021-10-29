@@ -1,4 +1,4 @@
-package JiyiCarnival.AbstractFactory;
+package JiyiCarnival.abstractfactory;
 
 import JiyiCarnival.entertainment.stage.abstractfactory.*;
 

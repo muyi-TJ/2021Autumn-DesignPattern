@@ -6,24 +6,24 @@ import JiyiCarnival.entertainment.stage.abstractfactory.Lightings.*;
  * @author muyi
  * 灯光工厂类
  */
-public class LightingFactory extends  AbstractFactory
+public class LightingFactory extends AbstractFactory
 {
     @Override
     public Lighting getLighting(String lighting)
     {
-        if(lighting==null)
+        if (lighting == null)
         {
             return null;
         }
-        if(lighting=="MovingHead")
+        if (lighting == "MovingHead")
         {
             return new MovingHead();
         }
-        else if(lighting=="Laser")
+        else if (lighting == "Laser")
         {
             return new Laser();
         }
-        else if(lighting=="TracingLamp")
+        else if (lighting == "TracingLamp")
         {
             return new TracingLamp();
         }
