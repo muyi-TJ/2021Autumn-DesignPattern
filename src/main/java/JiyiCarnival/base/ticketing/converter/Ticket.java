@@ -1,7 +1,10 @@
 package JiyiCarnival.base.ticketing.converter;
 
+import JiyiCarnival.Output;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 
 /**
  * 门票类
@@ -126,15 +129,24 @@ public class Ticket {
      * 打印票务信息
      */
     public void printInfomation(){
-        System.out.println("------------------------");
-        System.out.println("门票信息：");
-        System.out.println("游客姓名：" + name);
-        System.out.println("身份证号：" + ID);
-        System.out.println("游客年龄：" + age + "岁");
-        System.out.println("游客性别：" + gender);
+        String ticketInfo = """
+                
+                ------------------------
+                门票信息：
+                游客姓名：%s
+                身份证号：%s
+                游客年龄：%d
+                游客性别：%s
+                入园时间：%s
+                ------------------------
+                """;
         SimpleDateFormat dateFormat= new SimpleDateFormat("yyyy-MM-dd :hh:mm:ss");
-        System.out.println("入园时间：" + dateFormat.format(date));
-        System.out.println("------------------------");
+        ticketInfo = String.format(ticketInfo, name, ID, age, gender, dateFormat.format(date));
+        Output.output(this.getClass().toString(),
+                "printInfomation",
+                String.valueOf(System.identityHashCode(this)),
+                ticketInfo
+        );
     }
 
 

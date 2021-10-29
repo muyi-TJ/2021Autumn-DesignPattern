@@ -1,5 +1,9 @@
 package JiyiCarnival.base.ticketing.converter;
 
+import JiyiCarnival.Output;
+
+import java.text.SimpleDateFormat;
+
 /**
  * 游客类
  * @author WKATZZL
@@ -102,12 +106,21 @@ public class Visitor {
      * 打印游客信息
      */
     public void printInfomation(){
-        System.out.println("------------------------");
-        System.out.println("游客信息：");
-        System.out.println("游客姓名：" + name);
-        System.out.println("身份证号：" + ID);
-        System.out.println("游客年龄：" + age + "岁");
-        System.out.println("游客性别：" + gender);
-        System.out.println("------------------------");
+        String vistorInfo = """
+                
+                ------------------------
+                门票信息：
+                游客姓名：%s
+                身份证号：%s
+                游客年龄：%d
+                游客性别：%s
+                ------------------------
+                """;
+        vistorInfo = String.format(vistorInfo, name, ID, age, gender);
+        Output.output(this.getClass().toString(),
+                "printInfomation",
+                String.valueOf(System.identityHashCode(this)),
+                vistorInfo
+        );
     }
 }
