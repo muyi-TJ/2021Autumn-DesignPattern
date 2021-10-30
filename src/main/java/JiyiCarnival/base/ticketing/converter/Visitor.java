@@ -1,8 +1,8 @@
 package JiyiCarnival.base.ticketing.converter;
 
 /**
- * 游客类
  * @author WKATZZL
+ * 游客类
  */
 public class Visitor {
     /**

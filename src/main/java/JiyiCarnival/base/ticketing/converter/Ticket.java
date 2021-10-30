@@ -4,8 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * 门票类
  * @author WKATZZL
+ * 门票类
  */
 
 public class Ticket {

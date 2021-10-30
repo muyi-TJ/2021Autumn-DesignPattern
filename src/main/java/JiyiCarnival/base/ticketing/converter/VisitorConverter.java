@@ -4,8 +4,8 @@ import java.util.Date;
 import java.util.function.Function;
 
 /**
- * 继承于Converer 用于Visitor和Ticket的转换器类
  * @author WKATZZL
+ * 继承于Converer 用于Visitor和Ticket的转换器类
  */
 
 public class VisitorConverter extends Converter<Ticket, Visitor>{
