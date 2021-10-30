@@ -5,8 +5,8 @@ import JiyiCarnival.Output;
 import java.text.SimpleDateFormat;
 
 /**
- * 游客类
  * @author WKATZZL
+ * 游客类
  */
 public class Visitor {
     /**
