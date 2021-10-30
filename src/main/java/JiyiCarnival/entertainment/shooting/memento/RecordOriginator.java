@@ -1,5 +1,7 @@
 package JiyiCarnival.entertainment.shooting.memento;
 
+import JiyiCarnival.Output;
+
 /**
  * @author Rounds-Chen
  *
@@ -16,14 +18,28 @@ public class RecordOriginator {
         return score;
     }
 
+    /**
+     * 设置当前玩家昵称和分数
+     * @param nickName 玩家昵称
+     * @param score 得分
+     */
     public void setRecord(String nickName,Integer score) {
         this.nickName = nickName;
         this.score=score;
     }
 
+    /**
+     * 打印信息
+     */
     public void printCurrentRecord(){
-        System.out.println("\t玩家昵称："+nickName);
-        System.out.format("\t玩家得分：%d\n\n",score);
+        Output.output(
+                this.getClass().toString(),
+                "printCurrentRecord",
+                String.valueOf(System.identityHashCode(this)),
+                "\t玩家昵称："+nickName+"\t玩家得分："+score
+        );
+//        System.out.println("\t玩家昵称："+nickName);
+//        System.out.format("\t玩家得分：%d\n\n",score);
     }
 
 

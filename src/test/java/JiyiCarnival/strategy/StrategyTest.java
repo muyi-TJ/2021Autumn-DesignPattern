@@ -6,7 +6,7 @@ import JiyiCarnival.entertainment.parade.strategy.RouteOne;
 import JiyiCarnival.entertainment.parade.strategy.RouteTwo;
 import org.junit.Test;
 
-public class strategy {
+public class StrategyTest {
     @Test
     public void TestStrategy(){
         System.out.println("策略模式测试：");
@@ -20,7 +20,7 @@ public class strategy {
         parade.setRoute(route2);
         parade.parade();
 
-        System.out.println("Exit StrategyTest\n");
+//        System.out.println("Exit StrategyTest\n");
     }
 
 
