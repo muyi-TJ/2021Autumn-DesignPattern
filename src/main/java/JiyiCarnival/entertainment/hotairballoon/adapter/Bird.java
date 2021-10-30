@@ -4,7 +4,6 @@ import JiyiCarnival.Output;
 
 /**
  * @author WKATZZL
- *
  * 鸟类
  */
 public class Bird implements Flyable {
