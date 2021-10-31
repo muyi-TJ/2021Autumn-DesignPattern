@@ -7,6 +7,9 @@ import JiyiCarnival.Output;
  * 炸鸡类
  */
 public class FriedChicken implements Snack{
+    /**
+     * 获取炸鸡
+     */
     @Override
     public void get(){
         Output.output(

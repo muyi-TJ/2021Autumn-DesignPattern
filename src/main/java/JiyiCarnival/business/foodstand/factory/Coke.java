@@ -7,6 +7,9 @@ import JiyiCarnival.Output;
  * 可乐类
  */
 public class Coke implements Snack{
+    /**
+     * 获取可乐
+     */
     @Override
     public void get(){
         Output.output(

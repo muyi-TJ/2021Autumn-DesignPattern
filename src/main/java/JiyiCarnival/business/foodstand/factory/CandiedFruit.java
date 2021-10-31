@@ -7,6 +7,9 @@ import JiyiCarnival.Output;
  */
 
 public class CandiedFruit implements Snack {
+    /**
+     * 获取糖葫芦
+     */
     @Override
     public void get() {
         Output.output(
