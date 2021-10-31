@@ -1,5 +1,11 @@
 package JiyiCarnival.base.parkinglot.observe;
-//还没写完
+
+import JiyiCarnival.Output;
+
+/**
+ * @author PinkCrow007
+ * 车辆探测器类
+ */
 public class CarDetectMachine extends Subject {
     static private int MaxParkingSpace;
     static private int RestParkingSpace;
@@ -28,16 +34,31 @@ public class CarDetectMachine extends Subject {
         return state;
     }
 
-    public void CarIn(){
+    /**
+     * 检测到车辆驶入，通知各观察者类进行相应动作
+     */
+    public void carIn(){
         if(RestParkingSpace>0) RestParkingSpace--;
         else state=false;
-        System.out.println("检测到车辆准备驶入停车场...");
+        Output.output(this.getClass().toString(),
+                "carIn",
+                String.valueOf(System.identityHashCode(this)),
+                "检测到车辆准备驶入停车场..."
+        );
+
         notifyObserver(true);
     }
-    public void CarOut(){
+    /**
+     * 检测到车辆驶出，通知各观察者类进行相应动作
+     */
+    public void carOut(){
         RestParkingSpace++;
         state=true;
-        System.out.println("检测到车辆准备驶出停车场...");
+        Output.output(this.getClass().toString(),
+                "carOut",
+                String.valueOf(System.identityHashCode(this)),
+                "检测到车辆准备驶出停车场..."
+        );
         notifyObserver(false);
     }
 
