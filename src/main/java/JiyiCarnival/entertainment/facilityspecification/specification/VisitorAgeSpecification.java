@@ -1,5 +1,7 @@
 package JiyiCarnival.entertainment.facilityspecification.specification;
 
+import JiyiCarnival.Output;
+
 /**
  * @author swaychen0420
  * 判断当前游客年龄是否小于指定年龄
@@ -20,7 +22,12 @@ public class VisitorAgeSpecification extends CompositeSpecification<Visitor>{
                 visitor.getName() + "通过当前年龄下限规约, " + visitor.getName() + "年龄大于等于" + age :
                 visitor.getName() + "未通过前年龄下限规约, " + visitor.getName() + "年龄小于" + age;
 
-        System.out.println(msg);
+//        System.out.println(msg);
+        Output.output(this.getClass().toString(),
+                "isSatisfiedBy",
+                String.valueOf(System.identityHashCode(this)),
+                msg
+        );
         return res;
     }
 

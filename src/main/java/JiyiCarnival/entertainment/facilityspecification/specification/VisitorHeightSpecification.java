@@ -1,5 +1,7 @@
 package JiyiCarnival.entertainment.facilityspecification.specification;
 
+import JiyiCarnival.Output;
+
 /**
  * @author swaychen0420
  * 判断游客身高是否满足身高下限的规约
@@ -20,7 +22,12 @@ public class VisitorHeightSpecification extends CompositeSpecification<Visitor>{
                 visitor.getName() + "通过当前身高下限规约, " + visitor.getName() + "身高大于等于" + height :
                 visitor.getName() + "未通过当前身高下限规约, " + visitor.getName() + "身高小于" + height;
 
-        System.out.println(msg);
+//        System.out.println(msg);
+        Output.output(this.getClass().toString(),
+                "isSatisfiedBy",
+                String.valueOf(System.identityHashCode(this)),
+                msg
+        );
         return res;
     }
 

@@ -1,5 +1,7 @@
 package JiyiCarnival.entertainment.facilityspecification.specification;
 
+import JiyiCarnival.Output;
+
 /**
  * @author swaychen0420
  * 原规约进行链式操作and后产生的规约
@@ -19,7 +21,12 @@ public class AndSpecification<T> extends CompositeSpecification<T> {
         String msg = res ?
                 "满足当前‘和’规约":
                 "不满足当前'和'规约";
-        System.out.println(msg);
+//        System.out.println(msg);
+        Output.output(this.getClass().toString(),
+                "isSatisfiedBy",
+                String.valueOf(System.identityHashCode(this)),
+                msg
+        );
         return res;
     }
 }
