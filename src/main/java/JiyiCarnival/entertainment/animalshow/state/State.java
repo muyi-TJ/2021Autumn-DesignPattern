@@ -5,7 +5,8 @@ package JiyiCarnival.entertainment.animalshow.state;
  * 动物表演的状态
  */
 
-public interface State {
+public interface State
+{
     /**
      * 显示动物表演的状态
      * @param animalShow 某次表演
