@@ -11,17 +11,16 @@ import org.junit.Test;
 public class decoratorTest {
     @Test
     public void test(){
-        System.out.println("-------------------");
         System.out.println("装饰器模式测试：");
-        System.out.println("-------------------");
+        //System.out.println("【平时】");
         SouvenirShopPolicy souvenirShopPolicy=new SouvenirShopPolicy();
-        souvenirShopPolicy.PrintPolicy();
-        System.out.println("-------------------");
-        GraduatesDiscount freshmanDiscount=new GraduatesDiscount(souvenirShopPolicy);
-        freshmanDiscount.PrintPolicy();
-        System.out.println("-------------------");
-        AnniversaryGift anniversaryGift=new AnniversaryGift(freshmanDiscount);
-        anniversaryGift.PrintPolicy();
-        System.out.println("-------------------");
+        souvenirShopPolicy.printPolicy();
+         //System.out.println("【同济114周年校庆期间】");
+        AnniversaryGift anniversaryGift=new AnniversaryGift(souvenirShopPolicy);
+        anniversaryGift.printPolicy();
+        //System.out.println("【校庆还未结束，毕业季也临近了】");
+        GraduatesDiscount freshmanDiscount=new GraduatesDiscount(anniversaryGift);
+        freshmanDiscount.printPolicy();
+
     }
 }
