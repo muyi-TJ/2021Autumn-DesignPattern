@@ -1,5 +1,7 @@
 package JiyiCarnival.base.website.frontcontroller;
 
+import JiyiCarnival.Output;
+
 /**
  * @author Zong
  * 前端控制器，统一接收请求
@@ -21,7 +23,13 @@ public class FrontController
      */
     private boolean isAuthenticUser()
     {
-        System.out.println("正在认证身份： " + "成功认证用户身份");
+        String text = "正在认证身份： " + "成功认证用户身份";
+        Output.output(
+                this.getClass().toString(),
+                "authentication",
+                String.valueOf(System.identityHashCode(this)),
+                text
+        );
         return true;
     }
 
@@ -31,7 +39,13 @@ public class FrontController
      */
     private void trackRequest(String request)
     {
-        System.out.println("正在请求页面： " + request);
+        String text = "正在请求页面： " + request;
+        Output.output(
+                this.getClass().toString(),
+                "request",
+                String.valueOf(System.identityHashCode(this)),
+                text
+        );
     }
 
     /**

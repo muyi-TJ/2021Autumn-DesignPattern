@@ -1,5 +1,7 @@
 package JiyiCarnival.base.website.frontcontroller;
 
+import JiyiCarnival.Output;
+
 /**
  * @author Zong
  * 网页调度器，用于分配请求
@@ -28,24 +30,27 @@ public class Dispatcher
      */
     public void dispatch(String request)
     {
+        String text = "正在展示页面： " + request;
+        Output.output(
+                this.getClass().toString(),
+                "dispatch",
+                String.valueOf(System.identityHashCode(this)),
+                text
+        );
         if (request.equalsIgnoreCase("HOME"))
         {
-            System.out.println("展示" + request + "页面：");
             homeView.show();
         }
         else if (request.equalsIgnoreCase("HELP"))
         {
-            System.out.println("展示" + request + "页面：");
             helpView.show();
         }
         else if (request.equalsIgnoreCase("TICKET"))
         {
-            System.out.println("展示" + request + "页面：");
             buyTicketView.show();
         }
         else if (request.equalsIgnoreCase("FASTPASS"))
         {
-            System.out.println("展示" + request + "页面：");
             getFastpassView.show();
         }
     }
