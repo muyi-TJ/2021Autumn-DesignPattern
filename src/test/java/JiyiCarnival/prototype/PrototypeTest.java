@@ -13,17 +13,20 @@ public class PrototypeTest extends TestCase
     public void test()
     {
         System.out.println("原型模式测试：");
-        var origin = new Restroom("亲子卫生间");
-        var manorigin = new ManRestroom();
-        var womanorigin = new WomanRestroom();
+        var normalOrigin=new Restroom();
+        var barrierFreeOrigin = new Restroom("无障碍卫生间");
+        var manOrigin = new ManRestroom();
+        var womanOrigin = new WomanRestroom();
 
-        var cloneOrigin = origin.clone();
-        var cloneManorigin = manorigin.clone();
-        var cloneWomanorigin = womanorigin.clone();
+        var cloneNormalOrigin=normalOrigin.clone();
+        var cloneBarrierFreeOrigin = barrierFreeOrigin.clone();
+        var cloneManOrigin = manOrigin.clone();
+        var cloneWomanOrigin = womanOrigin.clone();
 
-        cloneOrigin.getType();
-        cloneManorigin.getType();
-        cloneWomanorigin.getType();
+        cloneNormalOrigin.getType();
+        cloneBarrierFreeOrigin.getType();
+        cloneManOrigin.getType();
+        cloneWomanOrigin.getType();
 
     }
 }

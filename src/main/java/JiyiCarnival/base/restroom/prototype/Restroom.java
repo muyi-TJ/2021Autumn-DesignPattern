@@ -20,6 +20,11 @@ public class Restroom implements Cloneable
     }
 
     /**
+     * 无参构造函数
+     */
+    public Restroom(){};
+
+    /**
      * 输出卫生间类型
      */
     public void getType()
