@@ -1,9 +1,9 @@
-package JiyiCarnival.hauntedHouse;
+package JiyiCarnival.bulider;
 
-import JiyiCarnival.entertainment.hauntedHouse.*;
+import JiyiCarnival.entertainment.hauntedhouse.builder.*;
 import org.junit.Test;
 
-public class hauntedHouseTest {
+public class HauntedHouseTest {
     @Test
     public void testBuilder(){
         HauntedHouseDirector hauntedHouseDirector=new HauntedHouseDirector();

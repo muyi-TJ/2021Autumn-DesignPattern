@@ -1,5 +1,7 @@
 package JiyiCarnival.entertainment.carousel.composite;
 
+import JiyiCarnival.Output;
+
 /**
  * @author potassiummmm
  * 木马类
@@ -16,6 +18,9 @@ public class Horse implements Component {
 
     @Override
     public void operate() {
-        System.out.println(index + "号木马开始旋转");
+        Output.output(this.getClass().toString(),
+                "operate",
+                String.valueOf(System.identityHashCode(this)),
+                index + "号木马开始旋转");
     }
 }

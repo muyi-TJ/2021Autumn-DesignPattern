@@ -2,7 +2,6 @@ package JiyiCarnival.base.restroom.prototype;
 
 /**
  * @author muyi
- *
  * 女卫生间
  */
 

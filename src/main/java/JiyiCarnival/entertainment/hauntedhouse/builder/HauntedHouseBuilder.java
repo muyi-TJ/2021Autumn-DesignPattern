@@ -1,4 +1,6 @@
-package JiyiCarnival.entertainment.hauntedHouse;
+package JiyiCarnival.entertainment.hauntedhouse.builder;
+
+import JiyiCarnival.Output;
 
 /**
  * 抽象鬼屋路线规划类
@@ -21,7 +23,12 @@ public abstract class HauntedHouseBuilder {
      */
     public abstract void setTheThirdPart();
     public HauntedHouse build(){
-        System.out.println("以"+theFirstPart+"的第一路段、"+theSecondPart+"的第二路段、"+theThirdPart+"的第三路段规划鬼屋路线");
+        Output.output(
+                this.getClass().toString(),
+                "initialize",
+                String.valueOf(System.identityHashCode(this)),
+                "以"+theFirstPart+"的第一路段、"+theSecondPart+"的第二路段、"+theThirdPart+"的第三路段规划鬼屋路线"
+        );
         return new HauntedHouse(theFirstPart,theSecondPart,theThirdPart);
     }
 }

@@ -1,5 +1,6 @@
 package JiyiCarnival.entertainment.stage.abstractfactory.Items;
 
+import JiyiCarnival.Output;
 import JiyiCarnival.entertainment.stage.abstractfactory.Item;
 
 /**
@@ -11,6 +12,10 @@ public class StageFog implements Item
     @Override
     public void useItem()
     {
-        System.out.println("使用舞台烟雾");
+        Output.output(this.getClass().toString(),
+                "useItem",
+                String.valueOf(System.identityHashCode(this)),
+                "使用舞台烟雾"
+        );
     }
 }

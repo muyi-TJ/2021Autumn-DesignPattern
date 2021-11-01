@@ -1,4 +1,6 @@
-package JiyiCarnival.entertainment.hauntedHouse;
+package JiyiCarnival.entertainment.hauntedhouse.builder;
+
+import JiyiCarnival.Output;
 
 /**
  * 指导鬼屋规划路线类
@@ -12,14 +14,24 @@ public class HauntedHouseDirector {
      */
     public void setHauntedHouseBuilder(HauntedHouseBuilder hauntedHouseBuilder){
         this.hauntedHouseBuilder=hauntedHouseBuilder;
-        System.out.println("设置指定的建造者");
+        Output.output(
+                this.getClass().toString(),
+                "initialize",
+                String.valueOf(System.identityHashCode(this)),
+                "设置指定的建造者"
+        );
     }
 
     /**
      * 指导鬼屋规划
      */
     public void construct(){
-        System.out.println("指导鬼屋路线规划（将鬼屋路线分为三段）：");
+        Output.output(
+                this.getClass().toString(),
+                "initialize",
+                String.valueOf(System.identityHashCode(this)),
+                "指导鬼屋路线规划（将鬼屋路线分为三段）："
+        );
         hauntedHouseBuilder.setTheFirstPart();
         hauntedHouseBuilder.setTheSecondPart();
         hauntedHouseBuilder.setTheThirdPart();

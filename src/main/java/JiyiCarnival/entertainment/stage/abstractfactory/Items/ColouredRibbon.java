@@ -1,6 +1,7 @@
 package JiyiCarnival.entertainment.stage.abstractfactory.Items;
 
 import JiyiCarnival.entertainment.stage.abstractfactory.Item;
+import JiyiCarnival.Output;
 
 /**
  * @author muyi
@@ -11,6 +12,11 @@ public class ColouredRibbon implements Item
     @Override
     public void useItem()
     {
-        System.out.println("使用彩带");
+        Output.output(this.getClass().toString(),
+                "useItem",
+                String.valueOf(System.identityHashCode(this)),
+                "使用彩带"
+        );
+
     }
 }

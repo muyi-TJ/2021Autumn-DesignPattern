@@ -1,12 +1,15 @@
 package JiyiCarnival.entertainment.animalshow.state;
 
+import JiyiCarnival.Output;
+
 /**
  * @author Zong
  * 动物表演对象
  */
-public class AnimalShow {
-    // 演出的状态
-    private State state;
+public class AnimalShow
+{
+
+    private State state; // 演出的状态
 
     public AnimalShow() {
         this.state = null;
@@ -16,7 +19,8 @@ public class AnimalShow {
      * 设置演出状态
      * @param state 新状态
      */
-    public void setState(State state) {
+    public void setState(State state)
+    {
         this.state = state;
     }
 

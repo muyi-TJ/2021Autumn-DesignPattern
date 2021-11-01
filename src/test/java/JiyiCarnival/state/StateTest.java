@@ -19,25 +19,20 @@ public class StateTest extends TestCase
         BeginShowState beginShowState = new BeginShowState();
         beginShowState.doAction(animalShow);
 
-        System.out.println(animalShow.getState().toString());
 
         //表演成功
         SucceedState succeedState = new SucceedState();
         succeedState.doAction(animalShow);
 
-        System.out.println(animalShow.getState().toString());
-
         //表演失败
         FailState failState = new FailState();
         failState.doAction(animalShow);
 
-        System.out.println(animalShow.getState().toString());
 
         //表演结束
         EndShowState endShowState = new EndShowState();
         endShowState.doAction(animalShow);
 
-        System.out.println(animalShow.getState().toString());
     }
 
 }

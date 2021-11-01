@@ -1,13 +1,14 @@
 package JiyiCarnival.entertainment.amusementpark.singleton;
 
+import JiyiCarnival.Output;
+
 /**
  * @author muyi
- *
  * 济忆嘉年华本身
  */
 public class JiyiCarnival
 {
-    private static JiyiCarnival instance=new JiyiCarnival();
+    private static JiyiCarnival instance = new JiyiCarnival();
 
     /**
      * 提供私有的构造函数，使其不会被实例化
@@ -18,7 +19,6 @@ public class JiyiCarnival
     }
 
     /**
-     *
      * @return 单例实体
      */
     public static JiyiCarnival getInstance()
@@ -31,7 +31,11 @@ public class JiyiCarnival
      */
     public void getInfo()
     {
-        System.out.println("当前的游乐园是："+this.toString());
+        Output.output(this.getClass().toString(),
+                "getInfo",
+                String.valueOf(System.identityHashCode(this)),
+                "当前的游乐园是：" + this.toString()
+        );
     }
 
 

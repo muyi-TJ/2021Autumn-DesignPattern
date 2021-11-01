@@ -1,4 +1,7 @@
 package JiyiCarnival.entertainment.waterslide.chainofresponsibility;
+
+import JiyiCarnival.Output;
+
 /**
  * @author WKATZZL
  * 处理抽象类
@@ -17,6 +20,10 @@ public class Play extends SlideHandler{
      */
     @Override
     protected void handle(){
-        System.out.println("游客游玩水上滑梯。");
+        Output.output(this.getClass().toString(),
+                "handle",
+                String.valueOf(System.identityHashCode(this)),
+                "游客游玩水上滑梯"
+        );
     }
 }
