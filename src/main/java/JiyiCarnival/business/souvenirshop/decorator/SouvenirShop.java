@@ -4,5 +4,8 @@ package JiyiCarnival.business.souvenirshop.decorator;
  * 纪念品商店类
  */
 public interface SouvenirShop {
-    void PrintPolicy();
+    /**
+     * 展示商店购买政策
+     */
+    void printPolicy();
 }

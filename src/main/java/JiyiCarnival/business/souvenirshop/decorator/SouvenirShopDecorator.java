@@ -9,8 +9,10 @@ public class SouvenirShopDecorator implements SouvenirShop {
     public SouvenirShopDecorator(SouvenirShop shop) {
         this.shop = shop;
     }
-
-    public void PrintPolicy(){
-        shop.PrintPolicy();
+    /**
+     * 展示商店购买政策
+     */
+    public void printPolicy(){
+        shop.printPolicy();
     }
 }

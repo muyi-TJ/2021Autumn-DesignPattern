@@ -5,7 +5,8 @@ package JiyiCarnival.business.orderfood.command;
  * 命令
  */
 
-public interface Order {
+public interface Order
+{
     /**
      * 执行
      */

@@ -23,7 +23,6 @@ public class Waiter
 
     /**
      * 通知厨师
-     *
      */
     public void Notify()
     {

@@ -1,5 +1,7 @@
 package JiyiCarnival.business.orderfood.command;
 
+import JiyiCarnival.Output;
+
 /**
  * @author Zong
  * 厨师
@@ -19,7 +21,13 @@ public class Cook
      */
     public void CookFood (String name)
     {
-        System.out.println(cookName + "制作菜品" + name);
+        String text = cookName + "制作菜品" + name;
+        Output.output(
+                this.getClass().toString(),
+                "CookFood",
+                String.valueOf(System.identityHashCode(this)),
+                text
+        );
     }
 
     /**
@@ -28,7 +36,13 @@ public class Cook
      */
     public void CookDrink (String name)
     {
-        System.out.println(cookName + "制作饮品" + name);
+        String text = cookName + "制作饮品" + name;
+        Output.output(
+                this.getClass().toString(),
+                "CookDrink",
+                String.valueOf(System.identityHashCode(this)),
+                text
+        );
     }
 
     /**
@@ -37,6 +51,12 @@ public class Cook
      */
     public void CookDessert (String name)
     {
-        System.out.println(cookName + "制作甜点" + name);
+        String text = cookName + "制作甜点" + name;
+        Output.output(
+                this.getClass().toString(),
+                "CookDessert",
+                String.valueOf(System.identityHashCode(this)),
+                text
+        );
     }
 }

@@ -4,7 +4,9 @@ import JiyiCarnival.business.orderfood.command.*;
 import junit.framework.TestCase;
 import org.junit.Test;
 
-
+/**
+ * @author Zong
+ */
 public class CommandTest extends TestCase
 {
     @Test

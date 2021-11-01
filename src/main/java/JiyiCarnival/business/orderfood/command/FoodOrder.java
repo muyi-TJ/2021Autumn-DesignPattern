@@ -10,14 +10,14 @@ public class FoodOrder implements Order
     private Cook cook;
     private String name;
 
-    public FoodOrder(Cook cook, String name) {
+    public FoodOrder(Cook cook, String name)
+    {
         this.cook = cook;
         this.name = name;
     }
 
     /**
      * 执行菜品订单
-     *
      */
     @Override
     public void execute() {
