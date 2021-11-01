@@ -1,4 +1,4 @@
-package JiyiCarnival.service.securityCheck.facade;
+package JiyiCarnival.service.securitycheck.facade;
 
 import JiyiCarnival.Output;
 
@@ -6,11 +6,13 @@ import JiyiCarnival.Output;
  * @author Caviar011230
  * 个人随身物品（背包等）的检查
  */
-public class PersonalBelongingCheck {
+public class PersonalBelongingCheck
+{
     /**
      * 个人随身物品检查
      */
-    public void checkPersonalBelongings(){
+    public void checkPersonalBelongings()
+    {
         Output.output(
                 this.getClass().toString(),
                 "initialize",

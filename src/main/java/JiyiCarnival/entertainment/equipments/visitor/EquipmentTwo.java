@@ -6,10 +6,12 @@ package JiyiCarnival.entertainment.equipments.visitor;
  * 设备名称可以在后续整合时进行更改
  */
 
-public class EquipmentTwo implements UncheckedEquipment {
+public class EquipmentTwo implements UncheckedEquipment
+{
 
     @Override
-    public void accept(UncheckedEquipmentVisitor uncheckedEquipmentVisitor) {
+    public void accept(UncheckedEquipmentVisitor uncheckedEquipmentVisitor)
+    {
         uncheckedEquipmentVisitor.visit(this);
     }
 }

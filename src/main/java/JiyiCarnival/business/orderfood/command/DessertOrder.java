@@ -20,7 +20,8 @@ public class DessertOrder implements Order
      * 执行甜品订单
      */
     @Override
-    public void execute() {
+    public void execute()
+    {
         cook.CookDessert(name);
     }
 }

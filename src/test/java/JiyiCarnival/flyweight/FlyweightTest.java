@@ -4,10 +4,12 @@ import JiyiCarnival.entertainment.movice.flyweight.Movice;
 import JiyiCarnival.entertainment.movice.flyweight.MoviceFactory;
 import org.junit.Test;
 
-public class FlyweightTest {
+public class FlyweightTest
+{
 
     @Test
-    public void test(){
+    public void test()
+    {
         System.out.println("享元模式测试：");
 
         Movice movice1 = MoviceFactory.getMovice("Mine");

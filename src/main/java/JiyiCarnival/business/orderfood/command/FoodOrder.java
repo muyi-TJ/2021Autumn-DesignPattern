@@ -20,7 +20,8 @@ public class FoodOrder implements Order
      * 执行菜品订单
      */
     @Override
-    public void execute() {
+    public void execute()
+    {
         cook.CookFood(name);
     }
 }

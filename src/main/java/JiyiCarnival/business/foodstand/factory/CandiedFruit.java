@@ -1,17 +1,20 @@
 package JiyiCarnival.business.foodstand.factory;
 
 import JiyiCarnival.Output;
+
 /**
- *@author Caviar011230
+ * @author Caviar011230
  * 糖葫芦类
  */
 
-public class CandiedFruit implements Snack {
+public class CandiedFruit implements Snack
+{
     /**
      * 获取糖葫芦
      */
     @Override
-    public void get() {
+    public void get()
+    {
         Output.output(
                 this.getClass().toString(),
                 "initialize",

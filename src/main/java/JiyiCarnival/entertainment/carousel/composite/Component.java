@@ -5,6 +5,7 @@ package JiyiCarnival.entertainment.carousel.composite;
  * 组件接口
  */
 
-public interface Component {
+public interface Component
+{
     void operate();
 }

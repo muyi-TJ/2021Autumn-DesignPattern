@@ -6,10 +6,12 @@ import JiyiCarnival.office.recruit.dependencyinjection.RecruitPublisher;
 import JiyiCarnival.office.recruit.dependencyinjection.Recruitment;
 import org.junit.Test;
 
-public class dependencyinjectionTest {
+public class dependencyinjectionTest
+{
 
     @Test
-    public void test(){
+    public void test()
+    {
         System.out.println("依赖注入模式测试：");
 
         RecruitPublisher publisher = new RecruitPublisher();

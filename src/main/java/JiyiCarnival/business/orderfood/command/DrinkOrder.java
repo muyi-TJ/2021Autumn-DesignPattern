@@ -21,7 +21,8 @@ public class DrinkOrder implements Order
      * 执行饮品订单
      */
     @Override
-    public void execute() {
+    public void execute()
+    {
         cook.CookDrink(name);
     }
 }

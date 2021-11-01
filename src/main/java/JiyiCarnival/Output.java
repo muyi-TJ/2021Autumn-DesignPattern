@@ -7,7 +7,9 @@ import java.util.logging.Logger;
 public class Output
 {
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-    static {
+
+    static
+    {
         System.setProperty("java.util.logging.SimpleFormatter.format",
                 "[%1$tF %1$tT] [%4$-4s] %5$s %n");
     }

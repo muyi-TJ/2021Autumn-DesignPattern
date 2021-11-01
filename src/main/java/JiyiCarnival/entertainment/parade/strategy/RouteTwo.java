@@ -4,12 +4,14 @@ import JiyiCarnival.Output;
 
 /**
  * @author Rounds-Chen
- *
+ * <p>
  * 巡游路线二
  */
-public class RouteTwo implements ParadeRoute{
+public class RouteTwo implements ParadeRoute
+{
     @Override
-    public void parade() {
+    public void parade()
+    {
         Output.output(
                 this.getClass().toString(),
                 "parade",

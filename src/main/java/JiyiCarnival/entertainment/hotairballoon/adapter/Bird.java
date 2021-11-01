@@ -6,12 +6,14 @@ import JiyiCarnival.Output;
  * @author WKATZZL
  * 鸟类
  */
-public class Bird implements Flyable {
+public class Bird implements Flyable
+{
     /**
      * 鸟儿飞行
      */
     @Override
-    public void fly() {
+    public void fly()
+    {
         Output.output(this.getClass().toString(),
                 "fly",
                 String.valueOf(System.identityHashCode(this)),

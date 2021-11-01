@@ -1,6 +1,6 @@
 package JiyiCarnival.frontcontroller;
 
-import JiyiCarnival.base.website.frontcontroller.*;
+import JiyiCarnival.base.website.frontcontroller.FrontController;
 import junit.framework.TestCase;
 import org.junit.Test;
 

@@ -6,10 +6,12 @@ package JiyiCarnival.base.broadcast.eventqueue;
  * 使用java14的record特性
  */
 
-public record Message(String content) {
+public record Message(String content)
+{
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return content;
     }
 }

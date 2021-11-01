@@ -6,14 +6,20 @@ import JiyiCarnival.Output;
  * @author PinkCrow007
  * 播报器类
  */
-public class Broadcaster implements Observer{
+public class Broadcaster implements Observer
+{
     private CarDetectMachine DetectMachine;
-    public Broadcaster(CarDetectMachine carDetectMachine) {
-        DetectMachine=carDetectMachine;
+
+    public Broadcaster(CarDetectMachine carDetectMachine)
+    {
+        DetectMachine = carDetectMachine;
     }
+
     @Override
-    public void update(boolean flg) {
-        if(!DetectMachine.getState()){
+    public void update(boolean flg)
+    {
+        if (!DetectMachine.getState())
+        {
 
             Output.output(this.getClass().toString(),
                     "update",
@@ -22,17 +28,21 @@ public class Broadcaster implements Observer{
             );
             return;
         }
-       if(flg)
-           Output.output(this.getClass().toString(),
-                   "update",
-                   String.valueOf(System.identityHashCode(this)),
-                   "【播报器】欢迎您来到停车场，祝您游玩愉快!"
-           );
+        if (flg)
+        {
+            Output.output(this.getClass().toString(),
+                    "update",
+                    String.valueOf(System.identityHashCode(this)),
+                    "【播报器】欢迎您来到停车场，祝您游玩愉快!"
+            );
+        }
         else
-        Output.output(this.getClass().toString(),
-                "update",
-                String.valueOf(System.identityHashCode(this)),
-                "【播报器】欢迎您下次再来!"
-        );
+        {
+            Output.output(this.getClass().toString(),
+                    "update",
+                    String.valueOf(System.identityHashCode(this)),
+                    "【播报器】欢迎您下次再来!"
+            );
+        }
     }
 }

@@ -7,15 +7,18 @@ import JiyiCarnival.Output;
  * 判断游客身高是否满足身高下限的规约
  */
 
-public class VisitorHeightSpecification extends CompositeSpecification<Visitor>{
+public class VisitorHeightSpecification extends CompositeSpecification<Visitor>
+{
     private double height;
 
-    public VisitorHeightSpecification(double height) {
+    public VisitorHeightSpecification(double height)
+    {
         this.height = height;
     }
 
     @Override
-    public boolean isSatisfiedBy(Visitor visitor) {
+    public boolean isSatisfiedBy(Visitor visitor)
+    {
         boolean res = visitor.getHeight() >= height;
 
         String msg = res ?
@@ -31,11 +34,13 @@ public class VisitorHeightSpecification extends CompositeSpecification<Visitor>{
         return res;
     }
 
-    public double getHeight() {
+    public double getHeight()
+    {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(double height)
+    {
         this.height = height;
     }
 }

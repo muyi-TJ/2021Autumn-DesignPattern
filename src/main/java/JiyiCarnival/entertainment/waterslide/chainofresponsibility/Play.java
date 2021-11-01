@@ -6,12 +6,13 @@ import JiyiCarnival.Output;
  * @author WKATZZL
  * 处理抽象类
  */
-public class Play extends SlideHandler{
+public class Play extends SlideHandler
+{
     /**
-     *
      * @param step 游玩水上滑梯所对应的步骤
      */
-    public Play(int step){
+    public Play(int step)
+    {
         super(play);
     }
 
@@ -19,7 +20,8 @@ public class Play extends SlideHandler{
      * 输出当前需要进行的处理信息
      */
     @Override
-    protected void handle(){
+    protected void handle()
+    {
         Output.output(this.getClass().toString(),
                 "handle",
                 String.valueOf(System.identityHashCode(this)),

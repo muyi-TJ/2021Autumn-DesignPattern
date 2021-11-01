@@ -1,10 +1,12 @@
 package JiyiCarnival.adapter;
 
 
-import JiyiCarnival.entertainment.hotairballoon.adapter.*;
+import JiyiCarnival.entertainment.hotairballoon.adapter.Bird;
+import JiyiCarnival.entertainment.hotairballoon.adapter.HotAirBalloonAdapter;
 import org.junit.Test;
 
-public class AdapterTest {
+public class AdapterTest
+{
     @Test
     public void test()
     {

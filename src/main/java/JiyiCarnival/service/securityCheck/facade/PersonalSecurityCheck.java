@@ -1,4 +1,4 @@
-package JiyiCarnival.service.securityCheck.facade;
+package JiyiCarnival.service.securitycheck.facade;
 
 import JiyiCarnival.Output;
 
@@ -7,11 +7,13 @@ import JiyiCarnival.Output;
  * 人身安检
  */
 
-public class PersonalSecurityCheck {
+public class PersonalSecurityCheck
+{
     /**
      * 人身安检
      */
-    public void personalSecurityCheck(){
+    public void personalSecurityCheck()
+    {
         Output.output(
                 this.getClass().toString(),
                 "initialize",

@@ -2,19 +2,22 @@ package JiyiCarnival.base.bikes.mediator;
 
 import JiyiCarnival.Output;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 站点中介系统类
  */
-public class StationMediator {
+public class StationMediator
+{
     protected final List<Station> StationList;
 
     /**
      * StationMediator 构造器
      */
-    public StationMediator(){
-        StationList=new ArrayList<Station>();
+    public StationMediator()
+    {
+        StationList = new ArrayList<Station>();
         Output.output(
                 this.getClass().toString(),
                 "initialize",
@@ -26,19 +29,22 @@ public class StationMediator {
     /**
      * 中介系统记录新站点
      */
-    public void addStation(Station station) {
+    public void addStation(Station station)
+    {
         StationList.add(station);
         Output.output(
                 this.getClass().toString(),
                 "initialize",
                 String.valueOf(System.identityHashCode(this)),
-                "中介系统记录新站点："+station.name
+                "中介系统记录新站点：" + station.name
         );
     }
+
     /**
      * 中介系统发布需求信息
      */
-    public void tellMsg(Station station, String str){
+    public void tellMsg(Station station, String str)
+    {
         Output.output(
                 this.getClass().toString(),
                 "initialize",
@@ -49,10 +55,12 @@ public class StationMediator {
                 this.getClass().toString(),
                 "initialize",
                 String.valueOf(System.identityHashCode(this)),
-                station.getName()+"需求："+str
+                station.getName() + "需求：" + str
         );
-        for(Station oneStation : StationList){
-            if(!oneStation.equals(station)){
+        for (Station oneStation : StationList)
+        {
+            if (!oneStation.equals(station))
+            {
                 oneStation.readMessage(station);
             }
         }

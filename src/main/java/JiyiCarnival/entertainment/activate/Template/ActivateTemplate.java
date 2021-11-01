@@ -1,4 +1,4 @@
-package JiyiCarnival.entertainment.activate.Template;
+package JiyiCarnival.entertainment.activate.template;
 
 import JiyiCarnival.Output;
 
@@ -6,11 +6,13 @@ import JiyiCarnival.Output;
  * @author ajt
  * 不同的主题活动的主干，具体活动需要重写play()方法
  */
-public abstract class ActivateTemplate {
+public abstract class ActivateTemplate
+{
     /**
      * 完成主题活动开始前的准备工作，如检查设施
      */
-    public void initialize(){
+    public void initialize()
+    {
         Output.output(
                 this.getClass().toString(),
                 "initialize",
@@ -22,7 +24,8 @@ public abstract class ActivateTemplate {
     /**
      * 检票，允许观众进入活动场地
      */
-    public void checkIn(){
+    public void checkIn()
+    {
         Output.output(
                 this.getClass().toString(),
                 "checkIn",
@@ -34,7 +37,8 @@ public abstract class ActivateTemplate {
     /**
      * 开始进行主题活动
      */
-    public void startActivate(){
+    public void startActivate()
+    {
         Output.output(
                 this.getClass().toString(),
                 "startActivate",
@@ -51,7 +55,8 @@ public abstract class ActivateTemplate {
     /**
      * 主题活动结束
      */
-    public void endActivate(){
+    public void endActivate()
+    {
         Output.output(
                 this.getClass().toString(),
                 "endActivate",
@@ -63,7 +68,8 @@ public abstract class ActivateTemplate {
     /**
      * 观众散场，进行散场后的清理和检查
      */
-    public void cleanUp(){
+    public void cleanUp()
+    {
         Output.output(
                 this.getClass().toString(),
                 "cleanUp",
@@ -75,7 +81,8 @@ public abstract class ActivateTemplate {
     /**
      * 按阶段进行主题活动
      */
-    public final void playActivate(){
+    public final void playActivate()
+    {
         initialize();
         checkIn();
         startActivate();

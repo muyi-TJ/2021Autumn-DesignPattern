@@ -26,6 +26,7 @@ public class Dispatcher
 
     /**
      * 获取请求相应页面
+     *
      * @param request 请求
      */
     public void dispatch(String request)

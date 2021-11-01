@@ -1,4 +1,4 @@
-package JiyiCarnival.service.securityCheck.facade;
+package JiyiCarnival.service.securitycheck.facade;
 
 import JiyiCarnival.Output;
 
@@ -6,11 +6,13 @@ import JiyiCarnival.Output;
  * @author Caviar011230
  * 检票
  */
-public class TicketCheck {
+public class TicketCheck
+{
     /**
      * 检票
      */
-    public void ticketCheck() {
+    public void ticketCheck()
+    {
         Output.output(
                 this.getClass().toString(),
                 "initialize",

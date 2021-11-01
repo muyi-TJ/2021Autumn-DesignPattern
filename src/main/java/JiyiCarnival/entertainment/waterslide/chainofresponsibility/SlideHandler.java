@@ -1,13 +1,12 @@
 package JiyiCarnival.entertainment.waterslide.chainofresponsibility;
 
-import java.util.logging.Handler;
-
 /**
  * @author WKATZZL
  * 处理抽象类
  */
 
-public abstract class SlideHandler {
+public abstract class SlideHandler
+{
     /**
      * 各个步骤
      */
@@ -28,26 +27,26 @@ public abstract class SlideHandler {
     private SlideHandler nextStep = null;
 
     /**
-     *
      * @param step 当前所处步骤
      */
-    public SlideHandler(int step){
+    public SlideHandler(int step)
+    {
         this.step = step;
     }
 
     /**
-     *
      * @param nextStep 设置下一个步骤
      */
-    public void setNextStep(SlideHandler nextStep){
+    public void setNextStep(SlideHandler nextStep)
+    {
         this.nextStep = nextStep;
     }
 
     /**
-     *
      * @return 当前所处步骤
      */
-    public int getCurrentStep(){
+    public int getCurrentStep()
+    {
         return this.step;
     }
 
@@ -57,13 +56,17 @@ public abstract class SlideHandler {
     protected abstract void handle();
 
     /**
-     *
      * @param request 游客所发起的请求
      */
-    public void handleRequest(Request request){
-        if(this.step <= request.getStep())
+    public void handleRequest(Request request)
+    {
+        if (this.step <= request.getStep())
+        {
             this.handle();
+        }
         if (this.nextStep != null)
+        {
             this.nextStep.handleRequest(request);
+        }
     }
 }

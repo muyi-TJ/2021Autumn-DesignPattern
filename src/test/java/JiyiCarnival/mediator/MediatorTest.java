@@ -7,14 +7,16 @@ import JiyiCarnival.base.bikes.mediator.StationThree;
 import JiyiCarnival.base.bikes.mediator.StationTwo;
 import org.junit.Test;
 
-public class MediatorTest {
+public class MediatorTest
+{
     @Test
-    public void test(){
+    public void test()
+    {
         System.out.println("中介者模式测试：");
-        StationMediator stationMediator=new StationMediator();
-        StationOne stationOne=new StationOne("StationOne",15);
-        StationTwo stationTwo=new StationTwo("StationTwo",10);
-        StationThree stationThree=new StationThree("StationThree",5);
+        StationMediator stationMediator = new StationMediator();
+        StationOne stationOne = new StationOne("StationOne", 15);
+        StationTwo stationTwo = new StationTwo("StationTwo", 10);
+        StationThree stationThree = new StationThree("StationThree", 5);
         stationOne.setBikeMediator(stationMediator);
         stationTwo.setBikeMediator(stationMediator);
         stationThree.setBikeMediator(stationMediator);

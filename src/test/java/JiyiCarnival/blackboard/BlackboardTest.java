@@ -4,9 +4,11 @@ import JiyiCarnival.base.bulletinboard.blackboard.Blackboard;
 import JiyiCarnival.base.bulletinboard.blackboard.Control;
 import org.junit.Test;
 
-public class BlackboardTest {
+public class BlackboardTest
+{
     @Test
-    public void test(){
+    public void test()
+    {
         System.out.println("黑板模式测试：");
         Blackboard blackboard = new Blackboard();
         Control control = new Control(blackboard);

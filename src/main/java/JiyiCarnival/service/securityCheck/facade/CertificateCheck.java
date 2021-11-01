@@ -1,15 +1,18 @@
-package JiyiCarnival.service.securityCheck.facade;
+package JiyiCarnival.service.securitycheck.facade;
 
 import JiyiCarnival.Output;
+
 /**
  * @author Caviar011230
  * 证件检查
  */
-public class CertificateCheck {
+public class CertificateCheck
+{
     /**
      * 证件检查
      */
-    public void checkCertificate(){
+    public void checkCertificate()
+    {
         Output.output(
                 this.getClass().toString(),
                 "initialize",

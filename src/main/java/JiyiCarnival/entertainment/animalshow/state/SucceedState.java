@@ -11,6 +11,7 @@ public class SucceedState implements State
 
     /**
      * 动物表演状态改变为成功，行为变化
+     *
      * @param animalShow 动物表演对象
      */
     public void doAction(AnimalShow animalShow)

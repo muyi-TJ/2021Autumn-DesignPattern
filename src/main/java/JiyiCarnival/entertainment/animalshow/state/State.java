@@ -9,6 +9,7 @@ public interface State
 {
     /**
      * 显示动物表演的状态
+     *
      * @param animalShow 某次表演
      */
     void doAction(AnimalShow animalShow);

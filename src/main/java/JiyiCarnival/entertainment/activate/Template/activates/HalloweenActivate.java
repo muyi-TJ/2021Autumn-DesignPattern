@@ -1,15 +1,17 @@
-package JiyiCarnival.entertainment.activate.Template.activates;
+package JiyiCarnival.entertainment.activate.template.activates;
 
 import JiyiCarnival.Output;
-import JiyiCarnival.entertainment.activate.Template.ActivateTemplate;
+import JiyiCarnival.entertainment.activate.template.ActivateTemplate;
 
 /**
  * @author ajt
  * “万圣节娱乐演出”主题活动
  */
-public class HalloweenActivate extends ActivateTemplate {
+public class HalloweenActivate extends ActivateTemplate
+{
     @Override
-    public void play() {
+    public void play()
+    {
         Output.output(
                 this.getClass().toString(),
                 "play",

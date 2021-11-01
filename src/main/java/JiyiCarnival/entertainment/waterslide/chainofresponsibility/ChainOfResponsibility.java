@@ -5,12 +5,13 @@ package JiyiCarnival.entertainment.waterslide.chainofresponsibility;
  * 处理抽象类
  */
 
-public class ChainOfResponsibility {
+public class ChainOfResponsibility
+{
     /**
-     *
      * @return 返回责任链
      */
-    public static SlideHandler getChainOfSlide(){
+    public static SlideHandler getChainOfSlide()
+    {
         // 游玩四步
         SlideHandler buyTicket = new BuyTicket(SlideHandler.ticket);
         SlideHandler enter = new Enter(SlideHandler.enter);

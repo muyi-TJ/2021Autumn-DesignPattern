@@ -7,15 +7,18 @@ import JiyiCarnival.Output;
  * 判断游客是否满足性别要求的规约
  */
 
-public class VisitorGenderSpecification extends CompositeSpecification<Visitor>{
+public class VisitorGenderSpecification extends CompositeSpecification<Visitor>
+{
     private Gender gender;
 
-    public VisitorGenderSpecification(Gender gender) {
+    public VisitorGenderSpecification(Gender gender)
+    {
         this.gender = gender;
     }
 
     @Override
-    public boolean isSatisfiedBy(Visitor visitor) {
+    public boolean isSatisfiedBy(Visitor visitor)
+    {
 
         boolean res = visitor.getGender() == gender;
 
@@ -32,11 +35,13 @@ public class VisitorGenderSpecification extends CompositeSpecification<Visitor>{
         return res;
     }
 
-    public Gender getGender() {
+    public Gender getGender()
+    {
         return gender;
     }
 
-    public void setGender(Gender gender) {
+    public void setGender(Gender gender)
+    {
         this.gender = gender;
     }
 }

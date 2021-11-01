@@ -35,6 +35,7 @@ public class FrontController
 
     /**
      * 记录请求页面过程
+     *
      * @param request 请求
      */
     private void trackRequest(String request)
@@ -50,6 +51,7 @@ public class FrontController
 
     /**
      * 处理请求流程
+     *
      * @param request 请求
      */
     public void dispatchRequest(String request)

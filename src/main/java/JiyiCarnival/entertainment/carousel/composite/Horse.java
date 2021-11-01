@@ -7,17 +7,20 @@ import JiyiCarnival.Output;
  * 木马类
  */
 
-public class Horse implements Component {
+public class Horse implements Component
+{
     private static int cnt = 0;
     private final int index;
 
-    public Horse() {
+    public Horse()
+    {
         cnt++;
         index = cnt;
     }
 
     @Override
-    public void operate() {
+    public void operate()
+    {
         Output.output(this.getClass().toString(),
                 "operate",
                 String.valueOf(System.identityHashCode(this)),

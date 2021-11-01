@@ -5,9 +5,11 @@ import JiyiCarnival.Output;
 /**
  * 办理退房手续的结果回溯
  */
-public class ResultExporter implements CallBack{
+public class ResultExporter implements CallBack
+{
     @Override
-    public void call(){
+    public void call()
+    {
         Output.output(
                 this.getClass().toString(),
                 "initialize",

@@ -3,9 +3,11 @@ package JiyiCarnival.specification;
 import JiyiCarnival.entertainment.facilityspecification.specification.*;
 import org.junit.Test;
 
-public class SpecificationTest {
+public class SpecificationTest
+{
     @Test
-    public void test(){
+    public void test()
+    {
         System.out.println("规约模式测试：");
 
         Visitor[] visitors = {

@@ -3,17 +3,22 @@ package JiyiCarnival.business.hotel.callback;
 /**
  * 线程管理抽象类
  */
-abstract public class BaseThreadHolder {
+abstract public class BaseThreadHolder
+{
     /**
-     *回调调用
+     * 回调调用
+     *
      * @param callBack
      */
-    public final void run(CallBack callBack){
+    public final void run(CallBack callBack)
+    {
         run();
-        if(callBack!=null){
+        if (callBack != null)
+        {
             callBack.call();
         }
     }
+
     /**
      * 开始事件
      */

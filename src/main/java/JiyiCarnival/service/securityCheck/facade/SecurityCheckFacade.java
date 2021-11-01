@@ -1,4 +1,4 @@
-package JiyiCarnival.service.securityCheck.facade;
+package JiyiCarnival.service.securitycheck.facade;
 
 import JiyiCarnival.Output;
 
@@ -6,7 +6,8 @@ import JiyiCarnival.Output;
  * @author Caviar011230
  * 外观类
  */
-public class SecurityCheckFacade {
+public class SecurityCheckFacade
+{
     PersonalSecurityCheck personalSecurityCheck = new PersonalSecurityCheck();
     TicketCheck ticketCheck = new TicketCheck();
     CertificateCheck certificateCheck = new CertificateCheck();
@@ -15,7 +16,8 @@ public class SecurityCheckFacade {
     /**
      * 普通游客安检流程
      */
-    public void ordinaryCustomerSecurityCheck(){
+    public void ordinaryCustomerSecurityCheck()
+    {
         Output.output(
                 this.getClass().toString(),
                 "initialize",
@@ -30,7 +32,8 @@ public class SecurityCheckFacade {
     /**
      * 特殊顾客（购买了凭证件打折的票种)安检流程
      */
-    public void specialCustomerSecurityCheck(){
+    public void specialCustomerSecurityCheck()
+    {
         Output.output(
                 this.getClass().toString(),
                 "initialize",

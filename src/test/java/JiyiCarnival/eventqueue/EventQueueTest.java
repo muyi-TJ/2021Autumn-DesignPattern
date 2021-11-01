@@ -1,11 +1,14 @@
 package JiyiCarnival.eventqueue;
 
-import JiyiCarnival.base.broadcast.eventqueue.*;
+import JiyiCarnival.base.broadcast.eventqueue.Broadcast;
+import JiyiCarnival.base.broadcast.eventqueue.Message;
 import org.junit.Test;
 
-public class EventQueueTest {
+public class EventQueueTest
+{
     @Test
-    public void test() throws InterruptedException {
+    public void test() throws InterruptedException
+    {
         System.out.println("事件队列模式测试:");
         System.out.println("广播站开始播报");
         Broadcast broadcast = new Broadcast();

@@ -6,9 +6,11 @@ import JiyiCarnival.entertainment.equipments.visitor.UncheckedEquipmentDisplayVi
 import JiyiCarnival.entertainment.equipments.visitor.UncheckedEquipmentInspectVisitor;
 import org.junit.Test;
 
-public class VisitorTest {
+public class VisitorTest
+{
     @Test
-    public void test(){
+    public void test()
+    {
         System.out.println("访问者模式测试：");
         UncheckedEquipment equipment = new Equipment();
         equipment.accept(new UncheckedEquipmentDisplayVisitor());

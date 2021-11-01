@@ -10,6 +10,7 @@ import JiyiCarnival.Output;
 public class Cook
 {
     private String cookName;
+
     public Cook(String cookname)
     {
         this.cookName = cookname;
@@ -17,9 +18,10 @@ public class Cook
 
     /**
      * 接收订单
+     *
      * @param name 菜品名称
      */
-    public void CookFood (String name)
+    public void CookFood(String name)
     {
         String text = cookName + "制作菜品" + name;
         Output.output(
@@ -32,9 +34,10 @@ public class Cook
 
     /**
      * 接收订单
+     *
      * @param name 饮品名称
      */
-    public void CookDrink (String name)
+    public void CookDrink(String name)
     {
         String text = cookName + "制作饮品" + name;
         Output.output(
@@ -47,9 +50,10 @@ public class Cook
 
     /**
      * 接收订单
+     *
      * @param name 甜点名称
      */
-    public void CookDessert (String name)
+    public void CookDessert(String name)
     {
         String text = cookName + "制作甜点" + name;
         Output.output(

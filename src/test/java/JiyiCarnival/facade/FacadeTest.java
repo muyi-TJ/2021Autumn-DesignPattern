@@ -4,12 +4,14 @@ package JiyiCarnival.facade;
  * 测试类
  */
 
-import JiyiCarnival.service.securityCheck.facade.*;
+import JiyiCarnival.service.securitycheck.facade.SecurityCheckFacade;
 import org.junit.Test;
 
-public class FacadeTest {
+public class FacadeTest
+{
     @Test
-    public void test(){
+    public void test()
+    {
         SecurityCheckFacade securityCheckFacade = new SecurityCheckFacade();
         System.out.println("外观模式测试：");
         securityCheckFacade.ordinaryCustomerSecurityCheck();

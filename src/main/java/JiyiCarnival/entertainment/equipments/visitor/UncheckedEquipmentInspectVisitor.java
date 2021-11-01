@@ -7,10 +7,12 @@ import JiyiCarnival.Output;
  * 顺次检查设备
  */
 
-public class UncheckedEquipmentInspectVisitor implements UncheckedEquipmentVisitor {
+public class UncheckedEquipmentInspectVisitor implements UncheckedEquipmentVisitor
+{
 
     @Override
-    public void visit(Equipment equipment) {
+    public void visit(Equipment equipment)
+    {
 //        System.out.println("Start inspecting equipments.");
         Output.output(this.getClass().toString(),
                 "visit",
@@ -20,7 +22,8 @@ public class UncheckedEquipmentInspectVisitor implements UncheckedEquipmentVisit
     }
 
     @Override
-    public void visit(EquipmentOne equipmentOne) {
+    public void visit(EquipmentOne equipmentOne)
+    {
 //        System.out.println("Inspecting EquipmentOne……Checked!");
         Output.output(this.getClass().toString(),
                 "visit",
@@ -30,7 +33,8 @@ public class UncheckedEquipmentInspectVisitor implements UncheckedEquipmentVisit
     }
 
     @Override
-    public void visit(EquipmentTwo equipmentTwo) {
+    public void visit(EquipmentTwo equipmentTwo)
+    {
 //        System.out.println("Inspecting EquipmentTwo……Checked!");
         Output.output(this.getClass().toString(),
                 "visit",
@@ -40,7 +44,8 @@ public class UncheckedEquipmentInspectVisitor implements UncheckedEquipmentVisit
     }
 
     @Override
-    public void visit(EquipmentThree equipmentThree) {
+    public void visit(EquipmentThree equipmentThree)
+    {
 //        System.out.println("Inspecting EquipmentThree……Checked!");
         Output.output(this.getClass().toString(),
                 "visit",

@@ -6,40 +6,53 @@ import JiyiCarnival.Output;
  * @author PinkCrow007
  * 车辆探测器类
  */
-public class CarDetectMachine extends Subject {
+public class CarDetectMachine extends Subject
+{
     static private int MaxParkingSpace;
     static private int RestParkingSpace;
     static private boolean state;
 
-    public CarDetectMachine() {
-        MaxParkingSpace=1000;
-        RestParkingSpace=1000;
+    public CarDetectMachine()
+    {
+        MaxParkingSpace = 1000;
+        RestParkingSpace = 1000;
     }
 
-    public CarDetectMachine(int maxParkingSpace, int restParkingSpace) {
+    public CarDetectMachine(int maxParkingSpace, int restParkingSpace)
+    {
         MaxParkingSpace = maxParkingSpace;
         RestParkingSpace = restParkingSpace;
-        state=true;
+        state = true;
     }
 
-    public int getMaxParkingSpace() {
+    public static boolean getState()
+    {
+        return state;
+    }
+
+    public int getMaxParkingSpace()
+    {
         return MaxParkingSpace;
     }
 
-    public int getRestParkingSpace() {
+    public int getRestParkingSpace()
+    {
         return RestParkingSpace;
-    }
-
-    public static boolean getState() {
-        return state;
     }
 
     /**
      * 检测到车辆驶入，通知各观察者类进行相应动作
      */
-    public void carIn(){
-        if(RestParkingSpace>0) RestParkingSpace--;
-        else state=false;
+    public void carIn()
+    {
+        if (RestParkingSpace > 0)
+        {
+            RestParkingSpace--;
+        }
+        else
+        {
+            state = false;
+        }
         Output.output(this.getClass().toString(),
                 "carIn",
                 String.valueOf(System.identityHashCode(this)),
@@ -48,12 +61,14 @@ public class CarDetectMachine extends Subject {
 
         notifyObserver(true);
     }
+
     /**
      * 检测到车辆驶出，通知各观察者类进行相应动作
      */
-    public void carOut(){
+    public void carOut()
+    {
         RestParkingSpace++;
-        state=true;
+        state = true;
         Output.output(this.getClass().toString(),
                 "carOut",
                 String.valueOf(System.identityHashCode(this)),

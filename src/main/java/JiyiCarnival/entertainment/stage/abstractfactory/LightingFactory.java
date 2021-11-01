@@ -1,6 +1,8 @@
 package JiyiCarnival.entertainment.stage.abstractfactory;
 
-import JiyiCarnival.entertainment.stage.abstractfactory.Lightings.*;
+import JiyiCarnival.entertainment.stage.abstractfactory.Lightings.Laser;
+import JiyiCarnival.entertainment.stage.abstractfactory.Lightings.MovingHead;
+import JiyiCarnival.entertainment.stage.abstractfactory.Lightings.TracingLamp;
 
 /**
  * @author muyi

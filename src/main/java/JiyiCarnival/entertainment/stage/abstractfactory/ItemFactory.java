@@ -1,6 +1,8 @@
 package JiyiCarnival.entertainment.stage.abstractfactory;
 
-import JiyiCarnival.entertainment.stage.abstractfactory.Items.*;
+import JiyiCarnival.entertainment.stage.abstractfactory.Items.ColouredRibbon;
+import JiyiCarnival.entertainment.stage.abstractfactory.Items.Sprinkler;
+import JiyiCarnival.entertainment.stage.abstractfactory.Items.StageFog;
 
 /**
  * @author muyi

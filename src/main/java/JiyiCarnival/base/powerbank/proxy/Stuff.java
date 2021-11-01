@@ -9,7 +9,8 @@ public class Stuff implements PowerBankProvider
 {
     private final ServiceCenter serviceCenter;
 
-    public Stuff() {
+    public Stuff()
+    {
         this.serviceCenter = new ServiceCenter();
     }
 
@@ -17,7 +18,8 @@ public class Stuff implements PowerBankProvider
      * @param num 充电宝数量
      */
     @Override
-    public void getPowerBank(int num) {
+    public void getPowerBank(int num)
+    {
         serviceCenter.getPowerBank(num);
     }
 }

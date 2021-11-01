@@ -8,10 +8,12 @@ import JiyiCarnival.Output;
  * 设备名称可以在后续整合时进行更改
  */
 
-public class UncheckedEquipmentDisplayVisitor implements UncheckedEquipmentVisitor {
+public class UncheckedEquipmentDisplayVisitor implements UncheckedEquipmentVisitor
+{
 
     @Override
-    public void visit(Equipment equipment) {
+    public void visit(Equipment equipment)
+    {
 //        System.out.println("Displaying equipments unchecked.");
         Output.output(this.getClass().toString(),
                 "visit",
@@ -21,7 +23,8 @@ public class UncheckedEquipmentDisplayVisitor implements UncheckedEquipmentVisit
     }
 
     @Override
-    public void visit(EquipmentOne equipmentOne) {
+    public void visit(EquipmentOne equipmentOne)
+    {
 //        System.out.println("EquipmentOne unchecked.");
         Output.output(this.getClass().toString(),
                 "visit",
@@ -31,7 +34,8 @@ public class UncheckedEquipmentDisplayVisitor implements UncheckedEquipmentVisit
     }
 
     @Override
-    public void visit(EquipmentTwo equipmentTwo) {
+    public void visit(EquipmentTwo equipmentTwo)
+    {
 //        System.out.println("EquipmentTwo unchecked.");
         Output.output(this.getClass().toString(),
                 "visit",
@@ -41,7 +45,8 @@ public class UncheckedEquipmentDisplayVisitor implements UncheckedEquipmentVisit
     }
 
     @Override
-    public void visit(EquipmentThree equipmentThree) {
+    public void visit(EquipmentThree equipmentThree)
+    {
 //        System.out.println("EquipmentThree unchecked.");
         Output.output(this.getClass().toString(),
                 "visit",

@@ -14,6 +14,7 @@ public class Waiter
 
     /**
      * 接收订单
+     *
      * @param order 命令
      */
     public void setList(Order order)
@@ -26,7 +27,8 @@ public class Waiter
      */
     public void Notify()
     {
-        for (Order order : list) {
+        for (Order order : list)
+        {
             order.execute();
         }
     }

@@ -11,20 +11,25 @@ import java.util.Queue;
  * 创建线程处理广播消息队列
  */
 
-public class Broadcast {
+public class Broadcast
+{
+    private final Queue<Message> pendingMessages;
     private volatile Thread updateThread = null;
 
-    private final Queue<Message> pendingMessages;
-
-    public Broadcast() {
+    public Broadcast()
+    {
         this.pendingMessages = new LinkedList<>();
     }
 
-    public void init() {
+    public void init()
+    {
 
-        if (updateThread == null) {
-            updateThread = new Thread(() -> {
-                while (!Thread.currentThread().isInterrupted()) {
+        if (updateThread == null)
+        {
+            updateThread = new Thread(() ->
+            {
+                while (!Thread.currentThread().isInterrupted())
+                {
                     update();
                 }
             });
@@ -32,27 +37,34 @@ public class Broadcast {
         startThread();
     }
 
-    private synchronized void startThread() {
-        if (!updateThread.isAlive()) {
+    private synchronized void startThread()
+    {
+        if (!updateThread.isAlive())
+        {
             updateThread.start();
         }
     }
 
-    public synchronized void stop() throws InterruptedException {
-        if (updateThread != null) {
+    public synchronized void stop() throws InterruptedException
+    {
+        if (updateThread != null)
+        {
             updateThread.interrupt();
         }
         updateThread.join();
         updateThread = null;
     }
 
-    public synchronized void addMessage(Message m) {
+    public synchronized void addMessage(Message m)
+    {
         init();
         pendingMessages.add(m);
     }
 
-    private void update() {
-        if (pendingMessages.isEmpty()) {
+    private void update()
+    {
+        if (pendingMessages.isEmpty())
+        {
             return;
         }
         Output.output(this.getClass().toString(),

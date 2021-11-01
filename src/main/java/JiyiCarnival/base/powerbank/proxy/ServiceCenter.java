@@ -13,7 +13,8 @@ public class ServiceCenter implements PowerBankProvider
      * @param num 充电宝数量
      */
     @Override
-    public void getPowerBank(int num) {
+    public void getPowerBank(int num)
+    {
         Output.output(this.getClass().toString(),
                 "getPowerBank",
                 String.valueOf(System.identityHashCode(this)),

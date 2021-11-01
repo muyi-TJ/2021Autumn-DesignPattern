@@ -5,15 +5,18 @@ import JiyiCarnival.Output;
 /**
  * 指导鬼屋规划路线类
  */
-public class HauntedHouseDirector {
+public class HauntedHouseDirector
+{
     private HauntedHouseBuilder hauntedHouseBuilder;
 
     /**
      * 设置指定的建造者
+     *
      * @param hauntedHouseBuilder 特定建造者
      */
-    public void setHauntedHouseBuilder(HauntedHouseBuilder hauntedHouseBuilder){
-        this.hauntedHouseBuilder=hauntedHouseBuilder;
+    public void setHauntedHouseBuilder(HauntedHouseBuilder hauntedHouseBuilder)
+    {
+        this.hauntedHouseBuilder = hauntedHouseBuilder;
         Output.output(
                 this.getClass().toString(),
                 "initialize",
@@ -25,7 +28,8 @@ public class HauntedHouseDirector {
     /**
      * 指导鬼屋规划
      */
-    public void construct(){
+    public void construct()
+    {
         Output.output(
                 this.getClass().toString(),
                 "initialize",

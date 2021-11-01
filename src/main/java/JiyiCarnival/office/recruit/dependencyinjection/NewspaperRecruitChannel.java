@@ -3,12 +3,13 @@ package JiyiCarnival.office.recruit.dependencyinjection;
 import JiyiCarnival.Output;
 
 /**
- * @author
- * 报纸渠道
+ * @author 报纸渠道
  */
-public class NewspaperRecruitChannel implements RecruitChannel{
+public class NewspaperRecruitChannel implements RecruitChannel
+{
     @Override
-    public void publish(Recruitment recruitment) {
+    public void publish(Recruitment recruitment)
+    {
         Output.output(
                 this.getClass().toString(),
                 "publish",

@@ -6,12 +6,13 @@ import JiyiCarnival.Output;
  * @author WKATZZL
  * 处理抽象类
  */
-public class BuyTicket extends SlideHandler{
+public class BuyTicket extends SlideHandler
+{
     /**
-     *
      * @param step 买票所对应的步骤
      */
-    public BuyTicket(int step){
+    public BuyTicket(int step)
+    {
         super(ticket);
     }
 
@@ -19,7 +20,8 @@ public class BuyTicket extends SlideHandler{
      * 输出当前需要进行的处理信息
      */
     @Override
-    protected void handle(){
+    protected void handle()
+    {
         Output.output(this.getClass().toString(),
                 "handle",
                 String.valueOf(System.identityHashCode(this)),

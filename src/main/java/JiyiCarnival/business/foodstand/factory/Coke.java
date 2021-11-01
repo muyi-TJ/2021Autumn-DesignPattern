@@ -3,15 +3,17 @@ package JiyiCarnival.business.foodstand.factory;
 import JiyiCarnival.Output;
 
 /**
- *@author Caviar011230
+ * @author Caviar011230
  * 可乐类
  */
-public class Coke implements Snack{
+public class Coke implements Snack
+{
     /**
      * 获取可乐
      */
     @Override
-    public void get(){
+    public void get()
+    {
         Output.output(
                 this.getClass().toString(),
                 "initialize",

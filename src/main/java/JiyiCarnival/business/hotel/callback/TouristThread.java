@@ -5,9 +5,11 @@ import JiyiCarnival.Output;
 /**
  * 简单游客线程类
  */
-public class TouristThread extends BaseThreadHolder {
+public class TouristThread extends BaseThreadHolder
+{
     @Override
-    public void run(){
+    public void run()
+    {
         Output.output(
                 this.getClass().toString(),
                 "initialize",

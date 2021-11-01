@@ -7,14 +7,18 @@ import JiyiCarnival.Output;
  * 判断当前游客年龄是否小于指定年龄
  */
 
-public class VisitorAgeSpecification extends CompositeSpecification<Visitor>{
+public class VisitorAgeSpecification extends CompositeSpecification<Visitor>
+{
     private int age;
-    public VisitorAgeSpecification(int age) {
+
+    public VisitorAgeSpecification(int age)
+    {
         this.age = age;
     }
 
     @Override
-    public boolean isSatisfiedBy(Visitor visitor) {
+    public boolean isSatisfiedBy(Visitor visitor)
+    {
 
         boolean res = visitor.getAge() >= age;
 
@@ -31,11 +35,13 @@ public class VisitorAgeSpecification extends CompositeSpecification<Visitor>{
         return res;
     }
 
-    public int getAge() {
+    public int getAge()
+    {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age)
+    {
         this.age = age;
     }
 }
