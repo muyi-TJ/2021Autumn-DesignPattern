@@ -52,7 +52,7 @@ public class FrontController
      * 处理请求流程
      * @param request 请求
      */
-    public void  dispatchRequest(String request)
+    public void dispatchRequest(String request)
     {
         //记录请求
         trackRequest(request);

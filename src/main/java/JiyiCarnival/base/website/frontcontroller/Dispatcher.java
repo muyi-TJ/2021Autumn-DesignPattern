@@ -11,7 +11,7 @@ public class Dispatcher
     private HomeView homeView;
     private HelpView helpView;
     private BuyTicketView buyTicketView;
-    private GetFastpassView getFastpassView;
+    private RecruitView recruitView;
 
     /**
      * Dispatcher构造器
@@ -21,7 +21,7 @@ public class Dispatcher
         homeView = new HomeView();
         helpView = new HelpView();
         buyTicketView = new BuyTicketView();
-        getFastpassView = new GetFastpassView();
+        recruitView = new RecruitView();
     }
 
     /**
@@ -49,9 +49,9 @@ public class Dispatcher
         {
             buyTicketView.show();
         }
-        else if (request.equalsIgnoreCase("FASTPASS"))
+        else if (request.equalsIgnoreCase("RECRUIT"))
         {
-            getFastpassView.show();
+            recruitView.show();
         }
     }
 }
