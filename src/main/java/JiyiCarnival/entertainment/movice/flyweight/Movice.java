@@ -1,5 +1,7 @@
 package JiyiCarnival.entertainment.movice.flyweight;
 
+import JiyiCarnival.Output;
+
 /**
  * @author ajt
  * 具体的电影类
@@ -20,6 +22,11 @@ public class Movice extends AbstractMovice {
      */
     @Override
     public void play(String room) {
-        System.out.println(room + "号放映厅正在播放" + this.name);
+        Output.output(
+                this.getClass().toString(),
+                "play",
+                String.valueOf(System.identityHashCode(this)),
+                room + "号放映厅正在播放" + this.name
+        );
     }
 }

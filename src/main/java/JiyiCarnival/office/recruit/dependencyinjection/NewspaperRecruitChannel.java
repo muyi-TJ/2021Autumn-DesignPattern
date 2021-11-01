@@ -1,5 +1,7 @@
 package JiyiCarnival.office.recruit.dependencyinjection;
 
+import JiyiCarnival.Output;
+
 /**
  * @author
  * 报纸渠道
@@ -7,6 +9,11 @@ package JiyiCarnival.office.recruit.dependencyinjection;
 public class NewspaperRecruitChannel implements RecruitChannel{
     @Override
     public void publish(Recruitment recruitment) {
-        System.out.println("Publish on Newspaper: " + recruitment.message);
+        Output.output(
+                this.getClass().toString(),
+                "publish",
+                String.valueOf(System.identityHashCode(this)),
+                "Publish on Newspaper: " + recruitment.message
+        );
     }
 }

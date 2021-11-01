@@ -7,9 +7,11 @@ import JiyiCarnival.office.recruit.dependencyinjection.Recruitment;
 import org.junit.Test;
 
 public class dependencyinjectionTest {
+
     @Test
     public void test(){
         System.out.println("依赖注入模式测试：");
+
         RecruitPublisher publisher = new RecruitPublisher();
         OnlineRecruitChannel online = new OnlineRecruitChannel();
         NewspaperRecruitChannel newspaper = new NewspaperRecruitChannel();

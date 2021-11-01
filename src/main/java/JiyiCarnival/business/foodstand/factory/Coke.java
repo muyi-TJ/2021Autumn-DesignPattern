@@ -1,11 +1,22 @@
 package JiyiCarnival.business.foodstand.factory;
+
+import JiyiCarnival.Output;
+
 /**
  *@author Caviar011230
  * 可乐类
  */
 public class Coke implements Snack{
+    /**
+     * 获取可乐
+     */
     @Override
     public void get(){
-        System.out.println("制作出了一杯可乐");
+        Output.output(
+                this.getClass().toString(),
+                "initialize",
+                String.valueOf(System.identityHashCode(this)),
+                "制作出了一杯可乐"
+        );
     }
 }

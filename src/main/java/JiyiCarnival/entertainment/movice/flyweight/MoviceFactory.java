@@ -1,5 +1,7 @@
 package JiyiCarnival.entertainment.movice.flyweight;
 
+import JiyiCarnival.Output;
+
 import java.util.HashMap;
 
 /**
@@ -22,7 +24,12 @@ public class MoviceFactory {
             movice = new Movice(name);
             pool.put(name, movice);
 
-            System.out.println("新增电影: " + name);
+            Output.output(
+                    "MoviceFactory",
+                    "getMovice",
+                    String.valueOf(System.identityHashCode("111111")),
+                    "新增电影: " + name
+            );
         }
         return pool.get(name);
     }
