@@ -17,7 +17,7 @@ public class FrontControllerTest extends TestCase
         FrontController frontController = new FrontController();
         frontController.dispatchRequest("HOME");
         frontController.dispatchRequest("TICKET");
-        frontController.dispatchRequest("FASTPASS");
+        frontController.dispatchRequest("RECRUIT");
         frontController.dispatchRequest("HELP");
     }
 }
