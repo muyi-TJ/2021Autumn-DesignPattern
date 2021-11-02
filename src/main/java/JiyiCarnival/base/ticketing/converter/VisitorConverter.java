@@ -2,6 +2,7 @@ package JiyiCarnival.base.ticketing.converter;
 
 import java.util.Date;
 import java.util.function.Function;
+import JiyiCarnival.util.visitor.Visitor;
 
 /**
  * @author WKATZZL

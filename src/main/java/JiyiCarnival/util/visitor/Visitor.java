@@ -1,6 +1,10 @@
 package JiyiCarnival.util.visitor;
 
 
+import JiyiCarnival.Output;
+
+import java.text.SimpleDateFormat;
+
 /**
  * @author WKATZZL
  * 游客类
@@ -109,9 +113,9 @@ public class Visitor
      *
      * @return 返回游客性别
      */
-    public String getGender()
+    public Gender getGender()
     {
-        return gender.toString();
+        return gender;
     }
 
     /**
@@ -140,6 +144,49 @@ public class Visitor
     {
         this.gender = gender;
         return this;
+    }
+
+
+    /**
+     * 打印游客信息
+     */
+    public void logInfomation()
+    {
+        String visitorInfo = """
+                                
+                ------------------------
+                门票信息：
+                游客姓名：%s
+                身份证号：%s
+                游客年龄：%d
+                游客性别：%s
+                ------------------------
+                """;
+        visitorInfo = String.format(visitorInfo, name, ID, age, gender.toString());
+        Output.output(this.getClass().toString(),
+                "logInformation",
+                String.valueOf(System.identityHashCode(this)),
+                visitorInfo
+        );
+    }
+
+    /**
+     * 打印游客信息
+     */
+    public void printInfomation()
+    {
+        String visitorInfo = """
+                                
+                ------------------------
+                门票信息：
+                游客姓名：%s
+                身份证号：%s
+                游客年龄：%d
+                游客性别：%s
+                ------------------------
+                """;
+        visitorInfo = String.format(visitorInfo, name, ID, age, gender.toString());
+        System.out.println(visitorInfo);
     }
 
 }

@@ -62,8 +62,7 @@ public class Dispatcher
      *
      * @param request 请求
      */
-    public void dispatchUserRequest(String request)
-    {
+    public void dispatchUserRequest(String request) throws InterruptedException {
         String text = "正在展示页面： " + request;
         if (request.equalsIgnoreCase("HOME"))
         {
@@ -75,7 +74,7 @@ public class Dispatcher
         }
         else if (request.equalsIgnoreCase("TICKET"))
         {
-            System.out.println(buyTicketView.view());
+            buyTicketView.view();
         }
         else if (request.equalsIgnoreCase("RECRUIT"))
         {
