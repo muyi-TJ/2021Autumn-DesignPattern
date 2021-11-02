@@ -150,7 +150,7 @@ public class Ticket
     }
 
     /**
-     * 打印票务信息
+     * 打印票务信息 测试模式
      */
     public void logInfomation()
     {
@@ -174,6 +174,9 @@ public class Ticket
         );
     }
 
+    /**
+     * 打印票务信息 游乐园模式
+     */
     public void printInfomation()
     {
         String ticketInfo = """

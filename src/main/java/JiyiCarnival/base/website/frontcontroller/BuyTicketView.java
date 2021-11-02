@@ -17,7 +17,7 @@ import java.util.Scanner;
 public class BuyTicketView
 {
     /**
-     * 展示购票视图
+     * 展示购票视图 测试模式
      */
     public void show()
     {
@@ -30,6 +30,11 @@ public class BuyTicketView
         );
     }
 
+    /**
+     * 购票视图 游乐园模式
+     * @return 购票的游客
+     * @throws InterruptedException 使用了线程的睡眠函数
+     */
     public Visitor view() throws InterruptedException {
         int error = 1;
         Visitor visitor = new Visitor();

@@ -9,7 +9,7 @@ import JiyiCarnival.Output;
 public class HelpView
 {
     /**
-     * 展示帮助中心视图
+     * 展示帮助中心视图 测试模式
      */
     public void show()
     {
@@ -22,8 +22,11 @@ public class HelpView
         );
     }
 
-    public String view(){
-        String text = "欢迎来到帮助中心，请随意向我们寻求帮助！";
-        return text;
+    /**
+     * 帮助中心视图 游乐园模式
+     * @return 购票的游
+     */
+    public void view(){
+        System.out.println("欢迎来到帮助中心，请随意向我们寻求帮助！");
     }
 }

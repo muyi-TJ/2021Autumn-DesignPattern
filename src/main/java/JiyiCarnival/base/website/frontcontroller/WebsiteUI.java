@@ -3,8 +3,18 @@ package JiyiCarnival.base.website.frontcontroller;
 import JiyiCarnival.menu.MainMenu;
 import JiyiCarnival.util.input.Input;
 
+/**
+ * @author WAKTZZL
+ * 网站UI类
+ */
+
 public class WebsiteUI {
     private FrontController frontController = new FrontController();
+
+    /**
+     * 显示网站
+     * @throws InterruptedException 使用了线程延迟函数
+     */
     public void website() throws InterruptedException {
         frontController.dispatchUserRequest("HOME");
         int choice = 0;

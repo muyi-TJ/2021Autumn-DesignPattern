@@ -25,7 +25,7 @@ public class Dispatcher
     }
 
     /**
-     * 获取请求相应页面
+     * 获取请求相应页面 测试模式
      *
      * @param request 请求
      */
@@ -58,7 +58,7 @@ public class Dispatcher
 
 
     /**
-     * 获取请求相应页面
+     * 获取请求相应页面 游乐园模式
      *
      * @param request 请求
      */
@@ -66,11 +66,11 @@ public class Dispatcher
         String text = "正在展示页面： " + request;
         if (request.equalsIgnoreCase("HOME"))
         {
-            System.out.println(homeView.view());
+            homeView.view();
         }
         else if (request.equalsIgnoreCase("HELP"))
         {
-            System.out.println(helpView.view());
+            helpView.view();
         }
         else if (request.equalsIgnoreCase("TICKET"))
         {
@@ -78,7 +78,7 @@ public class Dispatcher
         }
         else if (request.equalsIgnoreCase("RECRUIT"))
         {
-            System.out.println(recruitView.view());
+            recruitView.view();
         }
     }
 }

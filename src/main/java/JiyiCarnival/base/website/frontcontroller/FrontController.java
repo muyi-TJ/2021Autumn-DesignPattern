@@ -20,7 +20,7 @@ public class FrontController
     }
 
     /**
-     * 认证用户身份
+     * 认证用户身份 测试模式
      */
     private boolean isAuthenticUser()
     {
@@ -35,7 +35,7 @@ public class FrontController
     }
 
     /**
-     * 记录请求页面过程
+     * 记录请求页面过程 测试模式
      *
      * @param request 请求
      */
@@ -51,7 +51,7 @@ public class FrontController
     }
 
     /**
-     * 处理请求流程
+     * 处理请求流程 测试模式
      *
      * @param request 请求
      */
@@ -69,7 +69,7 @@ public class FrontController
 
 
     /**
-     * 认证用户身份
+     * 认证用户身份 游乐园模式
      */
     private boolean userAuthentication() throws InterruptedException {
         System.out.println("正在认证身份");
@@ -82,7 +82,7 @@ public class FrontController
     }
 
     /**
-     * 记录请求页面过程
+     * 记录请求页面过程 游乐园模式
      *
      * @param request 请求
      */
@@ -92,7 +92,7 @@ public class FrontController
     }
 
     /**
-     * 处理请求流程
+     * 处理请求流程 游乐园模式
      *
      * @param request 请求
      */

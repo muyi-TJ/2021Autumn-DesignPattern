@@ -148,7 +148,7 @@ public class Visitor
 
 
     /**
-     * 打印游客信息
+     * 打印游客信息 测试模式
      */
     public void logInfomation()
     {
@@ -171,7 +171,7 @@ public class Visitor
     }
 
     /**
-     * 打印游客信息
+     * 打印游客信息 游乐园模式
      */
     public void printInfomation()
     {
