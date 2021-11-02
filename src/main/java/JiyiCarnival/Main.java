@@ -1,7 +1,7 @@
 package JiyiCarnival;
 
 
-import JiyiCarnival.menu.MainMenu;
+import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
 import JiyiCarnival.util.input.Input;
 
 public class Main {
@@ -13,7 +13,8 @@ public class Main {
             choice = Input.input();
             switch (choice){
                 case 1:
-                    MainMenu.printMenu();
+                    JiyiCarnival carnival = JiyiCarnival.getInstance();
+                    carnival.flowControl();
                     choice = 0;
                     break;
                 case 2:

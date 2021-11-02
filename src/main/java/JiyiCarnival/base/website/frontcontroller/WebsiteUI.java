@@ -1,7 +1,8 @@
 package JiyiCarnival.base.website.frontcontroller;
 
-import JiyiCarnival.menu.MainMenu;
+import JiyiCarnival.base.ticketing.converter.Ticket;
 import JiyiCarnival.util.input.Input;
+import JiyiCarnival.util.visitor.Visitor;
 
 /**
  * @author WAKTZZL
@@ -9,13 +10,13 @@ import JiyiCarnival.util.input.Input;
  */
 
 public class WebsiteUI {
-    private FrontController frontController = new FrontController();
 
+    private FrontController frontController = new FrontController();
     /**
      * 显示网站
      * @throws InterruptedException 使用了线程延迟函数
      */
-    public void website() throws InterruptedException {
+    public int website() throws InterruptedException {
         frontController.dispatchUserRequest("HOME");
         int choice = 0;
         while(0 == choice) {
@@ -29,7 +30,6 @@ public class WebsiteUI {
                     break;
                 case 2:
                     frontController.dispatchUserRequest("TICKET");
-                    choice = 0;
                     break;
                 case 3:
                     frontController.dispatchUserRequest("RECRUIT");
@@ -47,5 +47,9 @@ public class WebsiteUI {
                     break;
             }
         }
+        return choice;
     }
+
+
+
 }

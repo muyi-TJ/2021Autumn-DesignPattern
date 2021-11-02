@@ -160,9 +160,10 @@ public class Visitor
                 身份证号：%s
                 游客年龄：%d
                 游客性别：%s
+                游客身高：%d
                 ------------------------
                 """;
-        visitorInfo = String.format(visitorInfo, name, ID, age, gender.toString());
+        visitorInfo = String.format(visitorInfo, name, ID, age, gender.toString(), height);
         Output.output(this.getClass().toString(),
                 "logInformation",
                 String.valueOf(System.identityHashCode(this)),
@@ -183,9 +184,10 @@ public class Visitor
                 身份证号：%s
                 游客年龄：%d
                 游客性别：%s
+                游客身高：%d
                 ------------------------
                 """;
-        visitorInfo = String.format(visitorInfo, name, ID, age, gender.toString());
+        visitorInfo = String.format(visitorInfo, name, ID, age, gender.toString(), height);
         System.out.println(visitorInfo);
     }
 

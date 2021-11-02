@@ -1,6 +1,8 @@
 package JiyiCarnival.base.website.frontcontroller;
 
 import JiyiCarnival.Output;
+import JiyiCarnival.base.ticketing.converter.Ticket;
+import JiyiCarnival.util.visitor.Visitor;
 
 /**
  * @author Zong
@@ -81,4 +83,6 @@ public class Dispatcher
             recruitView.view();
         }
     }
+
+
 }
