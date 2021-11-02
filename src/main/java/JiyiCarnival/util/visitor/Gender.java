@@ -1,4 +1,4 @@
-package JiyiCarnival.util;
+package JiyiCarnival.util.visitor;
 
 public enum Gender{
     MALE,

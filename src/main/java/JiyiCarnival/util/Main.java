@@ -1,6 +1,8 @@
 package JiyiCarnival.util;
 
 
+import JiyiCarnival.util.strvideo.StrVideo;
+
 public class Main {
     public static void main(String[] args) throws Exception {
 

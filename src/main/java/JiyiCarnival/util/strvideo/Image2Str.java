@@ -1,4 +1,4 @@
-package JiyiCarnival.util;
+package JiyiCarnival.util.strvideo;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -55,7 +55,7 @@ public class Image2Str {
         BufferedImage imageOrigin = ImageIO.read(file);
         BufferedImage image = resize(imageOrigin, 80, 50);
         for (int y = 0; y < image.getHeight(); y += 1) {
-            StringBuilder linePixel = new StringBuilder ( "" );
+            StringBuilder linePixel = new StringBuilder ();
             for (int x = 0; x < image.getWidth(); x += 1) {
                 int pixel = image.getRGB(x, y);
                 int r = (pixel & 0xff0000) >> 16, g = (pixel & 0xff00) >> 8, b = pixel & 0xff;

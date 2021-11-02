@@ -1,4 +1,4 @@
-package JiyiCarnival.util;
+package JiyiCarnival.util.strvideo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -56,12 +56,5 @@ public class StrVideo {
         }
     }
 
-
-    /**
-     * 显示到窗口
-     * @param filePath 图片文件夹
-     * @throws IOException
-     * @throws InterruptedException
-     */
 
 }
