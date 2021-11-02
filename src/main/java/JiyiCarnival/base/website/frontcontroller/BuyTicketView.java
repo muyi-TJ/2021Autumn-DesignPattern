@@ -21,4 +21,9 @@ public class BuyTicketView
                 text
         );
     }
+
+    public String view(){
+        String text = "在这里购买门票，即可凭票入园！";
+        return text;
+    }
 }

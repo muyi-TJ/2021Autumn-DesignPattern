@@ -21,4 +21,9 @@ public class HelpView
                 text
         );
     }
+
+    public String view(){
+        String text = "欢迎来到帮助中心，请随意向我们寻求帮助！";
+        return text;
+    }
 }

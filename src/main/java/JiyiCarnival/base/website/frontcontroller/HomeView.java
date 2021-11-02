@@ -21,4 +21,9 @@ public class HomeView
                 text
         );
     }
+
+    public String view(){
+        String text = "欢迎来到济忆嘉年华，在这里度过美妙的一天吧！";
+        return text;
+    }
 }

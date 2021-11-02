@@ -21,4 +21,10 @@ public class RecruitView
                 text
         );
     }
+
+    public String view(){
+        String text = "在这里查看招聘通知，快来报名心仪的岗位！";
+        return text;
+    }
+
 }

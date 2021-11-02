@@ -55,4 +55,31 @@ public class Dispatcher
             recruitView.show();
         }
     }
+
+
+    /**
+     * 获取请求相应页面
+     *
+     * @param request 请求
+     */
+    public void dispatchUserRequest(String request)
+    {
+        String text = "正在展示页面： " + request;
+        if (request.equalsIgnoreCase("HOME"))
+        {
+            System.out.println(homeView.view());
+        }
+        else if (request.equalsIgnoreCase("HELP"))
+        {
+            System.out.println(helpView.view());
+        }
+        else if (request.equalsIgnoreCase("TICKET"))
+        {
+            System.out.println(buyTicketView.view());
+        }
+        else if (request.equalsIgnoreCase("RECRUIT"))
+        {
+            System.out.println(recruitView.view());
+        }
+    }
 }
