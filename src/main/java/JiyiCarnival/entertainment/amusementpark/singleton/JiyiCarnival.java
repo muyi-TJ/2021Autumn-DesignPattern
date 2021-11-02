@@ -1,6 +1,7 @@
 package JiyiCarnival.entertainment.amusementpark.singleton;
 
 import JiyiCarnival.Output;
+import JiyiCarnival.Processor.MorningProcessor;
 import JiyiCarnival.base.ticketing.converter.Ticket;
 import JiyiCarnival.base.website.frontcontroller.WebsiteUI;
 import JiyiCarnival.util.input.Input;
@@ -15,10 +16,10 @@ public class JiyiCarnival
 {
     private static JiyiCarnival instance = new JiyiCarnival();
     private WebsiteUI websiteUI = new WebsiteUI();
-    private Visitor visitor;
-    private Ticket ticket;
-    private String weather = "晴天";
-    private int temperature = (int) Math.round(Math.random() * 10 + 30);
+    private static Visitor visitor;
+    private static Ticket ticket;
+    private static String weather = "晴天";
+    private static int temperature = (int) Math.round(Math.random() * 10 + 30);
 
     /**
      * 提供私有的构造函数，使其不会被实例化
@@ -64,6 +65,9 @@ public class JiyiCarnival
         this.ticket = ticket;
     }
 
+    public static Visitor getVisitor(){return visitor;}
+    public static Ticket getTicket(){return ticket;}
+
 
 
 
@@ -83,7 +87,8 @@ public class JiyiCarnival
             choice = Input.input();
             switch (choice){
                 case 1:
-                    choice = 0;
+                    MorningProcessor morningProcessor = new MorningProcessor();
+                    morningProcessor.flowControl();
                     break;
                 case 2:
                     choice = 0;
@@ -98,4 +103,19 @@ public class JiyiCarnival
         }
     }
 
+    /**
+     * 获得今日温度
+     * @return 返回温度
+     */
+    public static int getTemperature() {
+        return temperature;
+    }
+
+    /**
+     * 获得今日天气
+     * @return 天气
+     */
+    public static String getWeather() {
+        return weather;
+    }
 }
