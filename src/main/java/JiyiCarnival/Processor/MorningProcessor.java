@@ -35,9 +35,14 @@ public class MorningProcessor {
         System.out.println("尊敬的游客，请您先将车停到停车场中。");
         CarDetectMachine detectMachine = new CarDetectMachine(1000, 666);
         Screen screen = new Screen(detectMachine);
-        screen.carUpdate(true);
         Broadcaster broadcaster = new Broadcaster(detectMachine);
+        screen.carUpdate(true);
+        detectMachine.visitorCarIn();
+        broadcaster.carUpdate(true);
+        screen.carUpdate(true);
         System.out.println("尊敬的" + visitor.getName() +"，您准备好了吗？" + "济忆自由之旅就要开始啦！");
         System.out.println("--------------------------------------------");
+
+
     }
 }

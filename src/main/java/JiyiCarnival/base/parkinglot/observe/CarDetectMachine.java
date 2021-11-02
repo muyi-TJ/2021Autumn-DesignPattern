@@ -41,7 +41,7 @@ public class CarDetectMachine extends Subject
     }
 
     /**
-     * 检测到车辆驶入，通知各观察者类进行相应动作
+     * 检测到车辆驶入，通知各观察者类进行相应动作 测试模式
      */
     public void carIn()
     {
@@ -63,7 +63,7 @@ public class CarDetectMachine extends Subject
     }
 
     /**
-     * 检测到车辆驶出，通知各观察者类进行相应动作
+     * 检测到车辆驶出，通知各观察者类进行相应动作 游乐园模式
      */
     public void carOut()
     {
@@ -75,6 +75,34 @@ public class CarDetectMachine extends Subject
                 "检测到车辆准备驶出停车场..."
         );
         notifyObserver(false);
+    }
+
+    /**
+     * 检测到车辆驶入，通知各观察者类进行相应动作
+     */
+    public void visitorCarIn()
+    {
+        if (RestParkingSpace > 0)
+        {
+            RestParkingSpace--;
+        }
+        else
+        {
+            state = false;
+        }
+        System.out.println("检测到车辆准备驶入停车场...");
+        notifyCarObserver(true);
+    }
+
+    /**
+     * 检测到车辆驶出，通知各观察者类进行相应动作
+     */
+    public void visitorCarOut()
+    {
+        RestParkingSpace++;
+        state = true;
+        System.out.println("检测到车辆准备驶出停车场...");
+        notifyCarObserver(false);
     }
 
 }

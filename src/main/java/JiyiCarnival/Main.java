@@ -1,11 +1,15 @@
 package JiyiCarnival;
 
 
+import JiyiCarnival.base.parkinglot.observe.Broadcaster;
+import JiyiCarnival.base.parkinglot.observe.CarDetectMachine;
+import JiyiCarnival.base.parkinglot.observe.Screen;
 import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
 import JiyiCarnival.util.input.Input;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
+
         System.out.println("欢迎来到济忆嘉年华！");
         int choice = 0;
         while(0 == choice) {
