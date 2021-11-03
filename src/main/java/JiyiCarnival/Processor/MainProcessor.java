@@ -13,7 +13,7 @@ import JiyiCarnival.util.visitor.Visitor;
  * 早晨游玩处理器类
  */
 
-public class MorningProcessor {
+public class MainProcessor {
     private Visitor visitor = JiyiCarnival.getVisitor();
     private Ticket ticket = JiyiCarnival.getTicket();
 
@@ -42,6 +42,8 @@ public class MorningProcessor {
         screen.carUpdate(true);
         System.out.println("尊敬的" + visitor.getName() +"，您准备好了吗？" + "济忆自由之旅就要开始啦！");
         System.out.println("--------------------------------------------");
+
+
 
 
     }

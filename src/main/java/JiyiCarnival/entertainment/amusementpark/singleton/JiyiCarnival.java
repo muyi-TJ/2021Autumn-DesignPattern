@@ -1,7 +1,7 @@
 package JiyiCarnival.entertainment.amusementpark.singleton;
 
 import JiyiCarnival.Output;
-import JiyiCarnival.Processor.MorningProcessor;
+import JiyiCarnival.Processor.MainProcessor;
 import JiyiCarnival.base.ticketing.converter.Ticket;
 import JiyiCarnival.base.website.frontcontroller.WebsiteUI;
 import JiyiCarnival.util.input.Input;
@@ -87,7 +87,7 @@ public class JiyiCarnival
             choice = Input.input();
             switch (choice){
                 case 1:
-                    MorningProcessor morningProcessor = new MorningProcessor();
+                    MainProcessor morningProcessor = new MainProcessor();
                     morningProcessor.flowControl();
                     break;
                 case 2:
