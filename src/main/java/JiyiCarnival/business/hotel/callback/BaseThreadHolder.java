@@ -10,8 +10,7 @@ abstract public class BaseThreadHolder
      *
      * @param callBack
      */
-    public final void run(CallBack callBack)
-    {
+    public final void run(CallBack callBack) throws InterruptedException {
         run();
         if (callBack != null)
         {
@@ -22,5 +21,5 @@ abstract public class BaseThreadHolder
     /**
      * 开始事件
      */
-    public abstract void run();
+    public abstract void run() throws InterruptedException;
 }

@@ -3,7 +3,6 @@ package JiyiCarnival.Processor;
 import JiyiCarnival.base.ticketing.converter.Ticket;
 import JiyiCarnival.business.orderfood.command.*;
 import JiyiCarnival.entertainment.animalshow.state.*;
-import JiyiCarnival.entertainment.firework.bridge.Firework;
 import JiyiCarnival.entertainment.firework.bridge.FireworkControl;
 import JiyiCarnival.entertainment.hotairballoon.adapter.HotAirBalloonAdapter;
 import JiyiCarnival.entertainment.movice.flyweight.Movice;
