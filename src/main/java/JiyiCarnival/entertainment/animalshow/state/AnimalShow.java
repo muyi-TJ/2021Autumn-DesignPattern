@@ -7,6 +7,8 @@ package JiyiCarnival.entertainment.animalshow.state;
 public class AnimalShow
 {
 
+    private String[] animals = {"狮子", "狗狗", "猴子", "猩猩"};
+    private String[] performances = {"钻火圈", "顶球", "走钢丝"};
     private State state; // 演出的状态
 
     public AnimalShow()
@@ -32,6 +34,18 @@ public class AnimalShow
     public void setState(State state)
     {
         this.state = state;
+    }
+
+    /**
+     * 动物表演杂技
+     */
+    public void show(){
+        String animal = animals[(int) (Math.random() * animals.length)];
+        String performance = performances[(int) (Math.random() * performances.length)];
+        System.out.println("今日的表演是：");
+        System.out.println(animal + performance + "!!!");
+        // TODO 插入字符图画
+        System.out.println("敬请欣赏！");
     }
 
 }

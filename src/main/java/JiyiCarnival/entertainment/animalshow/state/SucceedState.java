@@ -1,6 +1,7 @@
 package JiyiCarnival.entertainment.animalshow.state;
 
 import JiyiCarnival.Output;
+import JiyiCarnival.util.time.Clock;
 
 /**
  * @author Zong
@@ -10,7 +11,7 @@ public class SucceedState implements State
 {
 
     /**
-     * 动物表演状态改变为成功，行为变化
+     * 动物表演状态改变为成功，行为变化 测试模式
      *
      * @param animalShow 动物表演对象
      */
@@ -33,5 +34,16 @@ public class SucceedState implements State
                 String.valueOf(System.identityHashCode(this)),
                 text
         );
+    }
+
+    /**
+     * 动物表演状态改变为失败，行为变化 游乐园模式
+     *
+     * @param animalShow 动物表演对象
+     */
+    public void printAction(AnimalShow animalShow) throws InterruptedException {
+        animalShow.show();
+        System.out.println("今日的演出非常成功！");
+        Thread.sleep(1000);
     }
 }
