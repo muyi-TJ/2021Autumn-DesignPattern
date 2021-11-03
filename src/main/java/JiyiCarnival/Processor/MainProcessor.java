@@ -43,8 +43,7 @@ public class MainProcessor {
         screen.carUpdate(true);
         System.out.println("尊敬的" + visitor.getName() +"，您准备好了吗？" + "济忆自由之旅就要开始啦！");
         System.out.println("--------------------------------------------");
-        ZoneProcessor zoneProcessor=new ZoneProcessor();
+        ZoneProcessor zoneProcessor=new ZoneProcessor(visitor, ticket);
         zoneProcessor.freeRoute();
-
     }
 }

@@ -155,7 +155,7 @@ public class Visitor
         String visitorInfo = """
                                 
                 ------------------------
-                门票信息：
+                游客信息：
                 游客姓名：%s
                 身份证号：%s
                 游客年龄：%d
@@ -179,7 +179,7 @@ public class Visitor
         String visitorInfo = """
                                 
                 ------------------------
-                门票信息：
+                游客信息：
                 游客姓名：%s
                 身份证号：%s
                 游客年龄：%d

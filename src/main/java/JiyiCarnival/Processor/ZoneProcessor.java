@@ -1,9 +1,21 @@
 package JiyiCarnival.Processor;
 
+import JiyiCarnival.base.ticketing.converter.Ticket;
+import JiyiCarnival.entertainment.waterslide.chainofresponsibility.ChainOfResponsibility;
+import JiyiCarnival.entertainment.waterslide.chainofresponsibility.Request;
+import JiyiCarnival.entertainment.waterslide.chainofresponsibility.SlideHandler;
 import JiyiCarnival.util.input.Input;
+import JiyiCarnival.util.visitor.Visitor;
 
 public class ZoneProcessor {
-    public void freeRoute(){
+    private Visitor visitor = new Visitor();
+    private Ticket ticket = new Ticket();
+    public ZoneProcessor(){};
+    public ZoneProcessor(Visitor visitor, Ticket ticket){
+        this.ticket = ticket;
+        this.visitor = visitor;
+    }
+    public void freeRoute() throws InterruptedException {
         int choice = 1;
         while(choice>0) {
             System.out.println("请选择嘉年华分区：\n[1] 刺激专场\n[2] 美食天堂\n[3] 幻想世界 \n[4] 好莱坞\n[5] 辅助设施\n[0] 退出");
@@ -31,7 +43,7 @@ public class ZoneProcessor {
             }
         }
     }
-    public void excitingZone(){
+    public void excitingZone() throws InterruptedException {
         System.out.println("欢迎来到刺激专场");
         int choice = 1;
         while(choice>0){
@@ -39,6 +51,9 @@ public class ZoneProcessor {
             choice = Input.input();
             switch (choice){
                 case 1:
+                    SlideHandler slideChain = ChainOfResponsibility.getChainOfSlide(visitor);
+                    Request request = new Request(4);
+                    slideChain.handleVisitorRequest(request);
                     break;
                 case 2:
                     break;
