@@ -8,10 +8,11 @@ package JiyiCarnival.base.powerbank.proxy;
 public class Stuff implements PowerBankProvider
 {
     private final ServiceCenter serviceCenter;
+    private int outputType = 0;
 
-    public Stuff()
+    public Stuff(int outputType)
     {
-        this.serviceCenter = new ServiceCenter();
+        this.serviceCenter = new ServiceCenter(outputType);
     }
 
     /**

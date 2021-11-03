@@ -10,7 +10,7 @@ public class ProxyTest
     public void test()
     {
         System.out.println("代理模式测试：");
-        Stuff stuff = new Stuff();
+        Stuff stuff = new Stuff(0);
         stuff.getPowerBank(1);
         stuff.getPowerBank(2);
         stuff.getPowerBank(3);

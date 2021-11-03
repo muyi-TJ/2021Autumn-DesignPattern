@@ -9,15 +9,24 @@ import JiyiCarnival.Output;
 
 public class ServiceCenter implements PowerBankProvider
 {
+    private int outputType;
+    public ServiceCenter(int outputType) {
+        this.outputType = outputType;
+    }
     /**
      * @param num 充电宝数量
      */
     @Override
     public void getPowerBank(int num)
     {
-        Output.output(this.getClass().toString(),
-                "getPowerBank",
-                String.valueOf(System.identityHashCode(this)),
-                "顾客获得了" + num + "个充电宝");
+        if (outputType == 0) {
+            Output.output(this.getClass().toString(),
+                    "getPowerBank",
+                    String.valueOf(System.identityHashCode(this)),
+                    "顾客获得了" + num + "个充电宝");
+        }
+        else {
+            System.out.println("顾客获得了" + num + "个充电宝");
+        }
     }
 }

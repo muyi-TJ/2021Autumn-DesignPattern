@@ -9,10 +9,10 @@ public class CompositeTest
     @Test
     public void test()
     {
-        Axis axis = new Axis();
-        axis.add(new Horse());
-        axis.add(new Horse());
-        axis.add(new Horse());
+        Axis axis = new Axis(1);
+        axis.add(new Horse(1));
+        axis.add(new Horse(1));
+        axis.add(new Horse(1));
         axis.operate();
     }
 }
