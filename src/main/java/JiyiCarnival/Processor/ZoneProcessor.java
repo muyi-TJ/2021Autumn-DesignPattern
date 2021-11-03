@@ -2,6 +2,7 @@ package JiyiCarnival.Processor;
 
 import JiyiCarnival.base.ticketing.converter.Ticket;
 import JiyiCarnival.entertainment.hotairballoon.adapter.HotAirBalloonAdapter;
+import JiyiCarnival.entertainment.movice.flyweight.Movice;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.ChainOfResponsibility;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.Request;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.SlideHandler;
@@ -114,7 +115,7 @@ public class ZoneProcessor {
             }
         }
     }
-    public void hollywood(){
+    public void hollywood() throws InterruptedException {
         System.out.println("欢迎来到好莱坞");
         int choice = 1;
         while(choice>0){
@@ -122,6 +123,9 @@ public class ZoneProcessor {
             choice = Input.input();
             switch (choice){
                 case 1:
+                    String[] names = {"寻梦环游记", "花木兰", "精灵旅社", "精灵旅社2"};
+                    Movice movice = new Movice(names);
+                    movice.play(visitor);
                     break;
                 case 2:
                     break;
