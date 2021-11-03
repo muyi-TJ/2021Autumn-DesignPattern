@@ -5,8 +5,10 @@ import JiyiCarnival.base.parkinglot.observe.Broadcaster;
 import JiyiCarnival.base.parkinglot.observe.CarDetectMachine;
 import JiyiCarnival.base.parkinglot.observe.Screen;
 import JiyiCarnival.base.ticketing.converter.Ticket;
+import JiyiCarnival.business.hotel.callback.UnsubscribeControl;
 import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
 import JiyiCarnival.service.securitycheck.facade.SecurityCheckFacade;
+import JiyiCarnival.util.time.Clock;
 import JiyiCarnival.util.visitor.Visitor;
 
 /**
@@ -51,7 +53,10 @@ public class MainProcessor {
             securityCheckFacade.specialCustomerSecurityCheckPrint();
         System.out.println("尊敬的" + visitor.getName() +"，您准备好了吗？" + "济忆自由之旅就要开始啦！");
         System.out.println("--------------------------------------------");
-        ZoneProcessor zoneProcessor=new ZoneProcessor(visitor, ticket);
+        ZoneProcessor zoneProcessor = new ZoneProcessor(visitor, ticket);
         zoneProcessor.freeRoute();
+        System.out.println("当前时间为：" + Clock.getClock());
+        UnsubscribeControl unsubscribeControl = new UnsubscribeControl();
+        unsubscribeControl.flowControl();
     }
 }
