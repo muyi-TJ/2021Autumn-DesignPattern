@@ -3,6 +3,8 @@ package JiyiCarnival.Processor;
 import JiyiCarnival.base.ticketing.converter.Ticket;
 import JiyiCarnival.business.orderfood.command.*;
 import JiyiCarnival.entertainment.animalshow.state.*;
+import JiyiCarnival.entertainment.firework.bridge.Firework;
+import JiyiCarnival.entertainment.firework.bridge.FireworkControl;
 import JiyiCarnival.entertainment.hotairballoon.adapter.HotAirBalloonAdapter;
 import JiyiCarnival.entertainment.movice.flyweight.Movice;
 import JiyiCarnival.entertainment.shooting.memento.ShootingUI;
@@ -154,6 +156,8 @@ public class ZoneProcessor {
                 case 3:
                     break;
                 case 4:
+                    FireworkControl fireworkControl = new FireworkControl();
+                    fireworkControl.flowControl();
                     break;
                 case 5:
                     return;

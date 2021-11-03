@@ -20,4 +20,9 @@ public class Blue implements LetOffAPI
 
     }
 
+    public void letOff(String shape){
+        System.out.println("如" + shape + "的蓝色烟花正在空中绽放！");
+    }
+
+
 }

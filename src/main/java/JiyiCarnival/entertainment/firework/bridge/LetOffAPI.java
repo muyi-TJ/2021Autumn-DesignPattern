@@ -7,7 +7,12 @@ package JiyiCarnival.entertainment.firework.bridge;
 public interface LetOffAPI
 {
     /**
-     * @param shape 烟花形状
+     * @param shape 烟花形状 测试模式
      */
     public void letOffFirework(String shape);
+
+    /**
+     * @param shape 烟花形状 游乐园模式
+     */
+    public void letOff(String shape);
 }
