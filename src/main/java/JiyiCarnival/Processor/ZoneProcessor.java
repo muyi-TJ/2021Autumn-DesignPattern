@@ -1,15 +1,9 @@
 package JiyiCarnival.Processor;
 
-import JiyiCarnival.base.broadcast.eventqueue.Broadcast;
-import JiyiCarnival.base.broadcast.eventqueue.Message;
-import JiyiCarnival.base.powerbank.proxy.ServiceCenter;
-import JiyiCarnival.base.powerbank.proxy.Stuff;
 import JiyiCarnival.base.ticketing.converter.Ticket;
 import JiyiCarnival.business.orderfood.command.*;
+import JiyiCarnival.business.souvenirshop.decorator.*;
 import JiyiCarnival.entertainment.animalshow.state.*;
-import JiyiCarnival.entertainment.carousel.composite.Axis;
-import JiyiCarnival.entertainment.carousel.composite.Horse;
-import JiyiCarnival.entertainment.firework.bridge.Firework;
 import JiyiCarnival.entertainment.firework.bridge.FireworkControl;
 import JiyiCarnival.entertainment.hotairballoon.adapter.HotAirBalloonAdapter;
 import JiyiCarnival.entertainment.movice.flyweight.Movice;
@@ -24,7 +18,6 @@ import java.util.Formatter;
 
 public class ZoneProcessor {
     private Visitor visitor = new Visitor();
-    private final Broadcast broadcast = new Broadcast(1);
     private Ticket ticket = new Ticket();
     private String[] names = {"寻梦环游记", "花木兰", "精灵旅社", "精灵旅社2"};
     public ZoneProcessor(){};
@@ -34,10 +27,6 @@ public class ZoneProcessor {
     }
     public void freeRoute() throws InterruptedException {
         int choice = 1;
-        broadcast.init();
-        broadcast.addMessage(new Message("欢迎来到济忆嘉年华！"));
-        Thread.sleep(500);
-        broadcast.stop();
         while(choice>0) {
             System.out.println("请选择嘉年华分区：\n[1] 刺激专场\n[2] 美食天堂\n[3] 幻想世界 \n[4] 好莱坞\n[5] 辅助设施\n[0] 退出");
             choice = Input.input();
@@ -163,11 +152,6 @@ public class ZoneProcessor {
                     hotAirBalloonAdapter.fly();
                     break;
                 case 2:
-                    Axis axis = new Axis(1);
-                    for (int i = 0; i < 3; i++) {
-                        axis.add(new Horse(1));
-                    }
-                    axis.operate();
                     break;
                 case 3:
                     break;
@@ -219,14 +203,41 @@ public class ZoneProcessor {
                 case 1:
                     break;
                 case 2:
-                    System.out.println("请输入想租赁的充电宝数量：");
-                    int num = Input.input();
-                    Stuff stuff = new Stuff(1);
-                    stuff.getPowerBank(num);
                     break;
                 case 3:
                     break;
                 case 4:
+                    System.out.println("欢迎您进入纪念品商店！DIY纪念挂饰正在热卖中，基础款为TONGJI字母挂饰，您可以选择自己喜欢的配件进行装饰！基础款15元，一个配件2元");
+                    System.out.println("--------------");
+                    System.out.println("1.白色椰壳 2.菩提果串珠 3.紫檀菱形雕 0.结束制作");
+                    System.out.println("--------------");
+                    BasicLogo basicLogo=new BasicLogo();
+                    Ornament pointer=basicLogo;
+                    int opt=1;
+                    while(opt>0){
+                        opt= Input.input();
+                        switch(opt){
+                            case 1:
+                                pointer=new CircleDecorator(pointer);
+                                break;
+                            case 2:
+                                pointer=new RectangleDecorator(pointer);
+                                break;
+                            case 3:
+                                pointer=new DiamondDecorator(pointer);
+                                break;
+                            case 0:
+                                break;
+                            default:
+                                System.out.println("输入有误，请重新输入");
+                                break;
+                        }
+                        System.out.println("ok");
+                    }
+                    System.out.println("挂饰制作好了^_^");
+                    System.out.println(pointer.getPattern());
+                    System.out.println("您一共消费："+pointer.cost()+"元，谢谢光临！");
+
                     break;
                 case 5:
                     return;

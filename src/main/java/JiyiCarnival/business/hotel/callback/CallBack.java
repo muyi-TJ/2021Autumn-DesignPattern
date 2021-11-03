@@ -8,5 +8,5 @@ public interface CallBack
     /**
      * 事情结束后回溯
      */
-    void call();
+    void call() throws InterruptedException;
 }

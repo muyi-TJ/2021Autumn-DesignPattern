@@ -19,19 +19,19 @@ public class Main {
                 case 1:
                     JiyiCarnival carnival = JiyiCarnival.getInstance();
                     carnival.flowControl();
-                    choice = 0;
+                    choice = 3;
                     break;
                 case 2:
                     choice = 0;
                     break;
                 case 3:
-                    System.out.println("今日的离开，是为了明日更好的相聚！");
-                    System.out.println("济忆嘉年华永远欢迎您的到来！再见！");
                     break;
                 default:
                     choice = 0;
                     break;
             }
         }
+        System.out.println("今日的离开，是为了明日更好的相聚！");
+        System.out.println("济忆嘉年华永远欢迎您的到来！再见！");
     }
 }
