@@ -175,15 +175,8 @@ public class ZoneProcessor {
                     movice.play(visitor);
                     break;
                 case 2:
-                    AnimalShow animalShow = new AnimalShow();
-                    BeginShowState beginShowState = new BeginShowState();
-                    EndShowState endShowState = new EndShowState();
-                    FailState failState = new FailState();
-                    SucceedState succeedState = new SucceedState();
-                    beginShowState.printAction(animalShow);
-                    failState.printAction(animalShow);
-                    succeedState.printAction(animalShow);
-                    endShowState.printAction(animalShow);
+                    AnimalShowUI animalShowUI = new AnimalShowUI();
+                    animalShowUI.flowControl();
                     break;
                 case 3:
                     break;
