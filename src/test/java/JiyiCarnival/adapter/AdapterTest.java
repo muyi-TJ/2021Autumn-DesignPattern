@@ -12,8 +12,8 @@ public class AdapterTest
     {
         System.out.println("适配器模式测试：");
         Bird bird = new Bird();
-        bird.fly();
+        bird.flyLog();
         HotAirBalloonAdapter tourist = new HotAirBalloonAdapter();
-        tourist.fly();
+        tourist.flyLog();
     }
 }

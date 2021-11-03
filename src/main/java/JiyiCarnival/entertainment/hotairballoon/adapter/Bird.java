@@ -12,12 +12,16 @@ public class Bird implements Flyable
      * 鸟儿飞行
      */
     @Override
-    public void fly()
+    public void flyLog()
     {
         Output.output(this.getClass().toString(),
                 "fly",
                 String.valueOf(System.identityHashCode(this)),
                 "鸟儿在空中飞行"
         );
+    }
+    @Override
+    public void fly(){
+        System.out.println("鸟儿在空中飞行");
     }
 }

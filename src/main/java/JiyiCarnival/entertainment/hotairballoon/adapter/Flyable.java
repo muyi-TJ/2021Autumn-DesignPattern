@@ -9,5 +9,6 @@ public interface Flyable
     /**
      * 飞翔
      */
+    void flyLog();
     void fly();
 }

@@ -2,6 +2,7 @@ package JiyiCarnival.util.visitor;
 
 
 import JiyiCarnival.Output;
+import JiyiCarnival.entertainment.hotairballoon.adapter.Walkable;
 
 import java.text.SimpleDateFormat;
 
@@ -9,7 +10,7 @@ import java.text.SimpleDateFormat;
  * @author WKATZZL
  * 游客类
  */
-public class Visitor
+public class Visitor implements Walkable
 {
 
     /**
@@ -191,4 +192,24 @@ public class Visitor
         System.out.println(visitorInfo);
     }
 
+    /**
+     * 游客行走输出 测试模式
+     */
+    @Override
+    public void walkLog(){
+        Output.output(
+                this.getClass().toString(),
+                "fly",
+                String.valueOf(System.identityHashCode(this)),
+                "游客在陆地行走"
+        );
+    }
+
+    /**
+     * 游客行走输出 游乐园模式
+     */
+    @Override
+    public void walk() {
+        System.out.println("游客行走");
+    }
 }

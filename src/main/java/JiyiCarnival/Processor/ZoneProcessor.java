@@ -1,6 +1,7 @@
 package JiyiCarnival.Processor;
 
 import JiyiCarnival.base.ticketing.converter.Ticket;
+import JiyiCarnival.entertainment.hotairballoon.adapter.HotAirBalloonAdapter;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.ChainOfResponsibility;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.Request;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.SlideHandler;
@@ -95,6 +96,9 @@ public class ZoneProcessor {
             choice = Input.input();
             switch (choice){
                 case 1:
+                    HotAirBalloonAdapter hotAirBalloonAdapter = new HotAirBalloonAdapter();
+                    hotAirBalloonAdapter.setVisitor(visitor);
+                    hotAirBalloonAdapter.fly();
                     break;
                 case 2:
                     break;
