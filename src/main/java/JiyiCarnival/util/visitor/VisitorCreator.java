@@ -24,10 +24,15 @@ public class VisitorCreator {
     public Visitor create() throws InterruptedException {
         int error = 1;
         System.out.println("请输入您的身份信息：");
+        boolean isIDInput = false;
         while(error != 0) {
             System.out.print("请输入您的名字：");
             Scanner scan = new Scanner(System.in);
             String name = scan.nextLine();
+            while(name.length() == 0){
+                System.out.print("名字不可为空，请重新输入您的名字：");
+                name = scan.nextLine();
+            }
             System.out.print("请选择您的性别：[1]男 [2]女：");
             int gender_num = Input.input();
             while (gender_num != 1 && gender_num != 2) {
@@ -47,8 +52,10 @@ public class VisitorCreator {
                 System.out.print("身高输入有误，请重新输入：");
                 height = Input.input();
             }
-            System.out.print("请输入您的ID：");
+            System.out.print("请输入您的ID（输入可获得随机立减哦）：");
             String ID = scan.nextLine();
+            if(ID.length() != 0)
+                isIDInput = true;
             visitor.setName(name);
             visitor.setAge(age);
             visitor.setGender(gender);
@@ -66,15 +73,18 @@ public class VisitorCreator {
                 System.out.println("请重新输入您的个人信息！");
             }
         }
-        int discount = (int) (Math.random() * 10 + 1);
-        System.out.println("门票价格为150元，但是碍于您可爱的容颜，所以给您立减" + discount + "元");
+        int discount = 0;
+        if(isIDInput) {
+            discount = (int) (Math.random() * 10 + 1);
+            System.out.println("门票价格为150元，但是碍于您可爱的容颜，所以给您立减" + discount + "元");
+        }
         Expression origin = new TerminalExpressionNumber(150),
                 dis = new TerminalExpressionNumber(-discount);
 
         Expression finalResult = new Add(origin, dis);
         int result = finalResult.interpret();
 
-        System.out.println("所以本次票价为：" + result + "元。");
+        System.out.println("本次票价为：" + result + "元。");
 
         System.out.println("正在出票，请稍后");
 
