@@ -46,4 +46,18 @@ public class RecordCaretaker
         this.states.remove(index);
         this.index--;
     }
+
+    /**
+     * 打印备忘录
+     */
+    public void printRecord(){
+        int i = 0;
+        System.out.println("   昵称  得分");
+        for(MementoIF mementoIF : states) {
+            System.out.print("记录" + i + " : ");
+            mementoIF.print();
+            i++;
+        }
+    }
+
 }

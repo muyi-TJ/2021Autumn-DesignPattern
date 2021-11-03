@@ -21,7 +21,7 @@ public class Clock {
     }
 
     private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    private static Date startDate = new Date();
+    private static Date startDate;
     private static Date nowTime = new Date();
     private static Date realStartTime;
     private static Date noon;
@@ -34,12 +34,13 @@ public class Clock {
      * @return 单例实体
      */
     public static Clock getInstance() throws ParseException {
+        startDate = new Date();
         SimpleDateFormat currentDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String startYMD =  currentDateFormat.format(startDate);
         nowTime = currentDateFormat.parse(startYMD);
         addTime(8 * 60 * 60);
-        noon = new Date(nowTime.getTime() + 12 * 60 * 1000L);
-        night = new Date(nowTime.getTime() + 18 * 60 * 1000L);
+        noon = new Date(nowTime.getTime() + 4 * 60 * 1000L);
+        night = new Date(nowTime.getTime() + 10 * 60 * 1000L);
         realStartTime = new Date();
         return instance;
     }

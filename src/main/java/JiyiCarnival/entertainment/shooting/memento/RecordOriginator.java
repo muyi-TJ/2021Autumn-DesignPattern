@@ -96,5 +96,9 @@ public class RecordOriginator
         {
             return score;
         }
+
+        public void print(){
+            System.out.println(nickName + "   " + score + "分");
+        }
     }
 }

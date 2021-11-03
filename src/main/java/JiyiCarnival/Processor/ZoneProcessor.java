@@ -4,6 +4,7 @@ import JiyiCarnival.base.ticketing.converter.Ticket;
 import JiyiCarnival.entertainment.animalshow.state.*;
 import JiyiCarnival.entertainment.hotairballoon.adapter.HotAirBalloonAdapter;
 import JiyiCarnival.entertainment.movice.flyweight.Movice;
+import JiyiCarnival.entertainment.shooting.memento.ShootingUI;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.ChainOfResponsibility;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.Request;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.SlideHandler;
@@ -60,6 +61,8 @@ public class ZoneProcessor {
                     slideChain.handleVisitorRequest(request);
                     break;
                 case 2:
+                    ShootingUI shootingUI = new ShootingUI();
+                    shootingUI.flowControl();
                     break;
                 case 3:
                     break;
