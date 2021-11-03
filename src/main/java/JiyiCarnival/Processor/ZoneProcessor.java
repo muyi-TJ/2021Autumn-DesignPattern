@@ -1,6 +1,7 @@
 package JiyiCarnival.Processor;
 
 import JiyiCarnival.base.ticketing.converter.Ticket;
+import JiyiCarnival.entertainment.animalshow.state.*;
 import JiyiCarnival.entertainment.hotairballoon.adapter.HotAirBalloonAdapter;
 import JiyiCarnival.entertainment.movice.flyweight.Movice;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.ChainOfResponsibility;
@@ -12,6 +13,7 @@ import JiyiCarnival.util.visitor.Visitor;
 public class ZoneProcessor {
     private Visitor visitor = new Visitor();
     private Ticket ticket = new Ticket();
+    private String[] names = {"寻梦环游记", "花木兰", "精灵旅社", "精灵旅社2"};
     public ZoneProcessor(){};
     public ZoneProcessor(Visitor visitor, Ticket ticket){
         this.ticket = ticket;
@@ -123,11 +125,19 @@ public class ZoneProcessor {
             choice = Input.input();
             switch (choice){
                 case 1:
-                    String[] names = {"寻梦环游记", "花木兰", "精灵旅社", "精灵旅社2"};
                     Movice movice = new Movice(names);
                     movice.play(visitor);
                     break;
                 case 2:
+                    AnimalShow animalShow = new AnimalShow();
+                    BeginShowState beginShowState = new BeginShowState();
+                    EndShowState endShowState = new EndShowState();
+                    FailState failState = new FailState();
+                    SucceedState succeedState = new SucceedState();
+                    beginShowState.printAction(animalShow);
+                    failState.printAction(animalShow);
+                    succeedState.printAction(animalShow);
+                    endShowState.printAction(animalShow);
                     break;
                 case 3:
                     break;

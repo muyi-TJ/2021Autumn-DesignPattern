@@ -10,7 +10,7 @@ public class BeginShowState implements State
 {
 
     /**
-     * 动物表演状态改变为进行中，行为变化
+     * 动物表演状态改变为进行中，行为变化 测试模式
      *
      * @param animalShow 动物表演对象
      */
@@ -33,5 +33,17 @@ public class BeginShowState implements State
                 String.valueOf(System.identityHashCode(this)),
                 text
         );
+    }
+
+
+    /**
+     * 动物表演状态改变为失败，行为变化 游乐园模式
+     *
+     * @param animalShow 动物表演对象
+     */
+    public void printAction(AnimalShow animalShow) throws InterruptedException {
+        System.out.println("表演已经开始啦！");
+        Thread.sleep(1000);
+        animalShow.setState(this);
     }
 }
