@@ -49,11 +49,15 @@ public class Image2Str {
      * @param threshold 灰度阈值 超过即设置为space
      * @return 图片字符串
      */
-    public static String image2str(File file, int threshold) throws IOException {
+    public static String image2str(File file, int threshold, boolean isScale) throws IOException {
         String base = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMnOPQRSTUVWXYZ^&*(){}[]\\:;''<>?/~`";
         String picStr = "";
         BufferedImage imageOrigin = ImageIO.read(file);
-        BufferedImage image = resize(imageOrigin, 80, 50);
+        BufferedImage image;
+        if(isScale)
+            image = resize(imageOrigin, 80, 50);
+        else
+            image = imageOrigin;
         for (int y = 0; y < image.getHeight(); y += 1) {
             StringBuilder linePixel = new StringBuilder ();
             for (int x = 0; x < image.getWidth(); x += 1) {

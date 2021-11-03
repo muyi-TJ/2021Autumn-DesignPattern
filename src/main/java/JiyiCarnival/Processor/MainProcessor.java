@@ -13,7 +13,7 @@ import JiyiCarnival.util.visitor.Visitor;
  * 早晨游玩处理器类
  */
 
-public class MorningProcessor {
+public class MainProcessor {
     private Visitor visitor = JiyiCarnival.getVisitor();
     private Ticket ticket = JiyiCarnival.getTicket();
 
@@ -44,6 +44,8 @@ public class MorningProcessor {
         System.out.println("--------------------------------------------");
         ZoneProcessor zoneProcessor=new ZoneProcessor();
         zoneProcessor.freeRoute();
+
+
 
     }
 }
