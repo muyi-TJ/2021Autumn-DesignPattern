@@ -46,6 +46,10 @@ public class Visitor implements Walkable
         this.height = height;
     }
 
+    public Visitor(String name) {
+        this.name = name;
+    }
+
     /**
      * 获取游客姓名
      *
