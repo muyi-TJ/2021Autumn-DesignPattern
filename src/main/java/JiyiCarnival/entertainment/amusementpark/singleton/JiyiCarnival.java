@@ -5,8 +5,11 @@ import JiyiCarnival.Processor.MainProcessor;
 import JiyiCarnival.base.ticketing.converter.Ticket;
 import JiyiCarnival.base.website.frontcontroller.WebsiteUI;
 import JiyiCarnival.util.input.Input;
+import JiyiCarnival.util.time.Clock;
 import JiyiCarnival.util.visitor.Visitor;
 import JiyiCarnival.util.visitor.VisitorCreator;
+
+import java.text.ParseException;
 
 /**
  * @author muyi
@@ -20,6 +23,15 @@ public class JiyiCarnival
     private static Ticket ticket;
     private static String weather = "晴天";
     private static int temperature = (int) Math.round(Math.random() * 10 + 30);
+    private static Clock clock;
+
+    static {
+        try {
+            clock = Clock.getInstance();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
 
     /**
      * 提供私有的构造函数，使其不会被实例化

@@ -26,11 +26,12 @@ public class MainProcessor {
         System.out.println("为了更好的娱乐体验，" + visitor.getName() + "决定提前一天到达游乐园，并在预定的宾馆中休息了一晚。");
         for(int i = 0; i < 15; i++){
             System.out.print('.');
-            Thread.sleep(100);
+            Thread.sleep(200);
         }
         System.out.println("\n天已经亮了！");
+        Thread.sleep(500);
         System.out.println("今天是个" + JiyiCarnival.getWeather() +
-                "，尽管温度已经到达了" + JiyiCarnival.getTemperature() + "，但是，这依然是个好天气呢！");
+                "，尽管温度已经到达了" + JiyiCarnival.getTemperature() + "摄氏度，但是，这依然是个好天气呢！");
 
         System.out.println("尊敬的游客，请您先将车停到停车场中。");
         CarDetectMachine detectMachine = new CarDetectMachine(1000, 666);
@@ -44,8 +45,6 @@ public class MainProcessor {
         System.out.println("--------------------------------------------");
         ZoneProcessor zoneProcessor=new ZoneProcessor();
         zoneProcessor.freeRoute();
-
-
 
     }
 }

@@ -53,7 +53,8 @@ public abstract class SlideHandler
     /**
      * 事件处理
      */
-    protected abstract void handle();
+    protected abstract void handleLog();
+    protected abstract void handlePrint();
 
     /**
      * @param request 游客所发起的请求
@@ -62,7 +63,7 @@ public abstract class SlideHandler
     {
         if (this.step <= request.getStep())
         {
-            this.handle();
+            this.handleLog();
         }
         if (this.nextStep != null)
         {

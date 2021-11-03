@@ -20,7 +20,7 @@ public class Enter extends SlideHandler
      * 输出当前需要进行的处理信息
      */
     @Override
-    protected void handle()
+    protected void handleLog()
     {
         Output.output(this.getClass().toString(),
                 "handle",
@@ -29,4 +29,13 @@ public class Enter extends SlideHandler
         );
     }
 
+    @Override
+    protected void handlePrint()
+    {
+        Output.output(this.getClass().toString(),
+                "handle",
+                String.valueOf(System.identityHashCode(this)),
+                "游客进入水上滑梯"
+        );
+    }
 }
