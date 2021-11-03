@@ -8,7 +8,12 @@ package JiyiCarnival.entertainment.parade.strategy;
 public interface ParadeRoute
 {
     /**
-     * 巡游
+     * 巡游 测试模式
      */
     void parade();
+
+    /**
+     * 巡游 游乐园模式
+     */
+    void print() throws InterruptedException;
 }

@@ -15,6 +15,9 @@ import JiyiCarnival.entertainment.facilityspecification.specification.VisitorHei
 import JiyiCarnival.entertainment.firework.bridge.FireworkControl;
 import JiyiCarnival.entertainment.hotairballoon.adapter.HotAirBalloonAdapter;
 import JiyiCarnival.entertainment.movice.flyweight.Movice;
+import JiyiCarnival.entertainment.parade.strategy.ParadeRoute;
+import JiyiCarnival.entertainment.parade.strategy.ParadeUI;
+import JiyiCarnival.entertainment.parade.strategy.RouteOne;
 import JiyiCarnival.entertainment.shooting.memento.ShootingUI;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.ChainOfResponsibility;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.Request;
@@ -161,7 +164,7 @@ public class ZoneProcessor {
             }
         }
     }
-    public void fantasyWorld(){
+    public void fantasyWorld() throws InterruptedException {
         System.out.println("欢迎来到幻想世界");
         int choice = 1;
         while(choice>0){
@@ -190,6 +193,8 @@ public class ZoneProcessor {
                     axis.operate();
                     break;
                 case 3:
+                    ParadeUI paradeUI = new ParadeUI();
+                    paradeUI.flowControl();
                     break;
                 case 4:
                     FireworkControl fireworkControl = new FireworkControl();
