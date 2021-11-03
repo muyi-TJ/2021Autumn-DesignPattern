@@ -22,15 +22,15 @@ public class AndSpecification<T> extends CompositeSpecification<T>
     public boolean isSatisfiedBy(T item)
     {
         boolean res = specification1.isSatisfiedBy(item) && specification2.isSatisfiedBy(item);
-        String msg = res ?
-                "满足当前‘和’规约" :
-                "不满足当前'和'规约";
-//        System.out.println(msg);
-        Output.output(this.getClass().toString(),
-                "isSatisfiedBy",
-                String.valueOf(System.identityHashCode(this)),
-                msg
-        );
+//        String msg = res ?
+//                "满足当前‘和’规约" :
+//                "不满足当前'和'规约";
+////        System.out.println(msg);
+//        Output.output(this.getClass().toString(),
+//                "isSatisfiedBy",
+//                String.valueOf(System.identityHashCode(this)),
+//                msg
+//        );
         return res;
     }
 }

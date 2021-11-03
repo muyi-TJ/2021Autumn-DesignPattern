@@ -18,11 +18,11 @@ public class NotSpecification<T> extends CompositeSpecification<T>
     public boolean isSatisfiedBy(T item)
     {
         boolean res = !specification.isSatisfiedBy(item);
-        String msg = res ?
-                "满足当前‘否’规约" :
-                "不满足当前'否'规约";
-
-        System.out.println(msg);
+//        String msg = res ?
+//                "满足当前‘否’规约" :
+//                "不满足当前'否'规约";
+//
+//        System.out.println(msg);
         return res;
     }
 }
