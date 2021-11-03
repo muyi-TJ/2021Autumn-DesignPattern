@@ -1,4 +1,4 @@
-package JiyiCarnival.service.securityCheck.facade;
+package JiyiCarnival.service.securitycheck.facade;
 
 import JiyiCarnival.Output;
 
@@ -45,4 +45,20 @@ public class SecurityCheckFacade
         personalBelongingCheck.checkPersonalBelongings();
         personalSecurityCheck.personalSecurityCheck();
     }
+
+    public void ordinaryCustomerSecurityCheckPrint() throws InterruptedException {
+        ticketCheck.ticketCheckPrint();
+        personalBelongingCheck.checkPersonalBelongingsPrint();
+        personalSecurityCheck.personalSecurityCheckPrint();
+    }
+
+
+    public void specialCustomerSecurityCheckPrint() throws InterruptedException {
+        ticketCheck.ticketCheckPrint();
+        certificateCheck.checkCertificatePrint();
+        personalBelongingCheck.checkPersonalBelongingsPrint();
+        personalSecurityCheck.personalSecurityCheckPrint();
+    }
+
+
 }
