@@ -9,6 +9,9 @@ import JiyiCarnival.business.souvenirshop.decorator.*;
 import JiyiCarnival.entertainment.animalshow.state.*;
 import JiyiCarnival.entertainment.carousel.composite.Axis;
 import JiyiCarnival.entertainment.carousel.composite.Horse;
+import JiyiCarnival.entertainment.facilityspecification.specification.Specification;
+import JiyiCarnival.entertainment.facilityspecification.specification.VisitorAgeSpecification;
+import JiyiCarnival.entertainment.facilityspecification.specification.VisitorHeightSpecification;
 import JiyiCarnival.entertainment.firework.bridge.FireworkControl;
 import JiyiCarnival.entertainment.hotairballoon.adapter.HotAirBalloonAdapter;
 import JiyiCarnival.entertainment.movice.flyweight.Movice;
@@ -71,9 +74,18 @@ public class ZoneProcessor {
             choice = Input.input();
             switch (choice){
                 case 1:
-                    SlideHandler slideChain = ChainOfResponsibility.getChainOfSlide(visitor);
-                    Request request = new Request(4);
-                    slideChain.handleVisitorRequest(request);
+                    System.out.println("欢迎来到水上滑梯大型游玩项目！\n");
+                    System.out.println("为了您的人身安全，请在游玩前确保您已满足游玩条件：儿童年龄不得低于12岁，身高不得小于140cm。满足游玩条件后请前往售票处购票，祝您游玩愉快！\n");
+                    System.out.println("游客规约检测loading……");
+                    Specification<Visitor> specificationOne = (new VisitorAgeSpecification(12)).and(new VisitorHeightSpecification(140.0D));
+                    if(specificationOne.isSatisfiedBy(visitor)){
+                        SlideHandler slideChain = ChainOfResponsibility.getChainOfSlide(visitor);
+                        Request request = new Request(4);
+                        slideChain.handleVisitorRequest(request);
+                    }
+                    else{
+                        System.out.println("非常抱歉，您并未满足游玩条件，可以选择游玩其他项目，祝您游玩愉快！");
+                    }
                     break;
                 case 2:
                     ShootingUI shootingUI = new ShootingUI();
@@ -157,9 +169,18 @@ public class ZoneProcessor {
             choice = Input.input();
             switch (choice){
                 case 1:
-                    HotAirBalloonAdapter hotAirBalloonAdapter = new HotAirBalloonAdapter();
-                    hotAirBalloonAdapter.setVisitor(visitor);
-                    hotAirBalloonAdapter.fly();
+                    System.out.println("欢迎来到热气球大型游玩项目！\n");
+                    System.out.println("为了您的人身安全，请在游玩前确保您已满足游玩条件：儿童年龄不得低于14岁，老人年龄不得大于60岁。满足游玩条件后请前往售票处购票，祝您游玩愉快！\n");
+                    System.out.println("游客规约检测loading……");
+                    Specification<Visitor> specificationOne = (new VisitorAgeSpecification(14)).and(new VisitorAgeSpecification(80).not());
+                    if(specificationOne.isSatisfiedBy(visitor)){
+                        HotAirBalloonAdapter hotAirBalloonAdapter = new HotAirBalloonAdapter();
+                        hotAirBalloonAdapter.setVisitor(visitor);
+                        hotAirBalloonAdapter.fly();
+                    }
+                    else{
+                        System.out.println("非常抱歉，您并未满足游玩条件，可以选择游玩其他项目，祝您游玩愉快！");
+                    }
                     break;
                 case 2:
                     Axis axis = new Axis(1);
