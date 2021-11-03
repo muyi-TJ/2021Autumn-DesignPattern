@@ -32,4 +32,11 @@ public class Waiter
             order.execute();
         }
     }
+    public void visitorNotify()
+    {
+        for (Order order : list)
+        {
+            order.visitorExecute();
+        }
+    }
 }

@@ -1,4 +1,4 @@
-package JiyiCarnival.service.securitycheck.facade;
+package JiyiCarnival.service.securityCheck.facade;
 
 import JiyiCarnival.Output;
 

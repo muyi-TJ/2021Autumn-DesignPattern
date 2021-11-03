@@ -4,7 +4,7 @@ package JiyiCarnival.facade;
  * 测试类
  */
 
-import JiyiCarnival.service.securitycheck.facade.SecurityCheckFacade;
+import JiyiCarnival.service.securityCheck.facade.SecurityCheckFacade;
 import org.junit.Test;
 
 public class FacadeTest

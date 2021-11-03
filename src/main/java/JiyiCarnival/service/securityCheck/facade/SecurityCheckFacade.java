@@ -1,4 +1,4 @@
-package JiyiCarnival.service.securitycheck.facade;
+package JiyiCarnival.service.securityCheck.facade;
 
 import JiyiCarnival.Output;
 
@@ -8,9 +8,9 @@ import JiyiCarnival.Output;
  */
 public class SecurityCheckFacade
 {
-    PersonalSecurityCheck personalSecurityCheck = new PersonalSecurityCheck();
-    TicketCheck ticketCheck = new TicketCheck();
-    CertificateCheck certificateCheck = new CertificateCheck();
+    JiyiCarnival.service.securitycheck.facade.PersonalSecurityCheck personalSecurityCheck = new JiyiCarnival.service.securitycheck.facade.PersonalSecurityCheck();
+    JiyiCarnival.service.securitycheck.facade.TicketCheck ticketCheck = new JiyiCarnival.service.securitycheck.facade.TicketCheck();
+    JiyiCarnival.service.securitycheck.facade.CertificateCheck certificateCheck = new JiyiCarnival.service.securitycheck.facade.CertificateCheck();
     PersonalBelongingCheck personalBelongingCheck = new PersonalBelongingCheck();
 
     /**
