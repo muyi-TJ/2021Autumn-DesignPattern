@@ -3,6 +3,7 @@ package JiyiCarnival.util.visitor;
 import JiyiCarnival.base.ticketing.converter.Converter;
 import JiyiCarnival.base.ticketing.converter.Ticket;
 import JiyiCarnival.base.ticketing.converter.VisitorConverter;
+import JiyiCarnival.service.ticketprice.interpreter.*;
 import JiyiCarnival.util.input.Input;
 
 import java.util.Scanner;
@@ -65,7 +66,18 @@ public class VisitorCreator {
                 System.out.println("请重新输入您的个人信息！");
             }
         }
+        int discount = (int) (Math.random() * 10 + 1);
+        System.out.println("门票价格为150元，但是碍于您可爱的容颜，所以给您立减" + discount + "元");
+        Expression origin = new TerminalExpressionNumber(150),
+                dis = new TerminalExpressionNumber(-discount);
+
+        Expression finalResult = new Add(origin, dis);
+        int result = finalResult.interpret();
+
+        System.out.println("所以本次票价为：" + result + "元。");
+
         System.out.println("正在出票，请稍后");
+
         for(int i=0; i<6; i++){
             System.out.print('.');
             Thread.sleep(500);
