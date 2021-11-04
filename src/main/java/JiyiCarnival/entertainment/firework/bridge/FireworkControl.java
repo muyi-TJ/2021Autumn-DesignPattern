@@ -11,7 +11,7 @@ public class FireworkControl extends Controller {
     /**
      * 流程控制
      */
-    public void flowControl(){
+    public void flowControl() throws InterruptedException {
         if(!Clock.timeCheck(18, 22)){
             Clock.printNowTime();
             System.out.print("尊敬的游客，很抱歉！现在不在观看烟花的时间哦！");

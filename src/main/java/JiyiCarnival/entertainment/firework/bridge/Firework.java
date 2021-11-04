@@ -23,7 +23,7 @@ public abstract class Firework
      */
     public abstract void letOff();
 
-    public abstract void letOffPrint();
+    public abstract void letOffPrint() throws InterruptedException;
 
 
 }

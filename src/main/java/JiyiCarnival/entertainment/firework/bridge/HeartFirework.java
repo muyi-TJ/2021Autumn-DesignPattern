@@ -21,6 +21,6 @@ public class HeartFirework extends Firework
     }
 
     @Override
-    public void letOffPrint(){super.color.letOff(shape);}
+    public void letOffPrint() throws InterruptedException {super.color.letOff(shape);}
 
 }
