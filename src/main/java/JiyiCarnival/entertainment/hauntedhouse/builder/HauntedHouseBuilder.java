@@ -28,12 +28,13 @@ public abstract class HauntedHouseBuilder
 
     public HauntedHouse build()
     {
-        Output.output(
-                this.getClass().toString(),
-                "initialize",
-                String.valueOf(System.identityHashCode(this)),
-                "以" + theFirstPart + "的第一路段、" + theSecondPart + "的第二路段、" + theThirdPart + "的第三路段规划鬼屋路线"
-        );
+//        Output.output(
+//                this.getClass().toString(),
+//                "initialize",
+//                String.valueOf(System.identityHashCode(this)),
+//                "以" + theFirstPart + "的第一路段、" + theSecondPart + "的第二路段、" + theThirdPart + "的第三路段规划鬼屋路线"
+//        );
+//        System.out.println("以" + theFirstPart + "的第一路段、" + theSecondPart + "的第二路段、" + theThirdPart + "的第三路段规划鬼屋路线");
         return new HauntedHouse(theFirstPart, theSecondPart, theThirdPart);
     }
 }
