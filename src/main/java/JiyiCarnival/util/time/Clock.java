@@ -44,8 +44,7 @@ public class Clock {
     }
 
     /**
-     * 获得当前时间
-     * @return 当前时间
+     * 打印当前时间
      */
    public static void printNowTime(){
         Date realNowTime = new Date();
@@ -65,18 +64,24 @@ public class Clock {
 
     /**
      * 检验时间是否允许
-     * @param startHour
-     * @param endHour
+     * @param startHour 开始时间
+     * @param endHour 结束时间
      * @return 允许则返回true 否则为false
      */
     public static boolean timeCheck(int startHour, int endHour){
         Date startTime = new Date(baseTime.getTime() + startHour * 60 * 60);
-        Date EndTime = new Date(baseTime.getTime() + endHour * 60 * 60);
-        if(nowTime.after(startTime) && nowTime.before(baseTime)){
+        Date endTime = new Date(baseTime.getTime() + endHour * 60 * 60);
+        if(nowTime.after(startTime) && nowTime.before(endTime)){
             return true;
         }
         else
             return false;
+    }
+
+
+    public static boolean isClosed(){
+        Date closeDate = new Date(baseTime.getTime() + 22 * 60 * 60);
+        return nowTime.after(closeDate);
     }
 
 
