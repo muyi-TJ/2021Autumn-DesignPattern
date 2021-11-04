@@ -7,6 +7,10 @@ import JiyiCarnival.base.parkinglot.observe.Screen;
 import JiyiCarnival.base.ticketing.converter.Ticket;
 import JiyiCarnival.business.hotel.callback.UnsubscribeControl;
 import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
+import JiyiCarnival.entertainment.equipments.visitor.Equipment;
+import JiyiCarnival.entertainment.equipments.visitor.UncheckedEquipment;
+import JiyiCarnival.entertainment.equipments.visitor.UncheckedEquipmentDisplayVisitor;
+import JiyiCarnival.entertainment.equipments.visitor.UncheckedEquipmentInspectVisitor;
 import JiyiCarnival.service.securitycheck.facade.SecurityCheckFacade;
 import JiyiCarnival.util.time.Clock;
 import JiyiCarnival.util.visitor.Visitor;
@@ -35,8 +39,14 @@ public class MainProcessor {
         Thread.sleep(500);
         System.out.println("今天是个" + JiyiCarnival.getWeather() +
                 "，尽管温度已经到达了" + JiyiCarnival.getTemperature() + "摄氏度，但是，这依然是个好天气呢！");
-
-        System.out.println("尊敬的游客，请您先将车停到停车场中。");
+        System.out.println("-----------------------------------------------------");
+        System.out.println("(济忆嘉年华开园前，园内管理员正仔细检查各个大型游乐设施……)");
+        UncheckedEquipment equipment = new Equipment();
+        equipment.accept(new UncheckedEquipmentDisplayVisitor());
+        equipment.accept(new UncheckedEquipmentInspectVisitor());
+        System.out.println("-----------------------------------------------------");
+        System.out.println("您驾车来到了停车场……");
+        System.out.println("‘尊敬的游客，请您先将车停到停车场中。’");
         CarDetectMachine detectMachine = new CarDetectMachine(1000, 666);
         Screen screen = new Screen(detectMachine);
         Broadcaster broadcaster = new Broadcaster(detectMachine);
@@ -47,7 +57,7 @@ public class MainProcessor {
 
         SecurityCheckFacade securityCheckFacade = new SecurityCheckFacade();
         System.out.println("尊敬的游客，请先进入安检！");
-        if(visitor.getID().length() == 0)
+         if(visitor.getID().length() == 0)
             securityCheckFacade.ordinaryCustomerSecurityCheckPrint();
         else
             securityCheckFacade.specialCustomerSecurityCheckPrint();
