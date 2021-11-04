@@ -1,27 +1,20 @@
 package JiyiCarnival.util;
 
 
-import JiyiCarnival.entertainment.stage.abstractfactory.StageUI;
-import JiyiCarnival.util.input.Input;
-import JiyiCarnival.util.strvideo.Image2Str;
+import JiyiCarnival.entertainment.carousel.composite.HorseControl;
 import JiyiCarnival.util.strvideo.StrVideo;
-import JiyiCarnival.util.time.Clock;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-
-        int a = Input.input();
-        System.out.println("a:" + a +"|end");
-        StageUI stageUI = new StageUI();
-        stageUI.flowControl();
-        //Video2Image.video2Image("G:\\temp\\3.mp4","G:\\temp\\pics", "hello");
+        HorseControl horseControl = new HorseControl();
+        horseControl.flowControl();
+        //Video2Image.video2Image("src\\main\\java\\JiyiCarnival\\video\\parking.mp4","src\\main\\java\\JiyiCarnival\\imgs\\parking", "parking");
 
         //Image2Str.createAsciiPic("G:\\temp\\pics","G:\\temp\\a.txt");
         // Video2Image.video2Image("G:\\temp\\1.mp4","G:\\temp\\pics", "hello");
-        StrVideo strVideo = new StrVideo();
-        //strVideo.play(255);
-        String content = strVideo.showStrImage("G:\\大学作业\\大三\\软件设计模式\\project\\2021Autumn-DesignPattern\\src\\main\\java\\JiyiCarnival\\imgs\\66_99.png", 255, false);
-        System.out.println(content);
+        StrVideo strVideo = new StrVideo("src\\main\\java\\JiyiCarnival\\imgs\\parking");
+        strVideo.play(254, true);
+        //strVideo.showStrImage("src\\main\\java\\JiyiCarnival\\imgs\\66_99.png", 255, true);
 
     }
 }

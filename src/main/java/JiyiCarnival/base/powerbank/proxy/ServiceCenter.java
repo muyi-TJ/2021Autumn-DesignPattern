@@ -26,7 +26,7 @@ public class ServiceCenter implements PowerBankProvider
                     "顾客获得了" + num + "个充电宝");
         }
         else {
-            System.out.println("顾客获得了" + num + "个充电宝");
+            System.out.println("游客获得了" + num + "个充电宝");
         }
     }
 }

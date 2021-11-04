@@ -16,8 +16,7 @@ public class Axis extends ArrayList<Component> implements Component
         this.outputType = outputType;
     }
     @Override
-    public void operate()
-    {
+    public void operate() throws InterruptedException {
         if (outputType == 0) {
             Output.output(this.getClass().toString(),
                     "operate",
@@ -25,7 +24,7 @@ public class Axis extends ArrayList<Component> implements Component
                     "旋转木马中轴开始旋转");
         }
         else {
-            System.out.println("旋转木马中轴开始旋转");
+            System.out.println("旋转木马开始旋转啦...");
         }
 
         for (Component component : this)

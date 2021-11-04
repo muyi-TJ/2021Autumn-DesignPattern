@@ -2,6 +2,7 @@ package JiyiCarnival.entertainment.shooting.memento;
 
 import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
 import JiyiCarnival.entertainment.hotairballoon.adapter.HotAirBalloonAdapter;
+import JiyiCarnival.util.control.Controller;
 import JiyiCarnival.util.input.Input;
 
 import java.util.Scanner;
@@ -10,7 +11,7 @@ import java.util.Scanner;
  * @author WKATZZL
  * shooting 射击的UI
  */
-public class ShootingUI {
+public class ShootingUI extends Controller {
     public void ShootingUI(){}
 
     /**

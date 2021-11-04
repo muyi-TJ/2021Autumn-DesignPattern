@@ -6,10 +6,12 @@ import JiyiCarnival.base.ticketing.converter.Ticket;
 import JiyiCarnival.base.website.frontcontroller.WebsiteUI;
 import JiyiCarnival.entertainment.shooting.memento.RecordCaretaker;
 import JiyiCarnival.util.input.Input;
+import JiyiCarnival.util.strvideo.StrVideo;
 import JiyiCarnival.util.time.Clock;
 import JiyiCarnival.util.visitor.Visitor;
 import JiyiCarnival.util.visitor.VisitorCreator;
 
+import java.io.IOException;
 import java.text.ParseException;
 
 /**
@@ -26,6 +28,9 @@ public class JiyiCarnival
     private static int temperature = (int) Math.round(Math.random() * 10 + 30);
     private static Clock clock;
     private static RecordCaretaker recordCaretaker = new RecordCaretaker();
+    private static StrVideo strVideo = new StrVideo();
+
+
 
     static {
         try {
@@ -51,6 +56,7 @@ public class JiyiCarnival
         return instance;
     }
 
+
     /**
      * 显示信息函数
      */
@@ -70,6 +76,8 @@ public class JiyiCarnival
     public void setVisitor(Visitor visitor){
         this.visitor = visitor;
     }
+
+    public static StrVideo getStrVideo(){return strVideo;}
 
     /**
      * 设置游乐园游客
@@ -95,7 +103,7 @@ public class JiyiCarnival
      * 设置时间
      * @throws ParseException
      */
-    public void setClock() throws ParseException {
+    public static void setClock() throws ParseException {
         clock = Clock.getInstance();
     }
 
@@ -111,7 +119,7 @@ public class JiyiCarnival
     /**
      * 游乐园流程控制器
      */
-    public void flowControl() throws InterruptedException {
+    public void flowControl() throws InterruptedException, IOException, ParseException {
         int web_choice = websiteUI.website();
         if(web_choice == 5)
             return;
