@@ -1,5 +1,6 @@
 package JiyiCarnival.Processor;
 
+import JiyiCarnival.base.bikes.mediator.BikesUI;
 import JiyiCarnival.base.broadcast.eventqueue.Broadcast;
 import JiyiCarnival.base.broadcast.eventqueue.Message;
 import JiyiCarnival.base.bulletinboard.blackboard.BulletinBoardControl;
@@ -14,6 +15,7 @@ import JiyiCarnival.entertainment.activate.Template.ActivityUI;
 import JiyiCarnival.entertainment.animalshow.state.*;
 import JiyiCarnival.entertainment.carousel.composite.HorseControl;
 import JiyiCarnival.entertainment.firework.bridge.FireworkControl;
+import JiyiCarnival.entertainment.hauntedhouse.builder.HauntedHouseUI;
 import JiyiCarnival.entertainment.hotairballoon.adapter.HotAirBalloonControl;
 import JiyiCarnival.entertainment.movice.flyweight.MovieControl;
 import JiyiCarnival.entertainment.parade.strategy.ParadeUI;
@@ -86,6 +88,8 @@ public class ZoneProcessor {
                 case 3:
                     break;
                 case 4:
+                    HauntedHouseUI hauntedHouseUI = new HauntedHouseUI();
+                    hauntedHouseUI.flowControl();
                     return;
                 default:
                     System.out.println("输入有误，请重新输入");
@@ -193,6 +197,8 @@ public class ZoneProcessor {
             choice = Input.input();
             switch (choice){
                 case 1:
+                    BikesUI bikesUI = new BikesUI();
+                    bikesUI.flowControl();
                     break;
                 case 2:
                     PowerBankControl powerBankControl = new PowerBankControl();
