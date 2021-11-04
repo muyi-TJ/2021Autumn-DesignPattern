@@ -19,4 +19,9 @@ public class OnlineRecruitChannel implements RecruitChannel
                 "Publish Online: " + recruitment.message
         );
     }
+
+    @Override
+    public void publishPrint(Recruitment recruitment) {
+        System.out.println(recruitment.message);
+    }
 }
