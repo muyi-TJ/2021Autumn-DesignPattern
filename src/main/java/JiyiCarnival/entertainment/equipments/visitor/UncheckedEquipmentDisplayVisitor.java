@@ -14,44 +14,44 @@ public class UncheckedEquipmentDisplayVisitor implements UncheckedEquipmentVisit
     @Override
     public void visit(Equipment equipment)
     {
-//        System.out.println("Displaying equipments unchecked.");
-        Output.output(this.getClass().toString(),
-                "visit",
-                String.valueOf(System.identityHashCode(this)),
-                "Displaying equipments unchecked."
-        );
+        System.out.println("显示当前未检查的设备 >>");
+//        Output.output(this.getClass().toString(),
+//                "visit",
+//                String.valueOf(System.identityHashCode(this)),
+//                "Displaying equipments unchecked."
+//        );
     }
 
     @Override
     public void visit(EquipmentOne equipmentOne)
     {
-//        System.out.println("EquipmentOne unchecked.");
-        Output.output(this.getClass().toString(),
-                "visit",
-                String.valueOf(System.identityHashCode(this)),
-                "EquipmentOne unchecked."
-        );
+        System.out.println("旋转木马 尚未检查");
+//        Output.output(this.getClass().toString(),
+//                "visit",
+//                String.valueOf(System.identityHashCode(this)),
+//                "EquipmentOne unchecked."
+//        );
     }
 
     @Override
     public void visit(EquipmentTwo equipmentTwo)
     {
-//        System.out.println("EquipmentTwo unchecked.");
-        Output.output(this.getClass().toString(),
-                "visit",
-                String.valueOf(System.identityHashCode(this)),
-                "EquipmentTwo unchecked."
-        );
+        System.out.println("水上滑梯 尚未检查");
+//        Output.output(this.getClass().toString(),
+//                "visit",
+//                String.valueOf(System.identityHashCode(this)),
+//                "EquipmentTwo unchecked."
+//        );
     }
 
     @Override
     public void visit(EquipmentThree equipmentThree)
     {
-//        System.out.println("EquipmentThree unchecked.");
-        Output.output(this.getClass().toString(),
-                "visit",
-                String.valueOf(System.identityHashCode(this)),
-                "EquipmentThree unchecked."
-        );
+        System.out.println("热气球 尚未检查");
+//        Output.output(this.getClass().toString(),
+//                "visit",
+//                String.valueOf(System.identityHashCode(this)),
+//                "EquipmentThree unchecked."
+//        );
     }
 }
