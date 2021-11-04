@@ -212,7 +212,7 @@ public class ZoneProcessor {
         System.out.println("欢迎来到好莱坞");
         int choice = 1;
         while(choice>0){
-            System.out.println("请选择项目：\n[1] 电影\n[2] 动物表演\n[3] 舞台\n[4] 主题活动\n[5]退出分区\n");
+            System.out.println("请选择项目：\n[1] 电影\n[2] 动物表演\n[3] 舞台演出\n[4] 主题活动\n[5] 退出分区\n");
             choice = Input.input();
             switch (choice){
                 case 1:
