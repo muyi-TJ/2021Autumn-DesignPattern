@@ -47,10 +47,11 @@ public class Clock {
      * 获得当前时间
      * @return 当前时间
      */
-   public static String getClock(){
+   public static void printNowTime(){
         Date realNowTime = new Date();
         long time_diff = realNowTime.getTime() - realStartTime.getTime();
-        return dateFormat.format(nowTime.getTime() + time_diff);
+        String time = dateFormat.format(nowTime.getTime() + time_diff);
+        System.out.println("当前时间是：" + time);
    }
 
     /**

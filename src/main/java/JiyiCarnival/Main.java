@@ -9,9 +9,10 @@ import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
 import JiyiCarnival.util.input.Input;
 
 import java.io.IOException;
+import java.text.ParseException;
 
 public class Main {
-    public static void main(String[] args) throws InterruptedException, IOException {
+    public static void main(String[] args) throws InterruptedException, IOException, ParseException {
 
         System.out.println("欢迎来到济忆嘉年华！");
         int choice = 0;

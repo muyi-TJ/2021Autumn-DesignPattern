@@ -103,7 +103,7 @@ public class JiyiCarnival
      * 设置时间
      * @throws ParseException
      */
-    public void setClock() throws ParseException {
+    public static void setClock() throws ParseException {
         clock = Clock.getInstance();
     }
 
@@ -119,7 +119,7 @@ public class JiyiCarnival
     /**
      * 游乐园流程控制器
      */
-    public void flowControl() throws InterruptedException, IOException {
+    public void flowControl() throws InterruptedException, IOException, ParseException {
         int web_choice = websiteUI.website();
         if(web_choice == 5)
             return;

@@ -17,6 +17,7 @@ import JiyiCarnival.util.time.Clock;
 import JiyiCarnival.util.visitor.Visitor;
 
 import java.io.IOException;
+import java.text.ParseException;
 
 /**
  * @author WKATZZL
@@ -30,14 +31,18 @@ public class MainProcessor {
      * 流程控制
      * @throws InterruptedException
      */
-    public void flowControl() throws InterruptedException, IOException {
+    public void flowControl() throws InterruptedException, IOException, ParseException {
         System.out.println("--------------------------------------------");
         System.out.println("为了更好的娱乐体验，" + visitor.getName() + "决定提前一天到达游乐园，并在预定的宾馆中休息了一晚。");
         for(int i = 0; i < 15; i++){
             System.out.print('.');
             Thread.sleep(200);
         }
+        System.out.println();
+        JiyiCarnival.setClock();
+        Clock.printNowTime();
         System.out.println("\n天已经亮了！");
+        System.out.println("");
         Thread.sleep(500);
         System.out.println("今天是个" + JiyiCarnival.getWeather() +
                 "，尽管温度已经到达了" + JiyiCarnival.getTemperature() + "摄氏度，但是，这依然是个好天气呢！");
@@ -66,7 +71,7 @@ public class MainProcessor {
         System.out.println("--------------------------------------------");
         ZoneProcessor zoneProcessor = new ZoneProcessor(visitor, ticket);
         zoneProcessor.freeRoute();
-        System.out.println("当前时间为：" + Clock.getClock());
+        Clock.printNowTime();
         UnsubscribeControl unsubscribeControl = new UnsubscribeControl();
         unsubscribeControl.flowControl();
     }
