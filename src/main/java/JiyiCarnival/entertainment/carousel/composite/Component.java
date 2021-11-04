@@ -7,5 +7,5 @@ package JiyiCarnival.entertainment.carousel.composite;
 
 public interface Component
 {
-    void operate();
+    void operate() throws InterruptedException;
 }

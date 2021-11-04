@@ -21,8 +21,7 @@ public class Horse implements Component
     }
 
     @Override
-    public void operate()
-    {
+    public void operate() throws InterruptedException {
         if (outputType == 0) {
             Output.output(this.getClass().toString(),
                     "operate",
@@ -30,7 +29,12 @@ public class Horse implements Component
                     index + "号木马开始旋转");
         }
         else {
-            System.out.println(index + "号木马开始旋转");
+            System.out.print("旋转中");
+            for(int i = 0; i<3; i++){
+                System.out.print('.');
+                Thread.sleep(400);
+            }
+            System.out.println();
         }
     }
 }

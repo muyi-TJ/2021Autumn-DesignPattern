@@ -1,16 +1,13 @@
 package JiyiCarnival.util;
 
 
-import JiyiCarnival.base.bulletinboard.blackboard.BlackboardDemo;
-import JiyiCarnival.entertainment.stage.abstractfactory.StageUI;
-import JiyiCarnival.util.input.Input;
-import JiyiCarnival.util.strvideo.Image2Str;
+import JiyiCarnival.entertainment.carousel.composite.HorseControl;
 import JiyiCarnival.util.strvideo.StrVideo;
-import JiyiCarnival.util.strvideo.Video2Image;
-import JiyiCarnival.util.time.Clock;
 
 public class Main {
     public static void main(String[] args) throws Exception {
+        HorseControl horseControl = new HorseControl();
+        horseControl.flowControl();
         //Video2Image.video2Image("src\\main\\java\\JiyiCarnival\\video\\parking.mp4","src\\main\\java\\JiyiCarnival\\imgs\\parking", "parking");
 
         //Image2Str.createAsciiPic("G:\\temp\\pics","G:\\temp\\a.txt");

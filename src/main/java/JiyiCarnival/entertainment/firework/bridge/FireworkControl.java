@@ -1,10 +1,12 @@
 package JiyiCarnival.entertainment.firework.bridge;
 
+import JiyiCarnival.util.control.Controller;
+
 /**
  * @author WKATZZL
  * 烟花释放流程控制
  */
-public class FireworkControl {
+public class FireworkControl extends Controller {
     public void flowControl(){
         FlowerFirework blueFlowerFirework = new FlowerFirework(new Blue());
         HeartFirework redHeartFirework = new HeartFirework(new Red());

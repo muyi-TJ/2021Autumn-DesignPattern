@@ -1,9 +1,10 @@
 package JiyiCarnival.entertainment.parade.strategy;
 
 import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
+import JiyiCarnival.util.control.Controller;
 import JiyiCarnival.util.input.Input;
 
-public class ParadeUI {
+public class ParadeUI extends Controller {
     public void flowControl() throws InterruptedException {
         Parade parade = new Parade();
         System.out.println("尊敬的" + JiyiCarnival.getVisitor().getName() + "，请选择您的巡游路线");
