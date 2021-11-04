@@ -7,7 +7,12 @@ package JiyiCarnival.business.foodstand.factory;
 public interface Snack
 {
     /**
-     * 获取小吃
+     * 获取小吃 测试模式
      */
-    abstract void get();
+    void get();
+
+    /**
+     * 获取小吃 游乐园模式
+     */
+    void getPrint() throws InterruptedException;
 }
