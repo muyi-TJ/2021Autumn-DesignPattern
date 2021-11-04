@@ -4,6 +4,7 @@ import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
 import JiyiCarnival.entertainment.hotairballoon.adapter.HotAirBalloonAdapter;
 import JiyiCarnival.util.control.Controller;
 import JiyiCarnival.util.input.Input;
+import JiyiCarnival.util.time.Clock;
 
 import java.util.Scanner;
 
@@ -42,6 +43,11 @@ public class ShootingUI extends Controller {
      * @throws InterruptedException
      */
     public void flowControl() throws InterruptedException {
+        if(!Clock.timeCheck(18, 22)){
+            Clock.printNowTime();
+            System.out.print("尊敬的游客，很抱歉！现在不在体验射击游戏的时间哦！");
+            System.out.println("请注意查看公告栏上各游乐地点的开放时间！");
+        }
         int choice = 1;
         while(choice > 0){
             System.out.println("请选择：\n[1] 进行射击游戏\n[2] 查看记录\n[3] 退出\n");

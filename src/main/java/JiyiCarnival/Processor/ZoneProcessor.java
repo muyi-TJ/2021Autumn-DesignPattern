@@ -5,7 +5,6 @@ import JiyiCarnival.base.broadcast.eventqueue.Broadcast;
 import JiyiCarnival.base.broadcast.eventqueue.Message;
 import JiyiCarnival.base.bulletinboard.blackboard.BulletinBoardControl;
 import JiyiCarnival.base.powerbank.proxy.PowerBankControl;
-import JiyiCarnival.base.powerbank.proxy.Stuff;
 import JiyiCarnival.base.restroom.prototype.RestroomUI;
 import JiyiCarnival.base.ticketing.converter.Ticket;
 import JiyiCarnival.business.foodstand.factory.SnackBlockUI;
@@ -86,10 +85,10 @@ public class ZoneProcessor {
                     shootingUI.flowControl();
                     break;
                 case 3:
-                    break;
-                case 4:
                     HauntedHouseUI hauntedHouseUI = new HauntedHouseUI();
                     hauntedHouseUI.flowControl();
+                    break;
+                case 4:
                     return;
                 default:
                     System.out.println("输入有误，请重新输入");

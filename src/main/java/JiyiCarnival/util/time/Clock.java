@@ -69,7 +69,7 @@ public class Clock {
      * @param endHour
      * @return 允许则返回true 否则为false
      */
-    public boolean timeCheck(int startHour, int endHour){
+    public static boolean timeCheck(int startHour, int endHour){
         Date startTime = new Date(baseTime.getTime() + startHour * 60 * 60);
         Date EndTime = new Date(baseTime.getTime() + endHour * 60 * 60);
         if(nowTime.after(startTime) && nowTime.before(baseTime)){
