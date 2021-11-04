@@ -14,5 +14,5 @@ public interface LetOffAPI
     /**
      * @param shape 烟花形状 游乐园模式
      */
-    public void letOff(String shape);
+    public void letOff(String shape) throws InterruptedException;
 }

@@ -24,8 +24,9 @@ public class Sprinkler implements Item
     @Override
     public void useItemPrint() throws InterruptedException {
         System.out.println("哗哗！");
-        Thread.sleep(500);
+        Thread.sleep(1000);
         System.out.println("水花四溅！");
+        Thread.sleep(500);
     }
 
 }

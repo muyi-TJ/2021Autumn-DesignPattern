@@ -1,11 +1,12 @@
-package JiyiCarnival.entertainment.activate.Template;
+package JiyiCarnival.entertainment.activate.template;
 
+import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
 import JiyiCarnival.util.control.Controller;
 import JiyiCarnival.util.input.Input;
 
 public class ActivityUI extends Controller {
     public void flowControl() throws InterruptedException {
-        System.out.println("来得正好！有两场主题活动正在火热进行！");
+        System.out.println(JiyiCarnival.getVisitor().getName() +",来得正好！有两场主题活动马上就要开始啦！");
         int opt=1;
         while(opt>0){
             System.out.println("请选择：\n[1]生日礼遇 [2]万圣节娱乐演出 [0]离开");

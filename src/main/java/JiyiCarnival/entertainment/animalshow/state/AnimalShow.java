@@ -39,13 +39,17 @@ public class AnimalShow
     /**
      * 动物表演杂技
      */
-    public void show(){
+    public void show() throws InterruptedException {
         String animal = animals[(int) (Math.random() * animals.length)];
         String performance = performances[(int) (Math.random() * performances.length)];
         System.out.println("今日的表演是：");
         System.out.println(animal + performance + "!!!");
         // TODO 插入字符图画
         System.out.println("敬请欣赏！");
+        for(int i = 0; i < 5; i++){
+            System.out.print('.');
+            Thread.sleep(200);
+        }
     }
 
 }

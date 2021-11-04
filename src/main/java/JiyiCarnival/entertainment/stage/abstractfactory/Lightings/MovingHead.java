@@ -24,6 +24,7 @@ public class MovingHead implements Lighting
         System.out.println("铛铛！");
         Thread.sleep(500);
         System.out.println("摇头灯已经摇摆！");
+        Thread.sleep(500);
     }
 
 }

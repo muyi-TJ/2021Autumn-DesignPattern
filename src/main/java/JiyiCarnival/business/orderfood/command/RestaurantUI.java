@@ -13,16 +13,16 @@ public class RestaurantUI extends Controller {
     /**
      * 餐厅流程控制
      */
-    public void flowControl(){
+    public void flowControl() throws InterruptedException {
         Cook cook = new Cook("KFC");
         System.out.println("多种美味菜品、甜点、饮品尽在KFC！请问您需要点什么呢？");
         Formatter formatter = new Formatter(System.out);
         String []food=new String[]{"1.新奥尔良鸡腿堡🍔", "2.经典回归嫩牛五方🥩", "3.老北京鸭肉卷🌮"};
-        String []dessert=new String[]{"1.蛋挞🥚", "2.红豆派🥧", "3.圣代🍨"};
+        String []dessert=new String[]{"1.蛋挞🥚", "2.红豆派🥧", "\t3.奥利奥圣代🍨"};
         String []drink=new String[]{"1.可乐🥤","2.橙汁🧃","3.桃之恋乌龙茶🍵"};
-        formatter.format("%-8s\t\t %-8s\t %-8s\n", "菜品","甜点","饮品");
+        formatter.format("%-12s\t\t %-12s\t %-12s\n", "菜品","甜点","饮品");
         for(int i=0;i<food.length;i++)
-            formatter.format("%-8s\t %-8s\t %-8s\n", food[i], dessert[i], drink[i]);
+            formatter.format("%-12s\t %-12s\t %-12s\n", food[i], dessert[i], drink[i]);
         System.out.println("请选择一种菜品:");
         int opt1=0,opt2=0,opt3=0;
         opt1 = Input.input();

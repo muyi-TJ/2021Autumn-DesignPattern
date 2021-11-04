@@ -20,8 +20,9 @@ public class Blue implements LetOffAPI
 
     }
 
-    public void letOff(String shape){
+    public void letOff(String shape) throws InterruptedException {
         System.out.println("如" + shape + "的蓝色烟花正在空中绽放！");
+        Thread.sleep(1000);
     }
 
 

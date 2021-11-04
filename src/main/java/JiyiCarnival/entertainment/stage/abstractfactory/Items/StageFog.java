@@ -22,7 +22,8 @@ public class StageFog implements Item
     @Override
     public void useItemPrint() throws InterruptedException {
         System.out.println("斯斯！");
-        Thread.sleep(500);
+        Thread.sleep(1000);
         System.out.println("舞台烟雾缭绕，好似仙境！");
+        Thread.sleep(500);
     }
 }

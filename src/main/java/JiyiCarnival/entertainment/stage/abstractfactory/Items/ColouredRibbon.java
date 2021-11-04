@@ -22,8 +22,9 @@ public class ColouredRibbon implements Item
     @Override
     public void useItemPrint() throws InterruptedException {
        System.out.println("沙沙！");
-       Thread.sleep(500);
+       Thread.sleep(1000);
        System.out.println("彩带在空中飞舞");
+       Thread.sleep(500);
     }
 
 

@@ -24,6 +24,7 @@ public class TracingLamp implements Lighting
         System.out.println("铛铛！");
         Thread.sleep(500);
         System.out.println("追光灯正在追逐演员！");
+        Thread.sleep(500);
     }
 
 }

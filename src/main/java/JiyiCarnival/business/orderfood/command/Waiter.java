@@ -32,10 +32,14 @@ public class Waiter
             order.execute();
         }
     }
-    public void visitorNotify()
-    {
+    public void visitorNotify() throws InterruptedException {
         for (Order order : list)
         {
+            for(int i = 0; i < 5; i++){
+                System.out.print('.');
+                Thread.sleep(200);
+            }
+            System.out.println("\n");
             order.visitorExecute();
         }
     }
