@@ -3,6 +3,9 @@ package JiyiCarnival.Processor;
 import JiyiCarnival.base.broadcast.eventqueue.Broadcast;
 import JiyiCarnival.base.broadcast.eventqueue.Message;
 import JiyiCarnival.base.powerbank.proxy.Stuff;
+import JiyiCarnival.base.restroom.prototype.ManRestroom;
+import JiyiCarnival.base.restroom.prototype.Restroom;
+import JiyiCarnival.base.restroom.prototype.WomanRestroom;
 import JiyiCarnival.base.ticketing.converter.Ticket;
 import JiyiCarnival.business.orderfood.command.*;
 import JiyiCarnival.business.souvenirshop.decorator.*;
@@ -45,7 +48,9 @@ public class ZoneProcessor {
         Thread.sleep(500);
         broadcast.stop();
         while(choice>0) {
+            System.out.println("-----------------------");
             System.out.println("请选择嘉年华分区：\n[1] 刺激专场\n[2] 美食天堂\n[3] 幻想世界 \n[4] 好莱坞\n[5] 辅助设施\n[0] 退出");
+            System.out.println("-----------------------");
             choice = Input.input();
             switch (choice){
                 case 1:
@@ -71,10 +76,12 @@ public class ZoneProcessor {
         }
     }
     public void excitingZone() throws InterruptedException {
-        System.out.println("欢迎来到刺激专场");
+        System.out.println("欢迎来到刺激专场!");
         int choice = 1;
         while(choice>0){
+            System.out.println("-----------------------");
             System.out.println("请选择项目：\n[1] 水上滑梯\n[2] 射击游戏\n[3] 鬼屋 \n[4] 退出分区\n");
+            System.out.println("-----------------------");
             choice = Input.input();
             switch (choice){
                 case 1:
@@ -107,10 +114,12 @@ public class ZoneProcessor {
 
     }
     public void foodParadise(){
-        System.out.println("欢迎来到美食天堂");
+        System.out.println("欢迎来到美食天堂!");
         int choice = 1;
         while(choice>0){
+            System.out.println("-----------------------");
             System.out.println("请选择项目：\n[1] 餐厅\n[2] 小吃摊\n[3] 退出分区\n");
+            System.out.println("-----------------------");
             choice = Input.input();
             switch (choice){
                 case 1:
@@ -166,10 +175,12 @@ public class ZoneProcessor {
         }
     }
     public void fantasyWorld() throws InterruptedException {
-        System.out.println("欢迎来到幻想世界");
+        System.out.println("欢迎来到幻想世界!");
         int choice = 1;
         while(choice>0){
+            System.out.println("-----------------------");
             System.out.println("请选择项目：\n[1] 热气球\n[2] 旋转木马\n[3] 花车\n[4] 烟花表演 \n[5] 退出分区\n");
+            System.out.println("-----------------------");
             choice = Input.input();
             switch (choice){
                 case 1:
@@ -210,10 +221,12 @@ public class ZoneProcessor {
         }
     }
     public void hollywood() throws InterruptedException {
-        System.out.println("欢迎来到好莱坞");
+        System.out.println("欢迎来到好莱坞!");
         int choice = 1;
         while(choice>0){
+            System.out.println("-----------------------");
             System.out.println("请选择项目：\n[1] 电影\n[2] 动物表演\n[3] 舞台演出\n[4] 主题活动\n[5] 退出分区\n");
+            System.out.println("-----------------------");
             choice = Input.input();
             switch (choice){
                 case 1:
@@ -241,7 +254,9 @@ public class ZoneProcessor {
     public void auxiliary(){
         int choice = 1;
         while(choice>0){
-            System.out.println("请选择项目：\n[1] 单车\n[2] 充电宝\n[3] 公告栏\n[4] 纪念品商店\n[5]退出分区\n");
+            System.out.println("-----------------------");
+            System.out.println("请选择项目：\n[1] 单车\n[2] 充电宝\n[3] 公告栏\n[4] 纪念品商店\n[5] 洗手间\n[6]退出分区\n");
+            System.out.println("-----------------------");
             choice = Input.input();
             switch (choice){
                 case 1:
@@ -288,6 +303,40 @@ public class ZoneProcessor {
 
                     break;
                 case 5:
+                    var normalOrigin=new Restroom();
+                    var barrierFreeOrigin = new Restroom("无障碍卫生间");
+                    var manOrigin = new ManRestroom();
+                    var womanOrigin = new WomanRestroom();
+
+                    var cloneNormalOrigin=normalOrigin.clone();
+                    var cloneBarrierFreeOrigin = barrierFreeOrigin.clone();
+                    var cloneManOrigin = manOrigin.clone();
+                    var cloneWomanOrigin = womanOrigin.clone();
+
+                    System.out.println("您来到了公共卫生间。");
+                    System.out.println("您将进入：：\n[1] 男卫生科\n[2] 女卫生间\n[3] 无障碍卫生间\n[4] 亲子卫生间\n[0]离开公共卫生间\n");
+                    choice = Input.input();
+                    switch (choice) {
+                        case 1:
+                            cloneManOrigin.getType();
+                            break;
+                        case 2:
+                            cloneWomanOrigin.getType();
+                            break;
+                        case 3:
+                            cloneBarrierFreeOrigin.getType();
+                            break;
+                        case 4:
+                            cloneNormalOrigin.getType();
+                            break;
+                        case 0:
+                            break;
+                        default:
+                            System.out.println("输入有误，请重新输入");
+                            break;
+                    }
+                    
+                case 6:
                     return;
                 default:
                     System.out.println("输入有误，请重新输入");
