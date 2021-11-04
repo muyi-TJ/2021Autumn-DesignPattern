@@ -26,4 +26,11 @@ public class Parade
     {
         this.route.parade();
     }
+
+    /**
+     * 执行花车游行
+     */
+    public void paradeRoutePrint() throws InterruptedException {
+        this.route.print();
+    }
 }

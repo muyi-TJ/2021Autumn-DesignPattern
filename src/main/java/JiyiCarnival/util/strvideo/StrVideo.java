@@ -1,4 +1,4 @@
-package JiyiCarnival.util;
+package JiyiCarnival.util.strvideo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -34,7 +34,7 @@ public class StrVideo {
      * 放映字符动画
      * @param threshold 灰度阈值
      */
-    public void play(int threshold) throws InterruptedException, IOException {
+    public void play(int threshold, boolean isScale) throws InterruptedException, IOException {
         File file = new File(filePath);
         File[] files = file.listFiles();
         JFrame frame = new JFrame();
@@ -50,18 +50,16 @@ public class StrVideo {
         frame.add(area);
         frame.setVisible(true);
         for(int i = 0; i < files.length; i++){
-            String content = Image2Str.image2str(files[i], threshold);
+            String content = Image2Str.image2str(files[i], threshold, isScale);
             area.setText(content);
             Thread.sleep(25L);
         }
     }
 
+    public String showStrImage(String filePath, int threshold, boolean isScale) throws IOException {
+        File file = new File(filePath);
+        return Image2Str.image2str(file, threshold, isScale);
+    }
 
-    /**
-     * 显示到窗口
-     * @param filePath 图片文件夹
-     * @throws IOException
-     * @throws InterruptedException
-     */
 
 }

@@ -19,8 +19,11 @@ public abstract class Firework
     }
 
     /**
-     * 放烟花函数
+     * 放烟花函数 测试模式
      */
     public abstract void letOff();
+
+    public abstract void letOffPrint();
+
 
 }

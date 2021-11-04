@@ -18,4 +18,7 @@ public class FlowerFirework extends Firework
     {
         super.color.letOffFirework(shape);
     }
+
+    @Override
+    public void letOffPrint(){super.color.letOff(shape);}
 }

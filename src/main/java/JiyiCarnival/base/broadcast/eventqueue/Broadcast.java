@@ -15,10 +15,12 @@ public class Broadcast
 {
     private final Queue<Message> pendingMessages;
     private volatile Thread updateThread = null;
+    private int outputType;
 
-    public Broadcast()
+    public Broadcast(int outputType)
     {
         this.pendingMessages = new LinkedList<>();
+        this.outputType = outputType;
     }
 
     public void init()
@@ -67,9 +69,13 @@ public class Broadcast
         {
             return;
         }
-        Output.output(this.getClass().toString(),
-                "update",
-                String.valueOf(System.identityHashCode(this)),
-                "广播信息:" + pendingMessages.poll());
+        if (outputType == 0) {
+            Output.output(this.getClass().toString(),
+                    "update",
+                    String.valueOf(System.identityHashCode(this)),
+                    "广播信息:" + pendingMessages.poll());
+        }else {
+            System.out.println(pendingMessages.poll());
+        }
     }
 }

@@ -1,7 +1,7 @@
 package JiyiCarnival.base.ticketing.converter;
 
 import JiyiCarnival.Output;
-
+import JiyiCarnival.util.visitor.Gender;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -20,7 +20,7 @@ public class Ticket
     private String name;
     private String ID;
     private int age;
-    private String gender;
+    private Gender gender;
     private Date date = new Date();
 
 
@@ -40,7 +40,7 @@ public class Ticket
      * @param age    游客年龄
      * @param gender 游客性别
      */
-    public Ticket(String name, String ID, int age, String gender)
+    public Ticket(String name, String ID, int age, Gender gender)
     {
         this.name = name;
         this.ID = ID;
@@ -114,7 +114,7 @@ public class Ticket
      *
      * @return 返回游客性别
      */
-    public String getGender()
+    public Gender getGender()
     {
         return gender;
     }
@@ -124,7 +124,7 @@ public class Ticket
      *
      * @param gender 游客性别
      */
-    public void setGender(String gender)
+    public void setGender(Gender gender)
     {
         this.gender = gender;
     }
@@ -150,7 +150,32 @@ public class Ticket
     }
 
     /**
-     * 打印票务信息
+     * 打印票务信息 测试模式
+     */
+    public void logInfomation()
+    {
+        String ticketInfo = """
+                                
+                ------------------------
+                门票信息：
+                游客姓名：%s
+                身份证号：%s
+                游客年龄：%d
+                游客性别：%s
+                购票时间：%s
+                ------------------------
+                """;
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd :hh:mm:ss");
+        ticketInfo = String.format(ticketInfo, name, ID, age, gender.toString(), dateFormat.format(date));
+        Output.output(this.getClass().toString(),
+                "printInfomation",
+                String.valueOf(System.identityHashCode(this)),
+                ticketInfo
+        );
+    }
+
+    /**
+     * 打印票务信息 游乐园模式
      */
     public void printInfomation()
     {
@@ -162,16 +187,12 @@ public class Ticket
                 身份证号：%s
                 游客年龄：%d
                 游客性别：%s
-                入园时间：%s
+                购票时间：%s
                 ------------------------
                 """;
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd :hh:mm:ss");
-        ticketInfo = String.format(ticketInfo, name, ID, age, gender, dateFormat.format(date));
-        Output.output(this.getClass().toString(),
-                "printInfomation",
-                String.valueOf(System.identityHashCode(this)),
-                ticketInfo
-        );
+        ticketInfo = String.format(ticketInfo, name, ID, age, gender.toString(), dateFormat.format(date));
+        System.out.println(ticketInfo);
     }
 
 

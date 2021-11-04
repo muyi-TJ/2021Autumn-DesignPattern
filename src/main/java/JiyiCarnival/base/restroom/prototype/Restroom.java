@@ -29,11 +29,19 @@ public class Restroom implements Cloneable
      */
     public void getType()
     {
-        Output.output(this.getClass().toString(),
-                "getType",
-                String.valueOf(System.identityHashCode(this)),
-                type
-        );
+//        Output.output(this.getClass().toString(),
+//                "getType",
+//                String.valueOf(System.identityHashCode(this)),
+//                type
+//        );
+        System.out.println("您进入了"+type+"。");
+        try{
+            Thread.sleep(200);
+        }catch (InterruptedException ex)
+        {
+            System.out.println("出现异常");
+        }
+        System.out.println("您离开了"+type+"。");
     }
 
     @Override

@@ -11,4 +11,5 @@ public interface Order
      * 执行
      */
     void execute();
+    void visitorExecute();
 }

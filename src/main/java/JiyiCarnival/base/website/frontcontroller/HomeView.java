@@ -9,7 +9,7 @@ import JiyiCarnival.Output;
 public class HomeView
 {
     /**
-     * 展示主页视图
+     * 展示主页视图 测试模式
      */
     public void show()
     {
@@ -20,5 +20,12 @@ public class HomeView
                 String.valueOf(System.identityHashCode(this)),
                 text
         );
+    }
+
+    /**
+     * 游乐园模式
+     */
+    public void view(){
+        System.out.println("欢迎来到济忆嘉年华官网，在这里度过美妙的一天吧！");
     }
 }

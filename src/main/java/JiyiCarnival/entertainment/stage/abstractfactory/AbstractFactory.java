@@ -21,4 +21,6 @@ public abstract class AbstractFactory
      * @return 物品对象
      */
     public abstract Item getItem(String item);
+
+
 }

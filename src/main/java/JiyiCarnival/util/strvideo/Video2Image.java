@@ -1,4 +1,4 @@
-package JiyiCarnival.util;
+package JiyiCarnival.util.strvideo;
 
 import org.bytedeco.javacv.FFmpegFrameGrabber;
 import org.bytedeco.javacv.Frame;

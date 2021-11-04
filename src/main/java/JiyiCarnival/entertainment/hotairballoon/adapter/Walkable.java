@@ -7,4 +7,5 @@ package JiyiCarnival.entertainment.hotairballoon.adapter;
 public interface Walkable
 {
     void walk();
+    void walkLog();
 }

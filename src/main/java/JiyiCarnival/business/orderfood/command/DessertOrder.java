@@ -24,4 +24,9 @@ public class DessertOrder implements Order
     {
         cook.CookDessert(name);
     }
+    @Override
+    public void visitorExecute()
+    {
+        cook.visitorCookDessert(name);
+    }
 }

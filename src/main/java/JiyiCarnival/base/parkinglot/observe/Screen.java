@@ -29,9 +29,17 @@ public class Screen implements Observer
         );
     }
 
+    private void displayParking(boolean flg)
+    {
+        System.out.println("停车场屏幕：停车场车位剩余:" + DetectMachine.getRestParkingSpace() + "/" + DetectMachine.getMaxParkingSpace());
+    }
+
     @Override
     public void update(boolean flg)
     {
         display(flg);
     }
+
+    @Override
+    public void carUpdate(boolean flg){displayParking(flg);}
 }

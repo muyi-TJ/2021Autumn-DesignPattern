@@ -1,6 +1,8 @@
 package JiyiCarnival.base.website.frontcontroller;
 
 import JiyiCarnival.Output;
+import JiyiCarnival.base.ticketing.converter.Ticket;
+import JiyiCarnival.util.visitor.Visitor;
 
 /**
  * @author Zong
@@ -25,7 +27,7 @@ public class Dispatcher
     }
 
     /**
-     * 获取请求相应页面
+     * 获取请求相应页面 测试模式
      *
      * @param request 请求
      */
@@ -55,4 +57,32 @@ public class Dispatcher
             recruitView.show();
         }
     }
+
+
+    /**
+     * 获取请求相应页面 游乐园模式
+     *
+     * @param request 请求
+     */
+    public void dispatchUserRequest(String request) throws InterruptedException {
+        String text = "正在展示页面： " + request;
+        if (request.equalsIgnoreCase("HOME"))
+        {
+            homeView.view();
+        }
+        else if (request.equalsIgnoreCase("HELP"))
+        {
+            helpView.view();
+        }
+        else if (request.equalsIgnoreCase("TICKET"))
+        {
+            buyTicketView.view();
+        }
+        else if (request.equalsIgnoreCase("RECRUIT"))
+        {
+            recruitView.view();
+        }
+    }
+
+
 }

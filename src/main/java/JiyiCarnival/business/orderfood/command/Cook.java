@@ -63,4 +63,24 @@ public class Cook
                 text
         );
     }
+
+    /**
+     * 以下是游玩模式的输出
+     * @param name
+     */
+    public void visitorCookFood(String name)
+    {
+        System.out.println(cookName + "制作菜品" + name);
+    }
+
+    public void visitorCookDrink(String name)
+    {
+        System.out.println(cookName + "制作饮品" + name);
+
+    }
+
+    public void visitorCookDessert(String name)
+    {
+        System.out.println(cookName + "制作甜点" + name);
+    }
 }

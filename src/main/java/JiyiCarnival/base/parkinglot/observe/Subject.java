@@ -35,4 +35,12 @@ public class Subject
             observer.update(flg);
         }
     }
+
+    public void notifyCarObserver(boolean flg){
+        for (Observer observer : this.ObserverList)
+        {
+            observer.carUpdate(flg);
+        }
+    }
+
 }

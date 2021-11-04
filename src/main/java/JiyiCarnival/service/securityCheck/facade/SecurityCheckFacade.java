@@ -8,9 +8,9 @@ import JiyiCarnival.Output;
  */
 public class SecurityCheckFacade
 {
-    PersonalSecurityCheck personalSecurityCheck = new PersonalSecurityCheck();
-    TicketCheck ticketCheck = new TicketCheck();
-    CertificateCheck certificateCheck = new CertificateCheck();
+    JiyiCarnival.service.securitycheck.facade.PersonalSecurityCheck personalSecurityCheck = new JiyiCarnival.service.securitycheck.facade.PersonalSecurityCheck();
+    JiyiCarnival.service.securitycheck.facade.TicketCheck ticketCheck = new JiyiCarnival.service.securitycheck.facade.TicketCheck();
+    JiyiCarnival.service.securitycheck.facade.CertificateCheck certificateCheck = new JiyiCarnival.service.securitycheck.facade.CertificateCheck();
     PersonalBelongingCheck personalBelongingCheck = new PersonalBelongingCheck();
 
     /**
@@ -45,4 +45,20 @@ public class SecurityCheckFacade
         personalBelongingCheck.checkPersonalBelongings();
         personalSecurityCheck.personalSecurityCheck();
     }
+
+    public void ordinaryCustomerSecurityCheckPrint() throws InterruptedException {
+        ticketCheck.ticketCheckPrint();
+        personalBelongingCheck.checkPersonalBelongingsPrint();
+        personalSecurityCheck.personalSecurityCheckPrint();
+    }
+
+
+    public void specialCustomerSecurityCheckPrint() throws InterruptedException {
+        ticketCheck.ticketCheckPrint();
+        certificateCheck.checkCertificatePrint();
+        personalBelongingCheck.checkPersonalBelongingsPrint();
+        personalSecurityCheck.personalSecurityCheckPrint();
+    }
+
+
 }

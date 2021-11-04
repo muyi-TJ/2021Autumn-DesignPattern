@@ -7,8 +7,7 @@ import org.junit.Test;
 public class CallBackTest
 {
     @Test
-    public void testCallBack()
-    {
+    public void testCallBack() throws InterruptedException {
         ResultExporter resultExporter = new ResultExporter();
         TouristThread touristThread = new TouristThread();
         touristThread.run(resultExporter);

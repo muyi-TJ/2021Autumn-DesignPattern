@@ -4,9 +4,12 @@ package JiyiCarnival.decorator;
  * 装饰器模式测试类
  */
 
-import JiyiCarnival.business.souvenirshop.decorator.AnniversaryGift;
-import JiyiCarnival.business.souvenirshop.decorator.GraduatesDiscount;
-import JiyiCarnival.business.souvenirshop.decorator.SouvenirShopPolicy;
+import JiyiCarnival.Output;
+import JiyiCarnival.business.souvenirshop.decorator.BasicLogo;
+import JiyiCarnival.business.souvenirshop.decorator.CircleDecorator;
+import JiyiCarnival.business.souvenirshop.decorator.DiamondDecorator;
+import JiyiCarnival.business.souvenirshop.decorator.RectangleDecorator;
+
 import org.junit.Test;
 
 public class decoratorTest
@@ -14,16 +17,59 @@ public class decoratorTest
     @Test
     public void test()
     {
-        System.out.println("装饰器模式测试：");
-        //System.out.println("【平时】");
-        SouvenirShopPolicy souvenirShopPolicy = new SouvenirShopPolicy();
-        souvenirShopPolicy.printPolicy();
-        //System.out.println("【同济114周年校庆期间】");
-        AnniversaryGift anniversaryGift = new AnniversaryGift(souvenirShopPolicy);
-        anniversaryGift.printPolicy();
-        //System.out.println("【校庆还未结束，毕业季也临近了】");
-        GraduatesDiscount freshmanDiscount = new GraduatesDiscount(anniversaryGift);
-        freshmanDiscount.printPolicy();
+        System.out.println("装饰器模式测试:");
+        BasicLogo basicLogo=new BasicLogo();
+        Output.output(
+                this.getClass().toString(),
+                "test",
+                String.valueOf(System.identityHashCode(this)),
+                "挂饰："+basicLogo.getPattern()
+        );
+        Output.output(
+                this.getClass().toString(),
+                "test",
+                String.valueOf(System.identityHashCode(this)),
+                "价格："+basicLogo.cost()+"元"
+        );
+        CircleDecorator circleDecorator=new CircleDecorator(basicLogo);
+        Output.output(
+                this.getClass().toString(),
+                "test",
+                String.valueOf(System.identityHashCode(this)),
+                "挂饰："+circleDecorator.getPattern()
+        );
+        Output.output(
+                this.getClass().toString(),
+                "test",
+                String.valueOf(System.identityHashCode(this)),
+                "价格："+circleDecorator.cost()+"元"
+        );
+        RectangleDecorator rectangleDecorator=new RectangleDecorator(circleDecorator);
+        Output.output(
+                this.getClass().toString(),
+                "test",
+                String.valueOf(System.identityHashCode(this)),
+                "挂饰："+rectangleDecorator.getPattern()
+        );
+        Output.output(
+                this.getClass().toString(),
+                "test",
+                String.valueOf(System.identityHashCode(this)),
+                "价格："+rectangleDecorator.cost()+"元"
+        );
+        DiamondDecorator diamondDecorator=new DiamondDecorator(rectangleDecorator);
+        Output.output(
+                this.getClass().toString(),
+                "test",
+                String.valueOf(System.identityHashCode(this)),
+                "挂饰："+diamondDecorator.getPattern()
+        );
+        Output.output(
+                this.getClass().toString(),
+                "test",
+                String.valueOf(System.identityHashCode(this)),
+                "价格："+diamondDecorator.cost()+"元"
+        );
 
     }
 }

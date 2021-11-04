@@ -7,4 +7,8 @@ package JiyiCarnival.entertainment.shooting.memento;
  */
 public interface MementoIF
 {
+    /**
+     * 信息打印接口
+     */
+    public void print();
 }

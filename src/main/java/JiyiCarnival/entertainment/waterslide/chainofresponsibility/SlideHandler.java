@@ -1,5 +1,7 @@
 package JiyiCarnival.entertainment.waterslide.chainofresponsibility;
 
+import JiyiCarnival.util.visitor.Visitor;
+
 /**
  * @author WKATZZL
  * 处理抽象类
@@ -7,6 +9,7 @@ package JiyiCarnival.entertainment.waterslide.chainofresponsibility;
 
 public abstract class SlideHandler
 {
+    private Visitor visitor;
     /**
      * 各个步骤
      */
@@ -53,7 +56,8 @@ public abstract class SlideHandler
     /**
      * 事件处理
      */
-    protected abstract void handle();
+    protected abstract void handleLog();
+    protected abstract void handlePrint() throws InterruptedException;
 
     /**
      * @param request 游客所发起的请求
@@ -62,11 +66,39 @@ public abstract class SlideHandler
     {
         if (this.step <= request.getStep())
         {
-            this.handle();
+            this.handleLog();
         }
         if (this.nextStep != null)
         {
             this.nextStep.handleRequest(request);
         }
     }
+
+    public void handleVisitorRequest(Request request) throws InterruptedException {
+        if (this.step <= request.getStep())
+        {
+            this.handlePrint();
+        }
+        if (this.nextStep != null)
+        {
+            this.nextStep.handleVisitorRequest(request);
+        }
+    }
+
+    /**
+     * 设置游客
+     * @param visitor 游客
+     */
+    public void setVisitor(Visitor visitor){
+        this.visitor = visitor;
+    }
+
+    /**
+     * 获得游客
+     * @return 获得游客
+     */
+    public Visitor getVisitor(){
+        return this.visitor;
+    }
+
 }

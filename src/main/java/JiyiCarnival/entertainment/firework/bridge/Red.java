@@ -19,4 +19,11 @@ public class Red implements LetOffAPI
         );
 
     }
+
+    @Override
+    public void letOff(String shape){
+        System.out.println("如" + shape + "的红色烟花正在空中绽放！");
+    }
+
+
 }

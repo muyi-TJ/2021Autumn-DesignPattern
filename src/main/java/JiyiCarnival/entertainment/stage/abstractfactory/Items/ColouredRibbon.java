@@ -17,6 +17,14 @@ public class ColouredRibbon implements Item
                 String.valueOf(System.identityHashCode(this)),
                 "使用彩带"
         );
-
     }
+
+    @Override
+    public void useItemPrint() throws InterruptedException {
+       System.out.println("沙沙！");
+       Thread.sleep(500);
+       System.out.println("彩带在空中飞舞");
+    }
+
+
 }
