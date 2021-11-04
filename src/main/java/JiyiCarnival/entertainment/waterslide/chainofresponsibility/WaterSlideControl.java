@@ -23,6 +23,7 @@ public class WaterSlideControl extends Controller {
             Clock.printNowTime();
             System.out.print("尊敬的游客，很抱歉！现在是不在水上乐园的游玩时间哦！");
             System.out.println("请注意查看公告栏上各游乐地点的开放时间！");
+            return;
         }
         Visitor visitor = JiyiCarnival.getVisitor();
         System.out.println("欢迎来到水上滑梯大型游玩项目！\n");

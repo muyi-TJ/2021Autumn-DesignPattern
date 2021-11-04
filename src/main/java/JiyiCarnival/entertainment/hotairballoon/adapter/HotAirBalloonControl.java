@@ -26,6 +26,7 @@ public class HotAirBalloonControl extends Controller {
             Clock.printNowTime();
             System.out.print("尊敬的游客，很抱歉！现在不在热气球的乘坐时间哦！");
             System.out.println("请注意查看公告栏上各游乐地点的开放时间！");
+            return;
         }
         Visitor visitor = JiyiCarnival.getVisitor();
         System.out.println("欢迎来到热气球大型游玩项目！\n");

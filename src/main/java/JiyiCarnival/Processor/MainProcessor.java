@@ -67,6 +67,7 @@ public class MainProcessor {
             securityCheckFacade.ordinaryCustomerSecurityCheckPrint();
         else
             securityCheckFacade.specialCustomerSecurityCheckPrint();
+        Clock.addTime(30);
         System.out.println("尊敬的" + visitor.getName() +"，您准备好了吗？" + "济忆自由之旅就要开始啦！");
         System.out.println("--------------------------------------------");
         ZoneProcessor zoneProcessor = new ZoneProcessor(visitor, ticket);

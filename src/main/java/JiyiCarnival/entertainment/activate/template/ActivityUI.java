@@ -1,5 +1,7 @@
 package JiyiCarnival.entertainment.activate.template;
 
+import JiyiCarnival.entertainment.activate.template.activates.BirthdayActivate;
+import JiyiCarnival.entertainment.activate.template.activates.HalloweenActivate;
 import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
 import JiyiCarnival.util.control.Controller;
 import JiyiCarnival.util.input.Input;
@@ -15,13 +17,13 @@ public class ActivityUI extends Controller {
             switch (opt){
                 case 1:
                     Clock.addTime(60);
-                    JiyiCarnival.entertainment.activate.template.ActivateTemplate birthdayActivate = new JiyiCarnival.entertainment.activate.template.activates.BirthdayActivate();
+                    ActivateTemplate birthdayActivate = new BirthdayActivate();
                     birthdayActivate.playActivatePrint();
                     opt = 0;
                     break;
                 case 2:
                     Clock.addTime(70);
-                    JiyiCarnival.entertainment.activate.template.ActivateTemplate halloweenActivate = new JiyiCarnival.entertainment.activate.template.activates.HalloweenActivate();
+                    ActivateTemplate halloweenActivate = new HalloweenActivate();
                     halloweenActivate.playActivatePrint();
                     opt = 0;
                     break;

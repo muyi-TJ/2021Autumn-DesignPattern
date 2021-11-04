@@ -38,7 +38,7 @@ public class Clock {
         String startYMD =  currentDateFormat.format(startDate);
         nowTime = currentDateFormat.parse(startYMD);
         baseTime = new Date(nowTime.getTime());
-        addTime(8 * 60 * 60);
+        addTime(8 * 60);
         realStartTime = new Date();
         return instance;
     }
@@ -69,8 +69,8 @@ public class Clock {
      * @return 允许则返回true 否则为false
      */
     public static boolean timeCheck(int startHour, int endHour){
-        Date startTime = new Date(baseTime.getTime() + startHour * 60 * 60);
-        Date endTime = new Date(baseTime.getTime() + endHour * 60 * 60);
+        Date startTime = new Date(baseTime.getTime() + startHour * 60 * 60 * 1000L);
+        Date endTime = new Date(baseTime.getTime() + endHour * 60 * 60 * 1000L);
         if(nowTime.after(startTime) && nowTime.before(endTime)){
             return true;
         }
@@ -80,7 +80,7 @@ public class Clock {
 
 
     public static boolean isClosed(){
-        Date closeDate = new Date(baseTime.getTime() + 22 * 60 * 60);
+        Date closeDate = new Date(baseTime.getTime() + 22 * 60 * 60 * 1000L);
         return nowTime.after(closeDate);
     }
 
