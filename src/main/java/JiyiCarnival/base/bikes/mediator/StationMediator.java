@@ -18,12 +18,12 @@ public class StationMediator
     public StationMediator()
     {
         StationList = new ArrayList<Station>();
-        Output.output(
-                this.getClass().toString(),
-                "initialize",
-                String.valueOf(System.identityHashCode(this)),
-                "StationMediator构造器"
-        );
+//        Output.output(
+//                this.getClass().toString(),
+//                "initialize",
+//                String.valueOf(System.identityHashCode(this)),
+//                "StationMediator构造器"
+//        );
     }
 
     /**
@@ -32,12 +32,12 @@ public class StationMediator
     public void addStation(Station station)
     {
         StationList.add(station);
-        Output.output(
-                this.getClass().toString(),
-                "initialize",
-                String.valueOf(System.identityHashCode(this)),
-                "中介系统记录新站点：" + station.name
-        );
+//        Output.output(
+//                this.getClass().toString(),
+//                "initialize",
+//                String.valueOf(System.identityHashCode(this)),
+//                "中介系统记录新站点：" + station.name
+//        );
     }
 
     /**
@@ -45,18 +45,18 @@ public class StationMediator
      */
     public void tellMsg(Station station, String str)
     {
-        Output.output(
-                this.getClass().toString(),
-                "initialize",
-                String.valueOf(System.identityHashCode(this)),
-                "中介系统发布需求信息:"
-        );
-        Output.output(
-                this.getClass().toString(),
-                "initialize",
-                String.valueOf(System.identityHashCode(this)),
-                station.getName() + "需求：" + str
-        );
+//        Output.output(
+//                this.getClass().toString(),
+//                "initialize",
+//                String.valueOf(System.identityHashCode(this)),
+//                "中介系统发布需求信息:"
+//        );
+//        Output.output(
+//                this.getClass().toString(),
+//                "initialize",
+//                String.valueOf(System.identityHashCode(this)),
+//                station.getName() + "需求：" + str
+//        );
         for (Station oneStation : StationList)
         {
             if (!oneStation.equals(station))
