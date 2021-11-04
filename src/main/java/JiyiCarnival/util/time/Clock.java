@@ -24,8 +24,7 @@ public class Clock {
     private static Date startDate;
     private static Date nowTime = new Date();
     private static Date realStartTime;
-    private static Date noon;
-    private static Date night;
+    private static Date baseTime;
 
     private Clock() throws ParseException {}
 
@@ -38,9 +37,8 @@ public class Clock {
         SimpleDateFormat currentDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String startYMD =  currentDateFormat.format(startDate);
         nowTime = currentDateFormat.parse(startYMD);
+        baseTime = new Date(nowTime.getTime());
         addTime(8 * 60 * 60);
-        noon = new Date(nowTime.getTime() + 4 * 60 * 1000L);
-        night = new Date(nowTime.getTime() + 10 * 60 * 1000L);
         realStartTime = new Date();
         return instance;
     }
@@ -63,16 +61,22 @@ public class Clock {
         nowTime = new Date(nowTime.getTime() + seconds * 1000L);
     }
 
+
     /**
-     * 时间类型 早下晚
-     * @return 早 -1 下 0 晚 1
+     * 检验时间是否允许
+     * @param startHour
+     * @param endHour
+     * @return 允许则返回true 否则为false
      */
-    public static int timeType(){
-        if(nowTime.before(noon))
-            return -1;
-        else if(nowTime.before(night))
-            return 0;
+    public boolean timeCheck(int startHour, int endHour){
+        Date startTime = new Date(baseTime.getTime() + startHour * 60 * 60);
+        Date EndTime = new Date(baseTime.getTime() + endHour * 60 * 60);
+        if(nowTime.after(startTime) && nowTime.before(baseTime)){
+            return true;
+        }
         else
-            return 1;
+            return false;
     }
+
+
 }

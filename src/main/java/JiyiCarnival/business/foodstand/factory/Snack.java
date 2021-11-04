@@ -9,5 +9,5 @@ public interface Snack
     /**
      * 获取小吃
      */
-    abstract void get();
+    void get();
 }
