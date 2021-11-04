@@ -18,4 +18,12 @@ public class MovingHead implements Lighting
                 "打开摇头灯"
         );
     }
+
+    @Override
+    public void turnOnPrint() throws InterruptedException {
+        System.out.println("铛铛！");
+        Thread.sleep(500);
+        System.out.println("摇头灯已经摇摆！");
+    }
+
 }

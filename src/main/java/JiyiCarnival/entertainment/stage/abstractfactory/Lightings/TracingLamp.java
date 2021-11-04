@@ -19,4 +19,11 @@ public class TracingLamp implements Lighting
         );
     }
 
+    @Override
+    public void turnOnPrint() throws InterruptedException {
+        System.out.println("铛铛！");
+        Thread.sleep(500);
+        System.out.println("追光灯正在追逐演员！");
+    }
+
 }

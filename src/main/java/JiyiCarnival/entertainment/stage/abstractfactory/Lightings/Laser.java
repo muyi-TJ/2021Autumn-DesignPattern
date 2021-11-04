@@ -19,4 +19,11 @@ public class Laser implements Lighting
         );
     }
 
+    @Override
+    public void turnOnPrint() throws InterruptedException {
+        System.out.println("呼呼！");
+        Thread.sleep(500);
+        System.out.println("让我们打开激光灯！");
+    }
+
 }

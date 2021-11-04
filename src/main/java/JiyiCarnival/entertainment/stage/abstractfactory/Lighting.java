@@ -7,7 +7,13 @@ package JiyiCarnival.entertainment.stage.abstractfactory;
 public interface Lighting
 {
     /**
-     * 打开灯光
+     * 打开灯光 测试模式
      */
     public void turnOn();
+
+
+    /**
+     * 打开灯光 游乐园模式
+     */
+    public void turnOnPrint() throws InterruptedException;
 }

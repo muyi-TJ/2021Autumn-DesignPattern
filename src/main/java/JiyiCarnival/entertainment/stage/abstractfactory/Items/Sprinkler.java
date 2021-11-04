@@ -19,4 +19,13 @@ public class Sprinkler implements Item
                 "使用喷水器"
         );
     }
+
+
+    @Override
+    public void useItemPrint() throws InterruptedException {
+        System.out.println("哗哗！");
+        Thread.sleep(500);
+        System.out.println("水花四溅！");
+    }
+
 }

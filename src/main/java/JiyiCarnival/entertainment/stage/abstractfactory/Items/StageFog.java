@@ -18,4 +18,11 @@ public class StageFog implements Item
                 "使用舞台烟雾"
         );
     }
+
+    @Override
+    public void useItemPrint() throws InterruptedException {
+        System.out.println("斯斯！");
+        Thread.sleep(500);
+        System.out.println("舞台烟雾缭绕，好似仙境！");
+    }
 }

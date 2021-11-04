@@ -19,6 +19,7 @@ import JiyiCarnival.entertainment.parade.strategy.ParadeRoute;
 import JiyiCarnival.entertainment.parade.strategy.ParadeUI;
 import JiyiCarnival.entertainment.parade.strategy.RouteOne;
 import JiyiCarnival.entertainment.shooting.memento.ShootingUI;
+import JiyiCarnival.entertainment.stage.abstractfactory.StageUI;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.ChainOfResponsibility;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.Request;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.SlideHandler;
@@ -224,6 +225,8 @@ public class ZoneProcessor {
                     animalShowUI.flowControl();
                     break;
                 case 3:
+                    StageUI stageUI = new StageUI();
+                    stageUI.flowControl();
                     break;
                 case 4:
                     break;
