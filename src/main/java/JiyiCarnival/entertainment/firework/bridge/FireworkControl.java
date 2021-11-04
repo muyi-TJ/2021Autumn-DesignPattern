@@ -7,6 +7,9 @@ import JiyiCarnival.util.control.Controller;
  * 烟花释放流程控制
  */
 public class FireworkControl extends Controller {
+    /**
+     * 流程控制
+     */
     public void flowControl(){
         FlowerFirework blueFlowerFirework = new FlowerFirework(new Blue());
         HeartFirework redHeartFirework = new HeartFirework(new Red());

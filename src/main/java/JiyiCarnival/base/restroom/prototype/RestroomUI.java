@@ -1,8 +1,14 @@
 package JiyiCarnival.base.restroom.prototype;
 
 import JiyiCarnival.util.input.Input;
-
+/**
+ * @author WKATZZL
+ * 充电宝控制类
+ */
 public class RestroomUI {
+    /**
+     * 流程控制
+     */
     public void flowControl() {
         var normalOrigin = new Restroom();
         var barrierFreeOrigin = new Restroom("无障碍卫生间");

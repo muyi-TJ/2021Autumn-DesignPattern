@@ -2,8 +2,14 @@ package JiyiCarnival.business.souvenirshop.decorator;
 
 import JiyiCarnival.util.control.Controller;
 import JiyiCarnival.util.input.Input;
-
+/**
+ * @author
+ * 充电宝控制类
+ */
 public class ShopUI extends Controller {
+    /**
+     * 流程控制
+     */
     public void flowControl(){
         System.out.println("欢迎您进入纪念品商店！DIY纪念挂饰正在热卖中，基础款为TONGJI字母挂饰，您可以选择自己喜欢的配件进行装饰！基础款15元，一个配件2元");
         System.out.println("--------------");
