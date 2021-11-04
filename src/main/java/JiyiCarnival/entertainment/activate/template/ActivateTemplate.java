@@ -20,6 +20,10 @@ public abstract class ActivateTemplate
                 "活动开始前检查设施"
         );
     }
+    public void initializePrint()
+    {
+        System.out.println("活动开始前检查设施");
+    }
 
     /**
      * 检票，允许观众进入活动场地
@@ -33,7 +37,10 @@ public abstract class ActivateTemplate
                 "检票并允许持票观众入场"
         );
     }
-
+    public void checkInPrint()
+    {
+        System.out.println("\n检票并允许持票观众入场");
+    }
     /**
      * 开始进行主题活动
      */
@@ -46,12 +53,16 @@ public abstract class ActivateTemplate
                 "开始活动"
         );
     }
+    public void startActivatePrint()
+    {
+        System.out.println("\n开始活动");
+    }
 
     /**
      * 进行主题活动
      */
     public abstract void play();
-
+    public abstract void playPrint();
     /**
      * 主题活动结束
      */
@@ -64,7 +75,10 @@ public abstract class ActivateTemplate
                 "活动结束"
         );
     }
-
+    public void endActivatePrint()
+    {
+        System.out.println("\n活动结束");
+    }
     /**
      * 观众散场，进行散场后的清理和检查
      */
@@ -77,7 +91,10 @@ public abstract class ActivateTemplate
                 "观众结束后清理场地"
         );
     }
-
+    public void cleanUpPrint()
+    {
+        System.out.println("观众结束后清理场地");
+    }
     /**
      * 按阶段进行主题活动
      */
@@ -89,5 +106,39 @@ public abstract class ActivateTemplate
         play();
         endActivate();
         cleanUp();
+    }
+    public final void playActivatePrint() throws InterruptedException {
+        initializePrint();
+        for(int i = 0; i < 5; i++){
+            System.out.print('.');
+            Thread.sleep(200);
+        }
+
+        checkInPrint();
+        for(int i = 0; i < 5; i++){
+            System.out.print('.');
+            Thread.sleep(200);
+        }
+
+        startActivatePrint();
+        for(int i = 0; i < 5; i++){
+            System.out.print('.');
+            Thread.sleep(200);
+        }
+
+        playPrint();
+        for(int i = 0; i < 10; i++){
+            System.out.print('.');
+            Thread.sleep(200);
+        }
+
+        endActivatePrint();
+        cleanUpPrint();
+        for(int i = 0; i < 5; i++){
+            System.out.print('.');
+            Thread.sleep(200);
+        }
+        System.out.println("\n");
+
     }
 }
