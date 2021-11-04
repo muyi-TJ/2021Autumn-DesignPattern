@@ -7,6 +7,7 @@ import JiyiCarnival.base.restroom.prototype.ManRestroom;
 import JiyiCarnival.base.restroom.prototype.Restroom;
 import JiyiCarnival.base.restroom.prototype.WomanRestroom;
 import JiyiCarnival.base.ticketing.converter.Ticket;
+import JiyiCarnival.business.foodstand.factory.FactoryDemo;
 import JiyiCarnival.business.orderfood.command.*;
 import JiyiCarnival.business.souvenirshop.decorator.*;
 import JiyiCarnival.entertainment.animalshow.state.*;
@@ -113,7 +114,7 @@ public class ZoneProcessor {
         }
 
     }
-    public void foodParadise(){
+    public void foodParadise() throws InterruptedException {
         System.out.println("欢迎来到美食天堂!");
         int choice = 1;
         while(choice>0){
@@ -165,6 +166,7 @@ public class ZoneProcessor {
                     waiter.visitorNotify();
                     break;
                 case 2:
+                    FactoryDemo.demo();
                     break;
                 case 3:
                     return;
