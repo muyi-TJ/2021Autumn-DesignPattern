@@ -9,6 +9,9 @@ import JiyiCarnival.base.restroom.prototype.WomanRestroom;
 import JiyiCarnival.base.ticketing.converter.Ticket;
 import JiyiCarnival.business.orderfood.command.*;
 import JiyiCarnival.business.souvenirshop.decorator.*;
+import JiyiCarnival.entertainment.activate.template.ActivateTemplate;
+import JiyiCarnival.entertainment.activate.template.activates.BirthdayActivate;
+import JiyiCarnival.entertainment.activate.template.activates.HalloweenActivate;
 import JiyiCarnival.entertainment.animalshow.state.*;
 import JiyiCarnival.entertainment.carousel.composite.Axis;
 import JiyiCarnival.entertainment.carousel.composite.Horse;
@@ -242,6 +245,30 @@ public class ZoneProcessor {
                     stageUI.flowControl();
                     break;
                 case 4:
+                    System.out.println("来得正好！有两场主题活动正在火热进行！");
+                    int opt=1;
+                    while(opt>0){
+                        System.out.println("请选择：\n[1]生日礼遇 [2]万圣节娱乐演出 [0]离开");
+                        opt=Input.input();
+                        switch (opt){
+                            case 1:
+                                ActivateTemplate birthdayActivate = new BirthdayActivate();
+                                birthdayActivate.playActivatePrint();
+                                break;
+                            case 2:
+                                ActivateTemplate halloweenActivate = new HalloweenActivate();
+                                halloweenActivate.playActivatePrint();
+                                break;
+                            case 0:
+                                break;
+                            default:
+                                System.out.println("输入有误，请重新输入");
+                                break;
+                        }
+
+                    }
+
+
                     break;
                 case 5:
                     return;

@@ -5,9 +5,9 @@ import JiyiCarnival.entertainment.activate.template.ActivateTemplate;
 
 /**
  * @author ajt
- * “万圣节娱乐演出”主题活动
+ * “生日礼遇”主题活动
  */
-public class HalloweenActivate extends ActivateTemplate
+public class BirthdayActivate extends ActivateTemplate
 {
     @Override
     public void play()
@@ -16,7 +16,13 @@ public class HalloweenActivate extends ActivateTemplate
                 this.getClass().toString(),
                 "play",
                 String.valueOf(System.identityHashCode(this)),
-                "“万圣节娱乐演出”主题活动正在进行！"
+                "“生日礼遇”主题活动正在进行！"
         );
+    }
+
+    @Override
+    public void playPrint() {
+        System.out.println("\n“生日礼遇”主题活动正在进行！");
+
     }
 }
