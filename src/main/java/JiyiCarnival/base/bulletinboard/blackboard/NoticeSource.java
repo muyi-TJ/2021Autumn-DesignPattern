@@ -28,4 +28,9 @@ public class NoticeSource
     {
         blackboard.update(notice);
     }
+
+    public void updateBlackboardNonPrint()
+    {
+        blackboard.updateNonPrint(notice);
+    }
 }

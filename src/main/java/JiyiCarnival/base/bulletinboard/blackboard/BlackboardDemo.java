@@ -12,14 +12,10 @@ public class BlackboardDemo
     {
         Blackboard blackboard = new Blackboard();
         Control control = new Control(blackboard);
-        control.nextSource("今日热气球检修，暂停对外开放。");
-        control.nextSource("今日游乐园餐厅全部菜品九折优惠。");
-        control.loop();
-        System.out.println("输入1对公告栏内容进行一次查看，输入其他数字离开公告栏：");
-        int ans = Input.input();
-        if(ans == 1)
-        {
-            blackboard.inspect();
-        }
+        control.nextSource("今日游乐园设施一切正常，敬请期待！");
+        control.nextSource("今日游乐园餐厅推出新产品！");
+        //TODO 写入各项游乐活动的时间
+        control.loopNonPrint();
+        blackboard.inspectPrint();
     }
 }

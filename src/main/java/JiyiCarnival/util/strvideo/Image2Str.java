@@ -55,7 +55,7 @@ public class Image2Str {
         BufferedImage imageOrigin = ImageIO.read(file);
         BufferedImage image;
         if(isScale)
-            image = resize(imageOrigin, 80, 50);
+            image = resize(imageOrigin, 120, 80);
         else
             image = imageOrigin;
         for (int y = 0; y < image.getHeight(); y += 1) {

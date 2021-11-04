@@ -23,13 +23,26 @@ public class Control
     }
 
     /**
-     * 将消息源的内容全部放入黑板类后，清空消息源列表
+     * 将消息源的内容全部放入黑板类后，清空消息源列表 测试模式
      */
     public void loop()
     {
         for (NoticeSource noticeSource : noticeSources)
         {
             noticeSource.updateBlackboard();
+        }
+        this.noticeSources = new ArrayList<>();
+    }
+
+
+    /**
+     * 将消息源的内容全部放入黑板类后，清空消息源列表 游乐园模式
+     */
+    public void loopNonPrint()
+    {
+        for (NoticeSource noticeSource : noticeSources)
+        {
+            noticeSource.updateBlackboardNonPrint();
         }
         this.noticeSources = new ArrayList<>();
     }

@@ -18,7 +18,7 @@ public class Blackboard
     }
 
     /**
-     * 向黑板类添加新公告
+     * 向黑板类添加新公告 测试模式
      *
      * @param newNotice 新公告内容
      */
@@ -34,7 +34,17 @@ public class Blackboard
     }
 
     /**
-     * 逐条展示黑板中的公告
+     * 向黑板类添加新公告 游乐园模式
+     *
+     * @param newNotice 新公告内容
+     */
+    public void updateNonPrint(String newNotice)
+    {
+        noticeList.add(newNotice);
+    }
+
+    /**
+     * 逐条展示黑板中的公告 测试模式
      */
     public void inspect()
     {
@@ -46,6 +56,19 @@ public class Blackboard
                     String.valueOf(System.identityHashCode(this)),
                     "Blackboard:inspect:第" + (i + 1) + "条公告为：" + noticeList.get(i)
             );
+        }
+    }
+
+
+
+    /**
+     * 逐条展示黑板中的公告 游乐园模式
+     */
+    public void inspectPrint()
+    {
+        for (int i = 0; i < noticeList.size(); i++)
+        {
+            System.out.println("公告" + (i + 1) + noticeList.get(i));
         }
     }
 }

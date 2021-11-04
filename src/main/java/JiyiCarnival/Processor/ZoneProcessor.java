@@ -2,6 +2,7 @@ package JiyiCarnival.Processor;
 
 import JiyiCarnival.base.broadcast.eventqueue.Broadcast;
 import JiyiCarnival.base.broadcast.eventqueue.Message;
+import JiyiCarnival.base.bulletinboard.blackboard.BlackboardDemo;
 import JiyiCarnival.base.powerbank.proxy.Stuff;
 import JiyiCarnival.base.restroom.prototype.ManRestroom;
 import JiyiCarnival.base.restroom.prototype.Restroom;
@@ -297,6 +298,7 @@ public class ZoneProcessor {
                     stuff.getPowerBank(num);
                     break;
                 case 3:
+                    BlackboardDemo.demo();
                     break;
                 case 4:
                     System.out.println("欢迎您进入纪念品商店！DIY纪念挂饰正在热卖中，基础款为TONGJI字母挂饰，您可以选择自己喜欢的配件进行装饰！基础款15元，一个配件2元");

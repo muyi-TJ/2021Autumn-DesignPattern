@@ -12,8 +12,11 @@ import JiyiCarnival.entertainment.equipments.visitor.UncheckedEquipment;
 import JiyiCarnival.entertainment.equipments.visitor.UncheckedEquipmentDisplayVisitor;
 import JiyiCarnival.entertainment.equipments.visitor.UncheckedEquipmentInspectVisitor;
 import JiyiCarnival.service.securitycheck.facade.SecurityCheckFacade;
+import JiyiCarnival.util.strvideo.StrVideo;
 import JiyiCarnival.util.time.Clock;
 import JiyiCarnival.util.visitor.Visitor;
+
+import java.io.IOException;
 
 /**
  * @author WKATZZL
@@ -23,12 +26,11 @@ import JiyiCarnival.util.visitor.Visitor;
 public class MainProcessor {
     private Visitor visitor = JiyiCarnival.getVisitor();
     private Ticket ticket = JiyiCarnival.getTicket();
-
     /**
      * 流程控制
      * @throws InterruptedException
      */
-    public void flowControl() throws InterruptedException {
+    public void flowControl() throws InterruptedException, IOException {
         System.out.println("--------------------------------------------");
         System.out.println("为了更好的娱乐体验，" + visitor.getName() + "决定提前一天到达游乐园，并在预定的宾馆中休息了一晚。");
         for(int i = 0; i < 15; i++){
@@ -46,15 +48,14 @@ public class MainProcessor {
         equipment.accept(new UncheckedEquipmentInspectVisitor());
         System.out.println("-----------------------------------------------------");
         System.out.println("您驾车来到了停车场……");
-        System.out.println("‘尊敬的游客，请您先将车停到停车场中。’");
-        CarDetectMachine detectMachine = new CarDetectMachine(1000, 666);
+        System.out.println("尊敬的游客，请您先将车停到停车场中。");
+        CarDetectMachine detectMachine = new CarDetectMachine(100, 66);
         Screen screen = new Screen(detectMachine);
         Broadcaster broadcaster = new Broadcaster(detectMachine);
         screen.carUpdate(true);
         detectMachine.visitorCarIn();
         broadcaster.carUpdate(true);
         screen.carUpdate(true);
-
         SecurityCheckFacade securityCheckFacade = new SecurityCheckFacade();
         System.out.println("尊敬的游客，请先进入安检！");
          if(visitor.getID().length() == 0)
