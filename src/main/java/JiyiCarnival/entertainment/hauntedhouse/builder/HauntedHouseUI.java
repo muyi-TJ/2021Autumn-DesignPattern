@@ -31,15 +31,29 @@ public class HauntedHouseUI extends Controller{
         System.out.println("-----------------------");
         huantChoice = Input.input();
         switch (huantChoice) {
-            case 1:
+            case 2:
                 hardHauntedHouse.play();
-                System.out.println("恭喜您闯关成功！！");
+                for(int i = 0; i < 10; i++){
+                    System.out.print("👻");
+                    Thread.sleep(100);
+                    System.out.print("☠");
+                    Thread.sleep(100);
+                    System.out.print("👹");
+                    Thread.sleep(100);
+                }
+                System.out.println("\n恭喜您闯关成功！！");
                 Thread.sleep(1000);
                 Clock.addTime(30);
                 break;
-            case 2:
+            case 1:
                 simpleHauntedHouse.play();
-                System.out.println("恭喜您闯关成功！！");
+                for(int i = 0; i < 10; i++){
+                    System.out.print("👻");
+                    Thread.sleep(100);
+                    System.out.print("🦇");
+                    Thread.sleep(100);
+                }
+                System.out.println("\n恭喜您闯关成功！！");
                 Thread.sleep(1000);
                 Clock.addTime(15);
                 break;
