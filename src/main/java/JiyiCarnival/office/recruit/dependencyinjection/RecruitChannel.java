@@ -7,4 +7,5 @@ package JiyiCarnival.office.recruit.dependencyinjection;
 public interface RecruitChannel
 {
     public void publish(Recruitment recruitment);
+    public void publishPrint(Recruitment recruitment);
 }

@@ -1,8 +1,7 @@
 package JiyiCarnival.base.website.frontcontroller;
 
 import JiyiCarnival.Output;
-import JiyiCarnival.base.ticketing.converter.Ticket;
-import JiyiCarnival.util.visitor.Visitor;
+
 
 /**
  * @author Zong
@@ -80,7 +79,20 @@ public class Dispatcher
         }
         else if (request.equalsIgnoreCase("RECRUIT"))
         {
+            recruitView.setMsg("""
+                    -------------------------------
+                           招    聘   启   事        
+                       现诚招以下岗位：             
+                       保洁人员  3名  4000元/月     
+                       兼职演员  10名 3000元/月     
+                       后勤人员  5名  4000元/月     
+                       厨师     4名  6000元/月     
+                       最重要的是：没有996！！！      
+                       薪酬丰厚，工资可议，还等什么呢? 
+                    ------------------------------
+                    """);
             recruitView.view();
+            Thread.sleep(1000);
         }
     }
 

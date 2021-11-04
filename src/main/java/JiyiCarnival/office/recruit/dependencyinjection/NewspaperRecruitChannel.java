@@ -17,4 +17,11 @@ public class NewspaperRecruitChannel implements RecruitChannel
                 "Publish on Newspaper: " + recruitment.message
         );
     }
+
+
+    @Override
+    public void publishPrint(Recruitment recruitment)
+    {
+        System.out.println(recruitment.message);
+    }
 }
