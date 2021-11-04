@@ -36,6 +36,14 @@ public abstract class AbstractStaff
                 String.valueOf(System.identityHashCode(this)),
                 this.getInfo()
         );
+    }
 
+    /**
+     * 用于规格化输出 游乐园模式
+     * 实际执行的是getInfo，用于在基类内避免重写
+     */
+    public void infoPrint()
+    {
+        System.out.println(this.getInfo());
     }
 }
