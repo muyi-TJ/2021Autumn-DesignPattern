@@ -3,6 +3,7 @@ package JiyiCarnival.entertainment.activate.template;
 import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
 import JiyiCarnival.util.control.Controller;
 import JiyiCarnival.util.input.Input;
+import JiyiCarnival.util.time.Clock;
 
 public class ActivityUI extends Controller {
     public void flowControl() throws InterruptedException {
@@ -13,12 +14,16 @@ public class ActivityUI extends Controller {
             opt= Input.input();
             switch (opt){
                 case 1:
+                    Clock.addTime(60);
                     JiyiCarnival.entertainment.activate.template.ActivateTemplate birthdayActivate = new JiyiCarnival.entertainment.activate.template.activates.BirthdayActivate();
                     birthdayActivate.playActivatePrint();
+                    opt = 0;
                     break;
                 case 2:
+                    Clock.addTime(70);
                     JiyiCarnival.entertainment.activate.template.ActivateTemplate halloweenActivate = new JiyiCarnival.entertainment.activate.template.activates.HalloweenActivate();
                     halloweenActivate.playActivatePrint();
+                    opt = 0;
                     break;
                 case 0:
                     break;
@@ -26,6 +31,7 @@ public class ActivityUI extends Controller {
                     System.out.println("输入有误，请重新输入");
                     break;
             }
+
         }
     }
 }

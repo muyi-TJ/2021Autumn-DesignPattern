@@ -2,6 +2,8 @@ package JiyiCarnival.business.souvenirshop.decorator;
 
 import JiyiCarnival.util.control.Controller;
 import JiyiCarnival.util.input.Input;
+import JiyiCarnival.util.time.Clock;
+
 /**
  * @author
  * 充电宝控制类
@@ -22,12 +24,15 @@ public class ShopUI extends Controller {
             opt= Input.input();
             switch(opt){
                 case 1:
+                    Clock.addTime(10);
                     pointer=new CircleDecorator(pointer);
                     break;
                 case 2:
+                    Clock.addTime(10);
                     pointer=new RectangleDecorator(pointer);
                     break;
                 case 3:
+                    Clock.addTime(10);
                     pointer=new DiamondDecorator(pointer);
                     break;
                 case 0:

@@ -56,10 +56,10 @@ public class Clock {
 
     /**
      * 增加时间
-     * @param seconds 增加的秒数
+     * @param minutes 增加的分钟数
      */
-    public static void addTime(int seconds){
-        nowTime = new Date(nowTime.getTime() + seconds * 1000L);
+    public static void addTime(int minutes){
+        nowTime = new Date(nowTime.getTime() + minutes * 60 * 1000L);
     }
 
 
@@ -69,7 +69,7 @@ public class Clock {
      * @param endHour
      * @return 允许则返回true 否则为false
      */
-    public boolean timeCheck(int startHour, int endHour){
+    public static boolean timeCheck(int startHour, int endHour){
         Date startTime = new Date(baseTime.getTime() + startHour * 60 * 60);
         Date EndTime = new Date(baseTime.getTime() + endHour * 60 * 60);
         if(nowTime.after(startTime) && nowTime.before(baseTime)){

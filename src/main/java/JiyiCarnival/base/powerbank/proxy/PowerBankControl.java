@@ -2,6 +2,7 @@ package JiyiCarnival.base.powerbank.proxy;
 
 import JiyiCarnival.util.control.Controller;
 import JiyiCarnival.util.input.Input;
+import JiyiCarnival.util.time.Clock;
 
 /**
  * @author WKATZZL
@@ -16,5 +17,6 @@ public class PowerBankControl extends Controller {
         int num = Input.input();
         Stuff stuff = new Stuff(1);
         stuff.getPowerBank(num);
+        Clock.addTime(5);
     }
 }

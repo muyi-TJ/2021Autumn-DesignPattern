@@ -3,6 +3,7 @@ package JiyiCarnival.entertainment.hauntedhouse.builder;
 import JiyiCarnival.entertainment.hauntedhouse.builder.*;
 import JiyiCarnival.util.input.Input;
 import JiyiCarnival.util.control.Controller;
+import JiyiCarnival.util.time.Clock;
 
 
 public class HauntedHouseUI extends Controller{
@@ -34,11 +35,13 @@ public class HauntedHouseUI extends Controller{
                 hardHauntedHouse.play();
                 System.out.println("恭喜您闯关成功！！");
                 Thread.sleep(1000);
+                Clock.addTime(30);
                 break;
             case 2:
                 simpleHauntedHouse.play();
                 System.out.println("恭喜您闯关成功！！");
                 Thread.sleep(1000);
+                Clock.addTime(15);
                 break;
             case 0:
                 return;

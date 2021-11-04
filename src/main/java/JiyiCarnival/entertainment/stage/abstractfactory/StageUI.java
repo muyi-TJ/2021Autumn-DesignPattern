@@ -4,6 +4,7 @@ import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
 import JiyiCarnival.office.staffinfo.nullobject.AbstractStaff;
 import JiyiCarnival.office.staffinfo.nullobject.StaffFactory;
 import JiyiCarnival.util.input.Input;
+import JiyiCarnival.util.time.Clock;
 
 import java.util.Scanner;
 
@@ -88,6 +89,7 @@ public class StageUI {
             switch (choice){
                 case 1:
                     stageShow();
+                    Clock.addTime(90);
                     break;
                 case 2:
                     staffShow();
