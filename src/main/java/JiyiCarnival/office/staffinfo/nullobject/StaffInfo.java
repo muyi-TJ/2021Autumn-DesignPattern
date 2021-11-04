@@ -8,19 +8,19 @@ public class StaffInfo
 {
     static public String getInfo(String name)
     {
-        if (name == "doinb")
+        if (name.equals("doinb"))
         {
             return "doinb 男 保洁";
         }
-        if (name == "junjia")
+        if (name.equals("junjia"))
         {
             return "junjia 男 饮水机管理员";
         }
-        if (name == "chovy")
+        if (name.equals("chovy"))
         {
             return "chovy 男 主管";
         }
-        if (name == "余霜")
+        if (name.equals("余霜"))
         {
             return "余霜 女 主持人";
         }

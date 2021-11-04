@@ -1,7 +1,11 @@
 package JiyiCarnival.entertainment.stage.abstractfactory;
 
 import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
+import JiyiCarnival.office.staffinfo.nullobject.AbstractStaff;
+import JiyiCarnival.office.staffinfo.nullobject.StaffFactory;
 import JiyiCarnival.util.input.Input;
+
+import java.util.Scanner;
 
 /**
  * @author WKATZZL
@@ -52,20 +56,41 @@ public class StageUI {
     }
 
     /**
+     * 展示工作人员
+     */
+    public void staffShow() throws InterruptedException {
+        System.out.println("当前舞台工作人员有：");
+        System.out.println("doinb, junjia, chovy, 余霜");
+        System.out.println("请输入您要查询的工作人员名字，退出请输入QUIT");
+        Scanner scan = new Scanner(System.in);
+        String staffName = scan.next();
+        while(staffName != "QUIT"){
+            AbstractStaff staff = StaffFactory.getStaff(staffName);
+            staff.infoPrint();
+            Thread.sleep(500);
+            System.out.println("请输入您要查询的工作人员名字，退出请输入QUIT");
+            staffName = scan.next();
+        }
+
+    }
+
+
+
+    /**
      * 流程控制
      */
     public void flowControl() throws InterruptedException {
         System.out.println("欢迎来到因你最美舞台演出！");
         int choice = 4;
         while(choice>0) {
-            System.out.println("请选择：\n[1] 观看舞台演出\n[2] 查看演员信息\n[3] 离开");
+            System.out.println("请选择：\n[1] 观看舞台演出\n[2] 查看人员信息\n[3] 离开");
             choice = Input.input();
             switch (choice){
                 case 1:
                     stageShow();
                     break;
                 case 2:
-
+                    staffShow();
                     break;
                 case 3:
                     System.out.println("祝您观演愉快！再见！");

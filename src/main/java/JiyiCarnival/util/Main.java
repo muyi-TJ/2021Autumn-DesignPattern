@@ -1,6 +1,7 @@
 package JiyiCarnival.util;
 
 
+import JiyiCarnival.entertainment.stage.abstractfactory.StageUI;
 import JiyiCarnival.util.strvideo.Image2Str;
 import JiyiCarnival.util.strvideo.StrVideo;
 import JiyiCarnival.util.time.Clock;
@@ -8,6 +9,8 @@ import JiyiCarnival.util.time.Clock;
 public class Main {
     public static void main(String[] args) throws Exception {
 
+        StageUI stageUI = new StageUI();
+        stageUI.flowControl();
         //Video2Image.video2Image("G:\\temp\\3.mp4","G:\\temp\\pics", "hello");
 
         //Image2Str.createAsciiPic("G:\\temp\\pics","G:\\temp\\a.txt");
