@@ -22,6 +22,7 @@ import JiyiCarnival.entertainment.shooting.memento.ShootingUI;
 import JiyiCarnival.entertainment.stage.abstractfactory.StageUI;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.WaterSlideControl;
 import JiyiCarnival.util.input.Input;
+import JiyiCarnival.util.time.Clock;
 import JiyiCarnival.util.visitor.Visitor;
 
 public class ZoneProcessor {
@@ -39,7 +40,7 @@ public class ZoneProcessor {
         broadcast.addMessage(new Message("欢迎来到济忆嘉年华！"));
         Thread.sleep(500);
         broadcast.stop();
-        while(choice>0) {
+        while(choice>0 && !Clock.isClosed()) {
             System.out.println("-----------------------");
             System.out.println("请选择嘉年华分区：\n[1] 刺激专场\n[2] 美食天堂\n[3] 幻想世界 \n[4] 好莱坞\n[5] 辅助设施\n[0] 退出");
             System.out.println("-----------------------");
@@ -70,7 +71,7 @@ public class ZoneProcessor {
     public void excitingZone() throws InterruptedException {
         System.out.println("欢迎来到刺激专场!");
         int choice = 1;
-        while(choice>0){
+        while(choice>0 && !Clock.isClosed()){
             System.out.println("-----------------------");
             System.out.println("请选择项目：\n[1] 水上滑梯\n[2] 射击游戏\n[3] 鬼屋 \n[4] 退出分区\n");
             System.out.println("-----------------------");
@@ -100,7 +101,7 @@ public class ZoneProcessor {
     public void foodParadise() throws InterruptedException {
         System.out.println("欢迎来到美食天堂!");
         int choice = 1;
-        while(choice>0){
+        while(choice>0 && !Clock.isClosed()){
             System.out.println("-----------------------");
             System.out.println("请选择项目：\n[1] 餐厅\n[2] 小吃摊\n[3] 退出分区\n");
             System.out.println("-----------------------");
@@ -125,7 +126,7 @@ public class ZoneProcessor {
     public void fantasyWorld() throws InterruptedException {
         System.out.println("欢迎来到幻想世界!");
         int choice = 1;
-        while(choice>0){
+        while(choice>0 && !Clock.isClosed()){
             System.out.println("-----------------------");
             System.out.println("请选择项目：\n[1] 热气球\n[2] 旋转木马\n[3] 花车\n[4] 烟花表演 \n[5] 退出分区\n");
             System.out.println("-----------------------");
@@ -158,7 +159,7 @@ public class ZoneProcessor {
     public void hollywood() throws InterruptedException {
         System.out.println("欢迎来到好莱坞!");
         int choice = 1;
-        while(choice>0){
+        while(choice>0 && !Clock.isClosed()){
             System.out.println("-----------------------");
             System.out.println("请选择项目：\n[1] 电影\n[2] 动物表演\n[3] 舞台演出\n[4] 主题活动\n[5] 退出分区\n");
             System.out.println("-----------------------");
@@ -190,9 +191,9 @@ public class ZoneProcessor {
     }
     public void auxiliary(){
         int choice = 1;
-        while(choice>0){
+        while(choice>0 && !Clock.isClosed()){
             System.out.println("-----------------------");
-            System.out.println("请选择项目：\n[1] 单车\n[2] 充电宝\n[3] 公告栏\n[4] 纪念品商店\n[5] 洗手间\n[6]退出分区\n");
+            System.out.println("请选择项目：\n[1] 单车\n[2] 充电宝\n[3] 公告栏\n[4] 纪念品商店\n[5] 洗手间\n[6] 查看时间 [7] 退出分区\n");
             System.out.println("-----------------------");
             choice = Input.input();
             switch (choice){
@@ -215,7 +216,11 @@ public class ZoneProcessor {
                 case 5:
                     RestroomUI restroomUI = new RestroomUI();
                     restroomUI.flowControl();
+                    break;
                 case 6:
+                    Clock.printNowTime();
+                    break;
+                case 7:
                     return;
                 default:
                     System.out.println("输入有误，请重新输入");
