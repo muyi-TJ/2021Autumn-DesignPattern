@@ -2,6 +2,7 @@ package JiyiCarnival.base.bulletinboard.blackboard;
 
 import JiyiCarnival.util.control.Controller;
 import JiyiCarnival.util.input.Input;
+import JiyiCarnival.util.time.Clock;
 
 /**
  * 一个公告栏的示例
@@ -18,5 +19,6 @@ public class BulletinBoardControl extends Controller
         //TODO 写入各项游乐活动的时间
         control.loopNonPrint();
         blackboard.inspectPrint();
+        Clock.addTime(5);
     }
 }

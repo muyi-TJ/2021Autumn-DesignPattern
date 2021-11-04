@@ -17,5 +17,6 @@ public class HorseControl extends Controller {
             axis.add(new Horse(1));
         }
         axis.operate();
+        Clock.addTime(5);
     }
 }

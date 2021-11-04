@@ -33,6 +33,7 @@ public class WaterSlideControl extends Controller {
             SlideHandler slideChain = ChainOfResponsibility.getChainOfSlide(visitor);
             Request request = new Request(4);
             slideChain.handleVisitorRequest(request);
+            Clock.addTime(30);
         }
         else{
             System.out.println("非常抱歉，您并未满足游玩条件，可以选择游玩其他项目，祝您游玩愉快！");

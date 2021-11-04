@@ -14,5 +14,6 @@ public class MovieControl extends Controller {
         }
         Movice movice = new Movice(names);
         movice.play(JiyiCarnival.getVisitor());
+        Clock.addTime(90);
     }
 }

@@ -36,6 +36,7 @@ public class HotAirBalloonControl extends Controller {
             HotAirBalloonAdapter hotAirBalloonAdapter = new HotAirBalloonAdapter();
             hotAirBalloonAdapter.setVisitor(visitor);
             hotAirBalloonAdapter.fly();
+            Clock.addTime(60);
         }
         else{
             System.out.println("非常抱歉，您并未满足游玩条件，可以选择游玩其他项目，祝您游玩愉快！");

@@ -25,6 +25,7 @@ public class FireworkControl extends Controller {
         redHeartFirework.letOffPrint();
         redFlowerFirework.letOffPrint();
         blueHeartFirework.letOffPrint();
+        Clock.addTime(60);
         //TODO 可加入字符动画
     }
 }

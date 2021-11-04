@@ -19,5 +19,6 @@ public class AnimalShowUI {
         failState.printAction(animalShow);
         succeedState.printAction(animalShow);
         endShowState.printAction(animalShow);
+        Clock.addTime(60);
     }
 }

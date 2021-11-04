@@ -55,6 +55,7 @@ public class ShootingUI extends Controller {
             switch (choice){
                 case 1:
                     playShooting();
+                    Clock.addTime(5);
                     break;
                 case 2:
                     JiyiCarnival.getRecordCaretaker().printRecord();

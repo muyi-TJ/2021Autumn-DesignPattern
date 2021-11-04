@@ -1,6 +1,8 @@
 package JiyiCarnival.base.restroom.prototype;
 
 import JiyiCarnival.util.input.Input;
+import JiyiCarnival.util.time.Clock;
+
 /**
  * @author WKATZZL
  * 充电宝控制类
@@ -22,6 +24,7 @@ public class RestroomUI {
 
         System.out.println("您来到了公共卫生间。");
         System.out.println("您将进入：：\n[1] 男卫生间\n[2] 女卫生间\n[3] 无障碍卫生间\n[4] 亲子卫生间\n[0]离开公共卫生间\n");
+        Clock.addTime(15);
         int choice = Input.input();
         switch (choice) {
             case 1:

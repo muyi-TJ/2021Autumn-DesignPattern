@@ -1,6 +1,7 @@
 package JiyiCarnival.business.foodstand.factory;
 
 import JiyiCarnival.util.input.Input;
+import JiyiCarnival.util.time.Clock;
 
 import java.io.BufferedInputStream;
 import java.util.Scanner;
@@ -42,6 +43,7 @@ public class SnackBlockUI
             if(snack != null)
             {
                 snack.getPrint();
+                Clock.addTime(15);
                 System.out.println("是否需要继续点单呢([1]糖葫芦[2]可乐[3]炸鸡),输入4退出点餐");
             }
             else if(snackNum == -1 || snackNum > 4)

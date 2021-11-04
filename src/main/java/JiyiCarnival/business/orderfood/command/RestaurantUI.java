@@ -2,6 +2,7 @@ package JiyiCarnival.business.orderfood.command;
 
 import JiyiCarnival.util.control.Controller;
 import JiyiCarnival.util.input.Input;
+import JiyiCarnival.util.time.Clock;
 
 import java.util.Formatter;
 
@@ -14,6 +15,7 @@ public class RestaurantUI extends Controller {
      * 餐厅流程控制
      */
     public void flowControl(){
+        Clock.addTime(60);
         Cook cook = new Cook("KFC");
         System.out.println("多种美味菜品、甜点、饮品尽在KFC！请问您需要点什么呢？");
         Formatter formatter = new Formatter(System.out);

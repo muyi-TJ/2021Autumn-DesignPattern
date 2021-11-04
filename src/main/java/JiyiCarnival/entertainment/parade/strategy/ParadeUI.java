@@ -24,11 +24,13 @@ public class ParadeUI extends Controller {
             ParadeRoute route1 = new RouteOne();
             parade.setRoute(route1);
             parade.paradeRoutePrint();
+            Clock.addTime(45);
         }
         else{
             ParadeRoute route2 = new RouteTwo();
             parade.setRoute(route2);
             parade.paradeRoutePrint();
+            Clock.addTime(50);
         }
 
 

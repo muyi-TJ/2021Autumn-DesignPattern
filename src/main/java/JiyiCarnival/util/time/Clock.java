@@ -56,10 +56,10 @@ public class Clock {
 
     /**
      * 增加时间
-     * @param seconds 增加的秒数
+     * @param minutes 增加的分钟数
      */
-    public static void addTime(int seconds){
-        nowTime = new Date(nowTime.getTime() + seconds * 1000L);
+    public static void addTime(int minutes){
+        nowTime = new Date(nowTime.getTime() + minutes * 60 * 1000L);
     }
 
 
