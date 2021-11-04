@@ -4,6 +4,7 @@ package JiyiCarnival;
 import JiyiCarnival.base.parkinglot.observe.Broadcaster;
 import JiyiCarnival.base.parkinglot.observe.CarDetectMachine;
 import JiyiCarnival.base.parkinglot.observe.Screen;
+import JiyiCarnival.business.foodstand.factory.FactoryDemo;
 import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
 import JiyiCarnival.util.input.Input;
 
