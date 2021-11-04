@@ -64,7 +64,7 @@ public class StageUI {
         System.out.println("请输入您要查询的工作人员名字，退出请输入QUIT");
         Scanner scan = new Scanner(System.in);
         String staffName = scan.next();
-        while(staffName != "QUIT"){
+        while(staffName.equals("QUIT")){
             AbstractStaff staff = StaffFactory.getStaff(staffName);
             staff.infoPrint();
             Thread.sleep(500);
