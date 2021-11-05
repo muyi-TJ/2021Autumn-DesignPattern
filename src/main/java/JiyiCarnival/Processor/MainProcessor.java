@@ -9,12 +9,8 @@ import JiyiCarnival.base.parkinglot.observe.Screen;
 import JiyiCarnival.base.ticketing.converter.Ticket;
 import JiyiCarnival.business.hotel.callback.UnsubscribeControl;
 import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
-import JiyiCarnival.entertainment.equipments.visitor.Equipment;
-import JiyiCarnival.entertainment.equipments.visitor.UncheckedEquipment;
-import JiyiCarnival.entertainment.equipments.visitor.UncheckedEquipmentDisplayVisitor;
-import JiyiCarnival.entertainment.equipments.visitor.UncheckedEquipmentInspectVisitor;
+import JiyiCarnival.entertainment.equipments.visitor.*;
 import JiyiCarnival.service.securitycheck.facade.SecurityCheckFacade;
-import JiyiCarnival.util.strvideo.StrVideo;
 import JiyiCarnival.util.time.Clock;
 import JiyiCarnival.util.visitor.Visitor;
 
@@ -50,9 +46,8 @@ public class MainProcessor {
                 "，尽管温度已经到达了" + JiyiCarnival.getTemperature() + "摄氏度，但是，这依然是个好天气呢！");
         System.out.println("-----------------------------------------------------");
         System.out.println("(济忆嘉年华开园前，园内管理员正仔细检查各个大型游乐设施……)");
-        UncheckedEquipment equipment = new Equipment();
-        equipment.accept(new UncheckedEquipmentDisplayVisitor());
-        equipment.accept(new UncheckedEquipmentInspectVisitor());
+        UncheckedEquipmentUI uncheckedEquipmentUI = new UncheckedEquipmentUI();
+        uncheckedEquipmentUI.flowControl();
         System.out.println("-----------------------------------------------------");
         System.out.println("您驾车来到了停车场……");
         System.out.println("尊敬的游客，请您先将车停到停车场中。");

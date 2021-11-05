@@ -1,15 +1,6 @@
 package JiyiCarnival.entertainment.equipments.visitor;
 
-import JiyiCarnival.Output;
-
-/**
- * @author swaychen0420
- * 顺次检查设备
- */
-
-public class UncheckedEquipmentInspectVisitor implements UncheckedEquipmentVisitor
-{
-
+public class UncheckedEquipmentInspectVisitor implements  UncheckedEquipmentVisitor{
     @Override
     public void visit(Equipment equipment)
     {

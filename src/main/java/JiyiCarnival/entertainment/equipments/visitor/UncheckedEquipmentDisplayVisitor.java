@@ -2,14 +2,8 @@ package JiyiCarnival.entertainment.equipments.visitor;
 
 import JiyiCarnival.Output;
 
-/**
- * @author swaychen0420
- * 展示未检查的设备
- * 设备名称可以在后续整合时进行更改
- */
+public class UncheckedEquipmentDisplayVisitor implements  UncheckedEquipmentVisitor{
 
-public class UncheckedEquipmentDisplayVisitor implements UncheckedEquipmentVisitor
-{
 
     @Override
     public void visit(Equipment equipment)
