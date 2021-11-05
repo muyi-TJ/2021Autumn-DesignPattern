@@ -61,7 +61,7 @@
 package JiyiCarnival.bulider;
 
 import JiyiCarnival.entertainment.hauntedhouse.builder.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 
 public class HauntedHouseTest {
