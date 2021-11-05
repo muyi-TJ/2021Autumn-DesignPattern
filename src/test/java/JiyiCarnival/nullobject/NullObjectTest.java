@@ -3,7 +3,8 @@ package JiyiCarnival.nullobject;
 import JiyiCarnival.office.staffinfo.nullobject.AbstractStaff;
 import JiyiCarnival.office.staffinfo.nullobject.StaffFactory;
 import junit.framework.TestCase;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 
 public class NullObjectTest extends TestCase

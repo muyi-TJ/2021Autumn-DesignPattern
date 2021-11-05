@@ -4,7 +4,8 @@ import JiyiCarnival.entertainment.parade.strategy.Parade;
 import JiyiCarnival.entertainment.parade.strategy.ParadeRoute;
 import JiyiCarnival.entertainment.parade.strategy.RouteOne;
 import JiyiCarnival.entertainment.parade.strategy.RouteTwo;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class StrategyTest
 {

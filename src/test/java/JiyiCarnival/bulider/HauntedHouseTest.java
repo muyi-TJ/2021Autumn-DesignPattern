@@ -63,6 +63,7 @@ package JiyiCarnival.bulider;
 import JiyiCarnival.entertainment.hauntedhouse.builder.*;
 import org.junit.Test;
 
+
 public class HauntedHouseTest {
     @Test
     public void testBuilder(){

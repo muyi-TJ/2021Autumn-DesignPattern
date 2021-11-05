@@ -2,7 +2,8 @@ package JiyiCarnival.frontcontroller;
 
 import JiyiCarnival.base.website.frontcontroller.FrontController;
 import junit.framework.TestCase;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author Zong

@@ -2,7 +2,8 @@ package JiyiCarnival.flyweight;
 
 import JiyiCarnival.entertainment.movie.flyweight.Movie;
 import JiyiCarnival.entertainment.movie.flyweight.MovieFactory;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class FlyweightTest
 {

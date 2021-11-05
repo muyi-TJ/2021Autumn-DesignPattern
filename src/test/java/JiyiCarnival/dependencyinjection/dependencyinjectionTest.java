@@ -4,7 +4,8 @@ import JiyiCarnival.office.recruit.dependencyinjection.NewspaperRecruitChannel;
 import JiyiCarnival.office.recruit.dependencyinjection.OnlineRecruitChannel;
 import JiyiCarnival.office.recruit.dependencyinjection.RecruitPublisher;
 import JiyiCarnival.office.recruit.dependencyinjection.Recruitment;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class dependencyinjectionTest
 {

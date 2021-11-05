@@ -2,7 +2,8 @@ package JiyiCarnival.memento;
 
 import JiyiCarnival.entertainment.shooting.memento.RecordCaretaker;
 import JiyiCarnival.entertainment.shooting.memento.RecordOriginator;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class MementoTest
 {

@@ -5,7 +5,7 @@ import JiyiCarnival.entertainment.firework.bridge.FlowerFirework;
 import JiyiCarnival.entertainment.firework.bridge.HeartFirework;
 import JiyiCarnival.entertainment.firework.bridge.Red;
 import junit.framework.TestCase;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 
 public class BridgeTest extends TestCase
