@@ -19,12 +19,6 @@ public class WaterSlideControl extends Controller {
      * @throws InterruptedException 使用了线程睡眠
      */
     public void flowControl() throws InterruptedException {
-        if(!Clock.timeCheck(9, 15)){
-            Clock.printNowTime();
-            System.out.print("尊敬的游客，很抱歉！现在是不在水上乐园的游玩时间哦！");
-            System.out.println("请注意查看公告栏上各游乐地点的开放时间！");
-            return;
-        }
         Visitor visitor = JiyiCarnival.getVisitor();
         System.out.println("欢迎来到水上滑梯大型游玩项目！\n");
         System.out.println("为了您的人身安全，请在游玩前确保您已满足游玩条件：儿童年龄不得低于12岁，身高不得小于140cm。满足游玩条件后请前往售票处购票，祝您游玩愉快！\n");
