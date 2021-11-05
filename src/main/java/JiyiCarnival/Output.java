@@ -21,7 +21,7 @@ public class Output
                 "\n\tmethodName = " + mymethod + ";" +
                 "\n\tobjectId = " + objectid + ";" +
                 "\n\tdescription = " + description + ";\n";
-        LOGGER.log(Level.INFO, msg);
+        System.out.println(msg);
 
     }
 }
