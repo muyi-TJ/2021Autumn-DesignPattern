@@ -31,7 +31,7 @@ public class StationMediator
      */
     public void addStation(Station station)
     {
-        StationList.add(station);
+//        StationList.add(station);
 //        Output.output(
 //                this.getClass().toString(),
 //                "initialize",
@@ -61,7 +61,7 @@ public class StationMediator
         {
             if (!oneStation.equals(station))
             {
-                oneStation.readMessage(station);
+                oneStation.readMessageLog(station);
             }
         }
     }

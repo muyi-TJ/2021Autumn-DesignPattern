@@ -28,7 +28,7 @@ public class Station
 //                String.valueOf(System.identityHashCode(this)),
 //                name + "处有" + bikeNumber + "辆共享单车"
 //        );
-        System.out.println(name+"处有"+bikeNumber + "辆共享单车");
+//        System.out.println(name+"处有"+bikeNumber + "辆共享单车");
     }
 
     /**
@@ -90,10 +90,33 @@ public class Station
         System.out.println("站点工作人员即将为您服务！");
         bikeMediator.addStation(this);
     }
+    public void setBikeMediatorLog(StationMediator bikeMediator)
+    {
+        this.bikeMediator = bikeMediator;
+        Output.output(
+                this.getClass().toString(),
+                "initialize",
+                String.valueOf(System.identityHashCode(this)),
+                "设置" + name + "处的中介系统"
+        );
+//        System.out.println("站点工作人员即将为您服务！");
+        bikeMediator.addStation(this);
+    }
 
     /**
      * 站点汇报自己的需求信息
      */
+    public void sendMessageLog(String str)
+    {
+        Output.output(
+                this.getClass().toString(),
+                "initialize",
+                String.valueOf(System.identityHashCode(this)),
+                name + "汇报自己的需求信息:" + str
+        );
+//        System.out.println("您一共需要"+str);
+        bikeMediator.tellMsg(this, str);
+    }
     public void sendMessage(String str)
     {
 //        Output.output(
@@ -110,6 +133,18 @@ public class Station
     /**
      * 站点查看其他商店的需求信息
      */
+    public void readMessageLog(Station station)
+    {
+        Output.output(
+                this.getClass().toString(),
+                "initialize",
+                String.valueOf(System.identityHashCode(this)),
+                this.getName() + "查看了" + station.getName() + "的需求信息"
+        );
+//        System.out.println(name+"站点处工作人员正在处理您的需求……");
+//        System.out.println("您已在"+name+"完成单车租赁，祝您游玩愉快！");
+    }
+
     public void readMessage(Station station)
     {
 //        Output.output(
