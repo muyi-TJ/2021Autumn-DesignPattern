@@ -42,4 +42,17 @@ public class HauntedHouseDirector
         hauntedHouseBuilder.setTheSecondPart();
         hauntedHouseBuilder.setTheThirdPart();
     }
+    public void constructLog()
+    {
+        Output.output(
+                this.getClass().toString(),
+                "initialize",
+                String.valueOf(System.identityHashCode(this)),
+                "指导鬼屋路线规划（将鬼屋路线分为三段）："
+        );
+//        System.out.println("指导鬼屋路线规划（将鬼屋路线分为三段）：");
+        hauntedHouseBuilder.setTheFirstPart();
+        hauntedHouseBuilder.setTheSecondPart();
+        hauntedHouseBuilder.setTheThirdPart();
+    }
 }

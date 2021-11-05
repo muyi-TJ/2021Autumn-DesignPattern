@@ -28,7 +28,7 @@ public class HauntedHouse
 //                String.valueOf(System.identityHashCode(this)),
 //                "规划出由" + theFirstPart + "的第一路段、" + theSecondPart + "的第二路段、" + theThirdPart + "的第三路段组成的鬼屋路线"
 //        );
-        System.out.println("第一条鬼屋路线包括" + theFirstPart + "的第一路段、" + theSecondPart + "的第二路段、" + theThirdPart + "的第三路段");
+//        System.out.println("第一条鬼屋路线包括" + theFirstPart + "的第一路段、" + theSecondPart + "的第二路段、" + theThirdPart + "的第三路段");
     }
 
     /**
@@ -43,5 +43,15 @@ public class HauntedHouse
 //                "游玩了由" + theFirstPart + "的第一路段、" + theSecondPart + "的第二路段、" + theThirdPart + "的第三路段组成的鬼屋路线"
 //        );
         System.out.println("您进入了由" + theFirstPart + "的第一路段、" + theSecondPart + "的第二路段、" + theThirdPart + "的第三路段组成的鬼屋路线");
+    }
+    public void playLog()
+    {
+        Output.output(
+                this.getClass().toString(),
+                "initialize",
+                String.valueOf(System.identityHashCode(this)),
+                "游玩了由" + theFirstPart + "的第一路段、" + theSecondPart + "的第二路段、" + theThirdPart + "的第三路段组成的鬼屋路线"
+        );
+//        System.out.println("您进入了由" + theFirstPart + "的第一路段、" + theSecondPart + "的第二路段、" + theThirdPart + "的第三路段组成的鬼屋路线");
     }
 }
