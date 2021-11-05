@@ -1,4 +1,4 @@
-package JiyiCarnival.entertainment.movice.flyweight;
+package JiyiCarnival.entertainment.movie.flyweight;
 
 import JiyiCarnival.util.visitor.Visitor;
 
@@ -6,7 +6,7 @@ import JiyiCarnival.util.visitor.Visitor;
  * @author ajt
  * 电影类的抽象接口
  */
-public abstract class AbstractMovice
+public abstract class AbstractMovie
 {
 
     /**
@@ -18,7 +18,7 @@ public abstract class AbstractMovice
     /**
      * @param name 电影名称
      */
-    public AbstractMovice(String name)
+    public AbstractMovie(String name)
     {
         this.name = name;
     }
@@ -26,7 +26,7 @@ public abstract class AbstractMovice
     /**
      * @param names 电影名称列表
      */
-    public AbstractMovice(String[] names){
+    public AbstractMovie(String[] names){
         this.names = names;
     }
 

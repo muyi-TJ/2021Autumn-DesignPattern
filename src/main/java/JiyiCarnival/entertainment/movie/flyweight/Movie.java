@@ -1,4 +1,4 @@
-package JiyiCarnival.entertainment.movice.flyweight;
+package JiyiCarnival.entertainment.movie.flyweight;
 
 import JiyiCarnival.Output;
 import JiyiCarnival.util.visitor.Visitor;
@@ -7,7 +7,7 @@ import JiyiCarnival.util.visitor.Visitor;
  * @author ajt
  * 具体的电影类
  */
-public class Movice extends AbstractMovice
+public class Movie extends AbstractMovie
 {
 
     /**
@@ -15,11 +15,11 @@ public class Movice extends AbstractMovice
      *
      * @param name 电影名称
      */
-    public Movice(String name)
+    public Movie(String name)
     {
         super(name);
     }
-    public Movice(String[] names){super(names);}
+    public Movie(String[] names){super(names);}
 
     /**
      * 设置改电影的放映厅号

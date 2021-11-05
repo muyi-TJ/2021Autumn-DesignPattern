@@ -1,7 +1,7 @@
 package JiyiCarnival.flyweight;
 
-import JiyiCarnival.entertainment.movice.flyweight.Movice;
-import JiyiCarnival.entertainment.movice.flyweight.MoviceFactory;
+import JiyiCarnival.entertainment.movie.flyweight.Movie;
+import JiyiCarnival.entertainment.movie.flyweight.MovieFactory;
 import org.junit.Test;
 
 public class FlyweightTest
@@ -12,17 +12,18 @@ public class FlyweightTest
     {
         System.out.println("享元模式测试：");
 
-        Movice movice1 = MoviceFactory.getMovice("Mine");
-        movice1.play("1");
-        Movice movice2 = MoviceFactory.getMovice("Red");
-        movice2.play("2");
-        Movice movice3 = MoviceFactory.getMovice("Mine");
-        movice3.play("3");
-        Movice movice4 = MoviceFactory.getMovice("Mine");
-        movice4.play("4");
-        Movice movice5 = MoviceFactory.getMovice("White");
-        movice5.play("5");
-        Movice movice6 = MoviceFactory.getMovice("Red");
-        movice6.play("6");
+        MovieFactory movieFactory = MovieFactory.getInstance();
+        Movie movie1 = movieFactory.getMovice("Mine");
+        movie1.play("1");
+        Movie movie2 = movieFactory.getMovice("Red");
+        movie2.play("2");
+        Movie movie3 = movieFactory.getMovice("Mine");
+        movie3.play("3");
+        Movie movie4 = movieFactory.getMovice("Mine");
+        movie4.play("4");
+        Movie movie5 = movieFactory.getMovice("White");
+        movie5.play("5");
+        Movie movie6 = movieFactory.getMovice("Red");
+        movie6.play("6");
     }
 }
