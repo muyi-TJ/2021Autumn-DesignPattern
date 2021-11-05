@@ -61,10 +61,11 @@
 package JiyiCarnival.bulider;
 
 import JiyiCarnival.entertainment.hauntedhouse.builder.*;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
 
-public class HauntedHouseTest {
+public class HauntedHouseTest extends TestCase {
     @Test
     public void testBuilder(){
         HauntedHouseDirector hauntedHouseDirector=new HauntedHouseDirector();

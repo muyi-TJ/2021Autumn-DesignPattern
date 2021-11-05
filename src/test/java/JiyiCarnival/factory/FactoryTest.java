@@ -2,12 +2,13 @@ package JiyiCarnival.factory;
 
 import JiyiCarnival.business.foodstand.factory.*;
 //import org.junit.Test;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
 /**
  * @author Caviar011230
  */
-public class FactoryTest
+public class FactoryTest extends TestCase
 {
     @Test
     public void test()

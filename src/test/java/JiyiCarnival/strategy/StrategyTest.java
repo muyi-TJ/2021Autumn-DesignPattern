@@ -5,12 +5,13 @@ import JiyiCarnival.entertainment.parade.strategy.ParadeRoute;
 import JiyiCarnival.entertainment.parade.strategy.RouteOne;
 import JiyiCarnival.entertainment.parade.strategy.RouteTwo;
 //import org.junit.Test;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-public class StrategyTest
+public class StrategyTest extends TestCase
 {
     @Test
-    public void TestStrategy()
+    public void test()
     {
         System.out.println("策略模式测试：");
 

@@ -6,13 +6,14 @@ import JiyiCarnival.base.ticketing.converter.VisitorConverter;
 import JiyiCarnival.util.visitor.Gender;
 import JiyiCarnival.util.visitor.Visitor;
 //import org.junit.Test;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class ConverterTest
+public class ConverterTest extends TestCase
 {
 
 

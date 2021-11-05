@@ -4,9 +4,10 @@ import JiyiCarnival.base.parkinglot.observe.Broadcaster;
 import JiyiCarnival.base.parkinglot.observe.CarDetectMachine;
 import JiyiCarnival.base.parkinglot.observe.Screen;
 //import org.junit.Test;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-public class observerTest
+public class ObserverTest extends TestCase
 {
     @Test
     public void test()

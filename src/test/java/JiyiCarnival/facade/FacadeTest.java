@@ -6,9 +6,10 @@ package JiyiCarnival.facade;
 
 import JiyiCarnival.service.securitycheck.facade.SecurityCheckFacade;
 //import org.junit.Test;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-public class FacadeTest
+public class FacadeTest extends TestCase
 {
     @Test
     public void test()

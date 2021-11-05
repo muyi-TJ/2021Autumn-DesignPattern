@@ -2,9 +2,10 @@ package JiyiCarnival.proxy;
 
 import JiyiCarnival.base.powerbank.proxy.Stuff;
 //import org.junit.Test;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-public class ProxyTest
+public class ProxyTest extends TestCase
 {
 
     @Test

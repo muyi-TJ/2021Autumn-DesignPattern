@@ -5,9 +5,10 @@ import JiyiCarnival.entertainment.facilityspecification.specification.*;
 import JiyiCarnival.util.visitor.Gender;
 import JiyiCarnival.util.visitor.Visitor;
 //import org.junit.Test;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-public class SpecificationTest
+public class SpecificationTest extends TestCase
 {
     @Test
     public void test()
