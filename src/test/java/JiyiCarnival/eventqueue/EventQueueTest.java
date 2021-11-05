@@ -2,7 +2,8 @@ package JiyiCarnival.eventqueue;
 
 import JiyiCarnival.base.broadcast.eventqueue.Broadcast;
 import JiyiCarnival.base.broadcast.eventqueue.Message;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class EventQueueTest
 {

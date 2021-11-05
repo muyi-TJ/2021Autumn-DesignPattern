@@ -3,7 +3,8 @@ package JiyiCarnival.adapter;
 
 import JiyiCarnival.entertainment.hotairballoon.adapter.Bird;
 import JiyiCarnival.entertainment.hotairballoon.adapter.HotAirBalloonAdapter;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class AdapterTest
 {

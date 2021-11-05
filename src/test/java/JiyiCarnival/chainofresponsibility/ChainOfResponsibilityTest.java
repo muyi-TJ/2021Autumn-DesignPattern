@@ -3,7 +3,8 @@ package JiyiCarnival.chainofresponsibility;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.ChainOfResponsibility;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.Request;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.SlideHandler;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ChainOfResponsibilityTest
 {

@@ -2,7 +2,8 @@ package JiyiCarnival.singleton;
 
 import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
 import junit.framework.TestCase;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class SingletonTest extends TestCase
 {

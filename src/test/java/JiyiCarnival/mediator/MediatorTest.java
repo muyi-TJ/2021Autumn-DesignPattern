@@ -74,7 +74,8 @@ import JiyiCarnival.base.bikes.mediator.StationMediator;
 import JiyiCarnival.base.bikes.mediator.StationOne;
 import JiyiCarnival.base.bikes.mediator.StationThree;
 import JiyiCarnival.base.bikes.mediator.StationTwo;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class MediatorTest {
     @Test

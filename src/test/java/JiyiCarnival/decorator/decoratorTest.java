@@ -10,7 +10,8 @@ import JiyiCarnival.business.souvenirshop.decorator.CircleDecorator;
 import JiyiCarnival.business.souvenirshop.decorator.DiamondDecorator;
 import JiyiCarnival.business.souvenirshop.decorator.RectangleDecorator;
 
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class decoratorTest
 {

@@ -2,7 +2,8 @@ package JiyiCarnival.command;
 
 import JiyiCarnival.business.orderfood.command.*;
 import junit.framework.TestCase;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author Zong

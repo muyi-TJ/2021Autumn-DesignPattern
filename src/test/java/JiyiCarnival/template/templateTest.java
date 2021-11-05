@@ -3,7 +3,8 @@ package JiyiCarnival.template;
 import JiyiCarnival.entertainment.activate.template.ActivateTemplate;
 import JiyiCarnival.entertainment.activate.template.activates.BirthdayActivate;
 import JiyiCarnival.entertainment.activate.template.activates.HalloweenActivate;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class templateTest
 {

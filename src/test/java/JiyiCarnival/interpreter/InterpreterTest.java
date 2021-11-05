@@ -2,7 +2,8 @@ package JiyiCarnival.interpreter;
 
 import JiyiCarnival.Output;
 import JiyiCarnival.service.ticketprice.interpreter.*;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class InterpreterTest
 {
