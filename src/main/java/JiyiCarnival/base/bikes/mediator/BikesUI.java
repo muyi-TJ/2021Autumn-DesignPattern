@@ -3,7 +3,7 @@ package JiyiCarnival.base.bikes.mediator;
 import JiyiCarnival.util.input.Input;
 import JiyiCarnival.util.control.Controller;
 
-public class BikesUI {
+public class BikesUI extends Controller{
     public void flowControl() {
         int bikeChoice = 5;
         int need = 0;
