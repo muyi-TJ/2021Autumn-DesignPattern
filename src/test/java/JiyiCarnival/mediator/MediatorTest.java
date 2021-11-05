@@ -75,9 +75,10 @@ import JiyiCarnival.base.bikes.mediator.StationOne;
 import JiyiCarnival.base.bikes.mediator.StationThree;
 import JiyiCarnival.base.bikes.mediator.StationTwo;
 //import org.junit.Test;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-public class MediatorTest {
+public class MediatorTest extends TestCase {
     @Test
     public void test(){
         System.out.println("中介者模式测试：");

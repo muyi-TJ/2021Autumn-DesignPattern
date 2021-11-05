@@ -3,9 +3,10 @@ package JiyiCarnival.flyweight;
 import JiyiCarnival.entertainment.movie.flyweight.Movie;
 import JiyiCarnival.entertainment.movie.flyweight.MovieFactory;
 //import org.junit.Test;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-public class FlyweightTest
+public class FlyweightTest extends TestCase
 {
 
     @Test

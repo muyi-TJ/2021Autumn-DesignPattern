@@ -4,9 +4,10 @@ import JiyiCarnival.entertainment.waterslide.chainofresponsibility.ChainOfRespon
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.Request;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.SlideHandler;
 //import org.junit.Test;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-public class ChainOfResponsibilityTest
+public class ChainOfResponsibilityTest extends TestCase
 {
     @Test
     public void test()

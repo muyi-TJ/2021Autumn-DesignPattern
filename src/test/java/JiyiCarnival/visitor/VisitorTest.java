@@ -5,9 +5,10 @@ import JiyiCarnival.entertainment.equipments.visitor.UncheckedEquipment;
 import JiyiCarnival.entertainment.equipments.visitor.UncheckedEquipmentDisplayVisitorLog;
 import JiyiCarnival.entertainment.equipments.visitor.UncheckedEquipmentInspectVisitorLog;
 //import org.junit.Test;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-public class VisitorTest
+public class VisitorTest extends TestCase
 {
     @Test
     public void test()

@@ -1,5 +1,8 @@
 package JiyiCarnival.state;
 
+import JiyiCarnival.entertainment.activate.template.ActivateTemplate;
+import JiyiCarnival.entertainment.activate.template.activates.BirthdayActivate;
+import JiyiCarnival.entertainment.activate.template.activates.HalloweenActivate;
 import JiyiCarnival.entertainment.animalshow.state.*;
 import junit.framework.TestCase;
 //import org.junit.Test;
@@ -35,5 +38,4 @@ public class StateTest extends TestCase
         endShowState.doAction(animalShow);
 
     }
-
 }

@@ -5,9 +5,10 @@ import JiyiCarnival.office.recruit.dependencyinjection.OnlineRecruitChannel;
 import JiyiCarnival.office.recruit.dependencyinjection.RecruitPublisher;
 import JiyiCarnival.office.recruit.dependencyinjection.Recruitment;
 //import org.junit.Test;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-public class dependencyinjectionTest
+public class DependencyinjectionTest extends TestCase
 {
 
     @Test

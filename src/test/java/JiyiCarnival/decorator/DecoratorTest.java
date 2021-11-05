@@ -11,9 +11,10 @@ import JiyiCarnival.business.souvenirshop.decorator.DiamondDecorator;
 import JiyiCarnival.business.souvenirshop.decorator.RectangleDecorator;
 
 //import org.junit.Test;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-public class decoratorTest
+public class DecoratorTest extends TestCase
 {
     @Test
     public void test()

@@ -3,9 +3,10 @@ package JiyiCarnival.eventqueue;
 import JiyiCarnival.base.broadcast.eventqueue.Broadcast;
 import JiyiCarnival.base.broadcast.eventqueue.Message;
 //import org.junit.Test;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-public class EventQueueTest
+public class EventQueueTest extends TestCase
 {
     @Test
     public void test() throws InterruptedException

@@ -3,9 +3,10 @@ package JiyiCarnival.callback;
 import JiyiCarnival.business.hotel.callback.ResultExporter;
 import JiyiCarnival.business.hotel.callback.TouristThread;
 //import org.junit.Test;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-public class CallBackTest
+public class CallBackTest extends TestCase
 {
     @Test
     public void testCallBack() throws InterruptedException {

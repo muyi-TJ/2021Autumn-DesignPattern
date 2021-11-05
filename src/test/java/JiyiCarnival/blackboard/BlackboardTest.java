@@ -3,9 +3,10 @@ package JiyiCarnival.blackboard;
 import JiyiCarnival.base.bulletinboard.blackboard.Blackboard;
 import JiyiCarnival.base.bulletinboard.blackboard.Control;
 //import org.junit.Test;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-public class BlackboardTest
+public class BlackboardTest extends TestCase
 {
     @Test
     public void test()

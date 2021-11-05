@@ -4,9 +4,14 @@ import JiyiCarnival.entertainment.activate.template.ActivateTemplate;
 import JiyiCarnival.entertainment.activate.template.activates.BirthdayActivate;
 import JiyiCarnival.entertainment.activate.template.activates.HalloweenActivate;
 //import org.junit.Test;
+import JiyiCarnival.entertainment.parade.strategy.Parade;
+import JiyiCarnival.entertainment.parade.strategy.ParadeRoute;
+import JiyiCarnival.entertainment.parade.strategy.RouteOne;
+import JiyiCarnival.entertainment.parade.strategy.RouteTwo;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-public class templateTest
+public class TemplateTest extends TestCase
 {
 
     @Test
@@ -19,4 +24,5 @@ public class templateTest
         birthdayActivate.playActivate();
         halloweenActivate.playActivate();
     }
+
 }

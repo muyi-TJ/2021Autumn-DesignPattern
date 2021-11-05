@@ -3,9 +3,10 @@ package JiyiCarnival.memento;
 import JiyiCarnival.entertainment.shooting.memento.RecordCaretaker;
 import JiyiCarnival.entertainment.shooting.memento.RecordOriginator;
 //import org.junit.Test;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-public class MementoTest
+public class MementoTest extends TestCase
 {
 
     @Test
