@@ -27,7 +27,6 @@ import JiyiCarnival.util.visitor.Visitor;
 
 public class ZoneProcessor {
     private Visitor visitor = new Visitor();
-    private final Broadcast broadcast = new Broadcast(1);
     private Ticket ticket = new Ticket();
     public ZoneProcessor(){};
     public ZoneProcessor(Visitor visitor, Ticket ticket){
@@ -36,10 +35,6 @@ public class ZoneProcessor {
     }
     public void freeRoute() throws InterruptedException {
         int choice = 1;
-        broadcast.init();
-        broadcast.addMessage(new Message("欢迎来到济忆嘉年华！"));
-        Thread.sleep(500);
-        broadcast.stop();
         while(choice>0 && !Clock.isClosed()) {
             System.out.println("-----------------------");
             System.out.println("请选择嘉年华分区：\n[1] 刺激专场\n[2] 美食天堂\n[3] 幻想世界 \n[4] 好莱坞\n[5] 辅助设施\n[0] 退出");

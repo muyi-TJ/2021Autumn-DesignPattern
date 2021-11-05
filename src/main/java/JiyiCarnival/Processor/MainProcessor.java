@@ -1,6 +1,8 @@
 package JiyiCarnival.Processor;
 
 
+import JiyiCarnival.base.broadcast.eventqueue.Broadcast;
+import JiyiCarnival.base.broadcast.eventqueue.Message;
 import JiyiCarnival.base.parkinglot.observe.Broadcaster;
 import JiyiCarnival.base.parkinglot.observe.CarDetectMachine;
 import JiyiCarnival.base.parkinglot.observe.Screen;
@@ -68,8 +70,12 @@ public class MainProcessor {
         else
             securityCheckFacade.specialCustomerSecurityCheckPrint();
         Clock.addTime(30);
-        System.out.println("尊敬的" + visitor.getName() +"，您准备好了吗？" + "济忆自由之旅就要开始啦！");
-        System.out.println("--------------------------------------------");
+        Broadcast broadcast = new Broadcast(1);
+        broadcast.init();
+        broadcast.addMessage(new Message("尊敬的" + visitor.getName() +"，您准备好了吗？" + "济忆自由之旅就要开始啦！"));
+        Thread.sleep(1000);
+        broadcast.stop();
+        System.out.println();
         ZoneProcessor zoneProcessor = new ZoneProcessor(visitor, ticket);
         zoneProcessor.freeRoute();
         Clock.printNowTime();
