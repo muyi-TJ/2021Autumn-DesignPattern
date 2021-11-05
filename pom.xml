@@ -66,6 +66,9 @@
                 </configuration>
             </plugin>
         </plugins>
+        <sourceDirectory>
+            src/test
+        </sourceDirectory>
     </build>
 
 
