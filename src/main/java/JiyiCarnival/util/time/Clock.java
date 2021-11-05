@@ -71,9 +71,11 @@ public class Clock {
     public static boolean timeCheck(int startHour, int endHour){
         Date startTime = new Date(baseTime.getTime() + startHour * 60 * 60 * 1000L);
         Date endTime = new Date(baseTime.getTime() + endHour * 60 * 60 * 1000L);
-        if(nowTime.after(startTime) && nowTime.before(endTime)){
+        Date realNowTime = new Date();
+        long time_diff = realNowTime.getTime() - realStartTime.getTime();
+        Date now = new Date(time_diff + nowTime.getTime());
+        if(now.after(startTime) && now.before(endTime))
             return true;
-        }
         else
             return false;
     }
