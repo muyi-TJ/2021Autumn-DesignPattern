@@ -1,4 +1,4 @@
-package JiyiCarnival.entertainment.movice.flyweight;
+package JiyiCarnival.entertainment.movie.flyweight;
 
 import JiyiCarnival.Output;
 

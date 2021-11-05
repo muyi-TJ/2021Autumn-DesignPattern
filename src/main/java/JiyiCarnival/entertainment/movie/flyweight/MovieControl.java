@@ -1,4 +1,4 @@
-package JiyiCarnival.entertainment.movice.flyweight;
+package JiyiCarnival.entertainment.movie.flyweight;
 
 import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
 import JiyiCarnival.util.control.Controller;
