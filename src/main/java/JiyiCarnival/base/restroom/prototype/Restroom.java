@@ -27,6 +27,22 @@ public class Restroom implements Cloneable
     /**
      * 输出卫生间类型
      */
+    public void getTypeLog()
+    {
+        Output.output(this.getClass().toString(),
+                "getType",
+                String.valueOf(System.identityHashCode(this)),
+                type
+        );
+//        System.out.println("您进入了"+type+"。");
+//        try{
+//            Thread.sleep(200);
+//        }catch (InterruptedException ex)
+//        {
+//            System.out.println("出现异常");
+//        }
+//        System.out.println("您离开了"+type+"。");
+    }
     public void getType()
     {
 //        Output.output(this.getClass().toString(),

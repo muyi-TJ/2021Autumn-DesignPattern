@@ -23,10 +23,10 @@ public class PrototypeTest extends TestCase
         var cloneManOrigin = manOrigin.clone();
         var cloneWomanOrigin = womanOrigin.clone();
 
-        cloneNormalOrigin.getType();
-        cloneBarrierFreeOrigin.getType();
-        cloneManOrigin.getType();
-        cloneWomanOrigin.getType();
+        cloneNormalOrigin.getTypeLog();
+        cloneBarrierFreeOrigin.getTypeLog();
+        cloneManOrigin.getTypeLog();
+        cloneWomanOrigin.getTypeLog();
 
     }
 }
