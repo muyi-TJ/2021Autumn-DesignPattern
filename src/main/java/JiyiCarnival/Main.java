@@ -87,7 +87,17 @@ public class Main {
                             .filters(includeClassNamePatterns(".*Test"));
                     LauncherDiscoveryRequest allTestRequest = requestBuilder.build();
                     Launcher launcher = LauncherFactory.create();
-                    launcher.execute(allTestRequest);
+                    TestPlan testPlan = launcher.discover(allTestRequest);
+                    Set<TestIdentifier> testIdentifierSet = testPlan.getChildren("[engine:junit-jupiter]");
+                    for (TestIdentifier id:testIdentifierSet)
+                    {
+                        LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request()
+                                .selectors(selectPackage(Main.class.getPackageName()))
+                                .filters(includeClassNamePatterns(id.getLegacyReportingName()))
+                                .build();
+                        launcher.execute(request);
+                        Thread.sleep(200);
+                    }
                     Thread.sleep(500);
                 }
                     choice = 0;
