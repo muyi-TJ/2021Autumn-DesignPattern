@@ -10,6 +10,7 @@ public class CallBackTest extends TestCase
 {
     @Test
     public void testCallBack() throws InterruptedException {
+        System.out.println("回调模式测试：");
         ResultExporter resultExporter = new ResultExporter();
         TouristThread touristThread = new TouristThread();
         touristThread.run(resultExporter);

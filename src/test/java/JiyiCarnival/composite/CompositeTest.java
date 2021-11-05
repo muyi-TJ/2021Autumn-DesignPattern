@@ -10,6 +10,7 @@ public class CompositeTest extends TestCase
 {
     @Test
     public void test() throws InterruptedException {
+        System.out.println("组合模式测试：");
         Axis axis = new Axis(0);
         axis.add(new Horse(0));
         axis.add(new Horse(0));

@@ -1,4 +1,4 @@
-package JiyiCarnival.base.parkinglot.observe;
+package JiyiCarnival.base.parkinglot.observer;
 
 import JiyiCarnival.Output;
 
@@ -20,7 +20,6 @@ public class Broadcaster implements Observer
     {
         if (!DetectMachine.getState())
         {
-            System.out.println("播报器：十分抱歉，停车场已满");
             Output.output(this.getClass().toString(),
                     "update",
                     String.valueOf(System.identityHashCode(this)),

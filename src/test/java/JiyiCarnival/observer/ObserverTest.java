@@ -1,8 +1,8 @@
 package JiyiCarnival.observer;
 
-import JiyiCarnival.base.parkinglot.observe.Broadcaster;
-import JiyiCarnival.base.parkinglot.observe.CarDetectMachine;
-import JiyiCarnival.base.parkinglot.observe.Screen;
+import JiyiCarnival.base.parkinglot.observer.Broadcaster;
+import JiyiCarnival.base.parkinglot.observer.CarDetectMachine;
+import JiyiCarnival.base.parkinglot.observer.Screen;
 //import org.junit.Test;
 import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;

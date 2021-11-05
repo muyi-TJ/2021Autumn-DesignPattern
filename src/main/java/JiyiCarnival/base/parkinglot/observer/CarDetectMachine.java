@@ -1,4 +1,4 @@
-package JiyiCarnival.base.parkinglot.observe;
+package JiyiCarnival.base.parkinglot.observer;
 
 import JiyiCarnival.Output;
 
