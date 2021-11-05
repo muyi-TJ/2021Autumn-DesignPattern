@@ -11,6 +11,7 @@ import java.util.Date;
 public class Clock {
 
     private static Clock instance;
+    private static boolean timeCheckStart = true;
 
     static {
         try {
@@ -27,6 +28,10 @@ public class Clock {
     private static Date baseTime;
 
     private Clock() throws ParseException {}
+
+    public static void shutdownCheck(){
+        timeCheckStart = false;
+    }
 
     /**
      * 返回时钟单例
@@ -69,6 +74,8 @@ public class Clock {
      * @return 允许则返回true 否则为false
      */
     public static boolean timeCheck(int startHour, int endHour){
+        if(!timeCheckStart)
+            return true;
         Date startTime = new Date(baseTime.getTime() + startHour * 60 * 60 * 1000L);
         Date endTime = new Date(baseTime.getTime() + endHour * 60 * 60 * 1000L);
         Date realNowTime = new Date();

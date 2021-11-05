@@ -5,23 +5,20 @@ import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
 import JiyiCarnival.entertainment.carousel.composite.HorseControl;
 import JiyiCarnival.util.input.Input;
 import JiyiCarnival.util.strvideo.StrVideo;
+import JiyiCarnival.util.strvideo.Video2Image;
 import JiyiCarnival.util.time.Clock;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        JiyiCarnival jiyiCarnival = JiyiCarnival.getInstance();
-        JiyiCarnival.setClock();
-        Clock.printNowTime();
 
-        Input.input();
-        HorseControl horseControl = new HorseControl();
-        horseControl.flowControl();
-        //Video2Image.video2Image("src\\main\\java\\JiyiCarnival\\video\\parking.mp4","src\\main\\java\\JiyiCarnival\\imgs\\parking", "parking");
 
+        //Video2Image.video2Image("src\\main\\java\\JiyiCarnival\\video\\hotairballoon.mp4", "src\\main\\java\\JiyiCarnival\\imgs\\hotairballoon", "hotairballoon");
+        StrVideo strVideo = new StrVideo("src\\main\\java\\JiyiCarnival\\imgs\\stage");
+        strVideo.play(255, 30, 10, true);
+        strVideo.close();
         //Image2Str.createAsciiPic("G:\\temp\\pics","G:\\temp\\a.txt");
-        // Video2Image.video2Image("G:\\temp\\1.mp4","G:\\temp\\pics", "hello");
-        StrVideo strVideo = new StrVideo("src\\main\\java\\JiyiCarnival\\imgs\\parking");
-        strVideo.play(254, true);
+        //Video2Image.video2Image("G:\\temp\\1.mp4","G:\\temp\\pics", "hello");
+
         //strVideo.showStrImage("src\\main\\java\\JiyiCarnival\\imgs\\66_99.png", 255, true);
 
     }

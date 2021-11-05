@@ -8,8 +8,11 @@ import JiyiCarnival.entertainment.waterslide.chainofresponsibility.ChainOfRespon
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.Request;
 import JiyiCarnival.entertainment.waterslide.chainofresponsibility.SlideHandler;
 import JiyiCarnival.util.control.Controller;
+import JiyiCarnival.util.strvideo.StrVideo;
 import JiyiCarnival.util.time.Clock;
 import JiyiCarnival.util.visitor.Visitor;
+
+import java.io.IOException;
 
 /**
  * @author WAKTZZL
@@ -21,7 +24,7 @@ public class HotAirBalloonControl extends Controller {
      * 流程控制
      * @throws InterruptedException 使用了线程睡眠
      */
-    public void flowControl() throws InterruptedException {
+    public void flowControl() throws InterruptedException, IOException {
         if(!Clock.timeCheck(16, 17)){
             Clock.printNowTime();
             System.out.print("尊敬的游客，很抱歉！现在不在热气球的乘坐时间哦！");
@@ -37,6 +40,9 @@ public class HotAirBalloonControl extends Controller {
             HotAirBalloonAdapter hotAirBalloonAdapter = new HotAirBalloonAdapter();
             hotAirBalloonAdapter.setVisitor(visitor);
             hotAirBalloonAdapter.fly();
+            StrVideo strVideo = new StrVideo("src\\main\\java\\JiyiCarnival\\imgs\\hotairballoon");
+            strVideo.play(255, 0, 0, true);
+            strVideo.close();
             Clock.addTime(60);
         }
         else{

@@ -39,6 +39,7 @@ public class MainProcessor {
         System.out.println();
         JiyiCarnival.setClock();
         Clock.printNowTime();
+        Clock.shutdownCheck();
         System.out.println("\n天已经亮了！");
         System.out.println("");
         Thread.sleep(500);

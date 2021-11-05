@@ -24,7 +24,6 @@ public class RouteOne implements ParadeRoute
 
     @Override
     public void print() throws InterruptedException {
-        // TODO 插入字符图画 花车
         String[] destinations = {"旋转木马", "星光大道", "过山车", "灵感街", "纪念品商店"};
         System.out.println("巡游历程：");
         for(String destination : destinations){

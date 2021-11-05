@@ -4,8 +4,10 @@ import JiyiCarnival.entertainment.amusementpark.singleton.JiyiCarnival;
 import JiyiCarnival.office.staffinfo.nullobject.AbstractStaff;
 import JiyiCarnival.office.staffinfo.nullobject.StaffFactory;
 import JiyiCarnival.util.input.Input;
+import JiyiCarnival.util.strvideo.StrVideo;
 import JiyiCarnival.util.time.Clock;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -17,7 +19,7 @@ public class StageUI {
      * 舞台演出
      * @throws InterruptedException 线程睡眠
      */
-    public void stageShow() throws InterruptedException {
+    public void stageShow() throws InterruptedException, IOException {
         System.out.println("尊敬的" + JiyiCarnival.getVisitor().getName() + "请坐好，演出马上开始！");
         for(int i=0; i<4; i++){
             System.out.print(".");
@@ -53,7 +55,9 @@ public class StageUI {
                 i++;
             }
         }
-
+        StrVideo strVideo = new StrVideo("src\\main\\java\\JiyiCarnival\\imgs\\stage");
+        strVideo.play(255, 30, 10, true);
+        strVideo.close();
     }
 
     /**
@@ -80,7 +84,7 @@ public class StageUI {
     /**
      * 流程控制
      */
-    public void flowControl() throws InterruptedException {
+    public void flowControl() throws InterruptedException, IOException {
         System.out.println("欢迎来到因你最美舞台演出！");
         int choice = 4;
         while(choice>0) {

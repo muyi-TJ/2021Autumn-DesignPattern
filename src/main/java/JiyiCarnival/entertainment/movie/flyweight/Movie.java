@@ -1,7 +1,10 @@
 package JiyiCarnival.entertainment.movie.flyweight;
 
 import JiyiCarnival.Output;
+import JiyiCarnival.util.strvideo.StrVideo;
 import JiyiCarnival.util.visitor.Visitor;
+
+import java.io.IOException;
 
 /**
  * @author ajt
@@ -44,7 +47,7 @@ public class Movie extends AbstractMovie
      */
 
     @Override
-    public void play(Visitor visitor) throws InterruptedException {
+    public void play(Visitor visitor) throws InterruptedException, IOException {
         if(0 == names.length)
             System.out.println("今日的电影是：" + name);
         else {
@@ -71,10 +74,15 @@ public class Movie extends AbstractMovie
                 """;
         TicketInfo = String.format(TicketInfo, visitor.getName(), room, seat);
         System.out.println(TicketInfo);
-        // TODO 使用字符串动画
-        // 电影还有三秒开始 倒计时三秒
-        // 电影放映
-        // 电影结束
+        System.out.println("电影还有三秒开始。");
+        for(int i=0; i<3; i++) {
+            System.out.print('.');
+            Thread.sleep(1000);
+        }
+        System.out.println();
+        StrVideo strVideo = new StrVideo("src\\main\\java\\JiyiCarnival\\imgs\\movie");
+        strVideo.play(255, 0, 0, true);
+        strVideo.close();
         System.out.println("祝您观影愉快！再见!");
 
     }
