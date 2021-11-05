@@ -1,8 +1,6 @@
 package JiyiCarnival.Processor;
 
 import JiyiCarnival.base.bikes.mediator.BikesUI;
-import JiyiCarnival.base.broadcast.eventqueue.Broadcast;
-import JiyiCarnival.base.broadcast.eventqueue.Message;
 import JiyiCarnival.base.bulletinboard.blackboard.BulletinBoardControl;
 import JiyiCarnival.base.powerbank.proxy.PowerBankControl;
 import JiyiCarnival.base.restroom.prototype.RestroomUI;
@@ -16,7 +14,7 @@ import JiyiCarnival.entertainment.carousel.composite.HorseControl;
 import JiyiCarnival.entertainment.firework.bridge.FireworkControl;
 import JiyiCarnival.entertainment.hauntedhouse.builder.HauntedHouseUI;
 import JiyiCarnival.entertainment.hotairballoon.adapter.HotAirBalloonControl;
-import JiyiCarnival.entertainment.movice.flyweight.MovieControl;
+import JiyiCarnival.entertainment.movie.flyweight.MovieControl;
 import JiyiCarnival.entertainment.parade.strategy.ParadeUI;
 import JiyiCarnival.entertainment.shooting.memento.ShootingUI;
 import JiyiCarnival.entertainment.stage.abstractfactory.StageUI;
