@@ -4,7 +4,8 @@ import JiyiCarnival.base.restroom.prototype.ManRestroom;
 import JiyiCarnival.base.restroom.prototype.Restroom;
 import JiyiCarnival.base.restroom.prototype.WomanRestroom;
 import junit.framework.TestCase;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 
 public class PrototypeTest extends TestCase

@@ -2,7 +2,8 @@ package JiyiCarnival.blackboard;
 
 import JiyiCarnival.base.bulletinboard.blackboard.Blackboard;
 import JiyiCarnival.base.bulletinboard.blackboard.Control;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class BlackboardTest
 {

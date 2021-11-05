@@ -2,7 +2,8 @@ package JiyiCarnival.callback;
 
 import JiyiCarnival.business.hotel.callback.ResultExporter;
 import JiyiCarnival.business.hotel.callback.TouristThread;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class CallBackTest
 {

@@ -4,7 +4,8 @@ import JiyiCarnival.entertainment.equipments.visitor.Equipment;
 import JiyiCarnival.entertainment.equipments.visitor.UncheckedEquipment;
 import JiyiCarnival.entertainment.equipments.visitor.UncheckedEquipmentDisplayVisitorLog;
 import JiyiCarnival.entertainment.equipments.visitor.UncheckedEquipmentInspectVisitorLog;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class VisitorTest
 {

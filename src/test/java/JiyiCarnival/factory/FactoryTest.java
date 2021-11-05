@@ -1,7 +1,8 @@
 package JiyiCarnival.factory;
 
 import JiyiCarnival.business.foodstand.factory.*;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author Caviar011230

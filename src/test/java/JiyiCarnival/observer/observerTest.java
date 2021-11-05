@@ -3,7 +3,8 @@ package JiyiCarnival.observer;
 import JiyiCarnival.base.parkinglot.observe.Broadcaster;
 import JiyiCarnival.base.parkinglot.observe.CarDetectMachine;
 import JiyiCarnival.base.parkinglot.observe.Screen;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class observerTest
 {
