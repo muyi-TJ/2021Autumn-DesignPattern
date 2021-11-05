@@ -52,6 +52,7 @@ public class StrVideo {
         File file = new File(filePath);
         File[] files = file.listFiles();
         frame.setVisible(true);
+        imageShow();
         for(int i = 0; i < files.length; i++){
             String content = Image2Str.image2str(files[i], threshold, xstart, ystart, isScale);
             area.setText(content);

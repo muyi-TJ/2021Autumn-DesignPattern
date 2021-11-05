@@ -25,12 +25,6 @@ public class HotAirBalloonControl extends Controller {
      * @throws InterruptedException 使用了线程睡眠
      */
     public void flowControl() throws InterruptedException, IOException {
-        if(!Clock.timeCheck(16, 17)){
-            Clock.printNowTime();
-            System.out.print("尊敬的游客，很抱歉！现在不在热气球的乘坐时间哦！");
-            System.out.println("请注意查看公告栏上各游乐地点的开放时间！");
-            return;
-        }
         Visitor visitor = JiyiCarnival.getVisitor();
         System.out.println("欢迎来到热气球大型游玩项目！\n");
         System.out.println("为了您的人身安全，请在游玩前确保您已满足游玩条件：儿童年龄不得低于14岁，老人年龄不得大于60岁。满足游玩条件后请前往售票处购票，祝您游玩愉快！\n");
