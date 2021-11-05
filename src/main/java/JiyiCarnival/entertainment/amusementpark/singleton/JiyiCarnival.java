@@ -126,26 +126,9 @@ public class JiyiCarnival
         VisitorCreator visitorCreator = new VisitorCreator();
         visitor = visitorCreator.create();
         ticket = visitorCreator.getTicket();
-        int choice = 0;
-        while(0 == choice) {
-            System.out.println("请选择游玩路线：\n[1] 自由行路线\n[2] 青春挑战路线\n[3] 浪漫情侣路线\n[4] 童真欢乐路线");
-            choice = Input.input();
-            switch (choice){
-                case 1:
-                    MainProcessor mainProcessor = new MainProcessor();
-                    mainProcessor.flowControl();
-                    break;
-                case 2:
-                    choice = 0;
-                    break;
-                case 3:
-                    choice = 0;
-                    break;
-                default:
-                    choice = 0;
-                    break;
-            }
-        }
+        MainProcessor mainProcessor = new MainProcessor();
+        mainProcessor.flowControl();
+
     }
 
 

@@ -97,7 +97,6 @@ public class VisitorCreator {
         Converter<Ticket, Visitor> converter = new VisitorConverter();
         ticket = converter.entity2dto(visitor);
         ticket.printInfomation();
-        System.out.println("两秒后您将返回游玩路线菜单！");
         Thread.sleep(2000);
         return visitor;
     }
