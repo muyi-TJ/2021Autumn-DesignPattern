@@ -22,9 +22,9 @@ public class SpecificationTest
 
 //        System.out.println("【规约检测】（请参照每位测试对象最后一条检测结果>>");
 //        System.out.println("loading......");
-        Specification<Visitor> specificationOne = new VisitorGenderSpecification(Gender.FEMALE).and(new VisitorAgeSpecification(14));
-        Specification<Visitor> specificationTwo = new VisitorHeightSpecification(170).or(new VisitorGenderSpecification(Gender.FEMALE));
-        Specification<Visitor> specificationThree = new VisitorAgeSpecification(18).and(new VisitorAgeSpecification(80).not());
+        Specification<Visitor> specificationOne = new VisitorGenderSpecificationLog(Gender.FEMALE).and(new VisitorAgeSpecificationLog(14));
+        Specification<Visitor> specificationTwo = new VisitorHeightSpecificationLog(170).or(new VisitorGenderSpecificationLog(Gender.FEMALE));
+        Specification<Visitor> specificationThree = new VisitorAgeSpecificationLog(18).and(new VisitorAgeSpecificationLog(80).not());
 
 //        System.out.println("规约检测-------------------1----------------------");
         specificationOne.isSatisfiedBy(visitors[0]);
