@@ -188,7 +188,7 @@ public class ZoneProcessor {
         int choice = 1;
         while(choice>0 && !Clock.isClosed()){
             System.out.println("-----------------------");
-            System.out.println("请选择项目：\n[1] 单车\n[2] 充电宝\n[3] 公告栏\n[4] 纪念品商店\n[5] 洗手间\n[6] 查看时间\n [7] 退出分区\n");
+            System.out.println("请选择项目：\n[1] 单车\n[2] 充电宝\n[3] 公告栏\n[4] 纪念品商店\n[5] 洗手间\n[6] 查看时间\n[7] 退出分区\n");
             System.out.println("-----------------------");
             choice = Input.input();
             switch (choice){
