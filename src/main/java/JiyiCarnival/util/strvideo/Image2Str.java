@@ -49,18 +49,18 @@ public class Image2Str {
      * @param threshold 灰度阈值 超过即设置为space
      * @return 图片字符串
      */
-    public static String image2str(File file, int threshold, boolean isScale) throws IOException {
+    public static String image2str(File file, int threshold, int xstart, int ystart, boolean isScale) throws IOException {
         String base = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMnOPQRSTUVWXYZ^&*(){}[]\\:;''<>?/~`";
         String picStr = "";
         BufferedImage imageOrigin = ImageIO.read(file);
         BufferedImage image;
         if(isScale)
-            image = resize(imageOrigin, 120, 80);
+            image = resize(imageOrigin, 220, 80);
         else
             image = imageOrigin;
-        for (int y = 0; y < image.getHeight(); y += 1) {
+        for (int y = ystart; y < image.getHeight(); y += 1) {
             StringBuilder linePixel = new StringBuilder ();
-            for (int x = 0; x < image.getWidth(); x += 1) {
+            for (int x = xstart; x < image.getWidth(); x += 1) {
                 int pixel = image.getRGB(x, y);
                 int r = (pixel & 0xff0000) >> 16, g = (pixel & 0xff00) >> 8, b = pixel & 0xff;
                 int alpha = (pixel & 0xff000000) >> 24;
@@ -68,6 +68,8 @@ public class Image2Str {
                 float gray = 0.299f * r + 0.578f * g + 0.114f * b;
                 int index = Math.round(gray * base.length() / 256);
                 if(gray >= threshold)
+                    linePixel.append(" ");
+                else if(gray < 5)
                     linePixel.append(" ");
                 else if(alpha != 0)
                     linePixel.append(index >= base.length() ? " " : base.charAt(index));

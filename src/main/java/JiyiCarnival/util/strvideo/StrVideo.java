@@ -13,12 +13,12 @@ public class StrVideo {
 
     public void init(){
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setBounds(0,0,800,600);
+        frame.setBounds(0,0,800,800);
         frame.setResizable(false); //设置框架是否可由用户调整大小。
         frame.setUndecorated(false); //禁用或启用此框架的装饰
         area.setBackground(Color.BLACK);
         area.setForeground(Color.WHITE);
-        area.setBounds(0,0,900,850);
+        area.setBounds(0,0,900,900);
         area.setFont(new Font("monospaced",Font.PLAIN,10));
         frame.add(area);
     }
@@ -48,20 +48,20 @@ public class StrVideo {
      * 放映字符动画
      * @param threshold 灰度阈值
      */
-    public void play(int threshold, boolean isScale) throws InterruptedException, IOException {
+    public void play(int threshold, int xstart, int ystart, boolean isScale) throws InterruptedException, IOException {
         File file = new File(filePath);
         File[] files = file.listFiles();
         frame.setVisible(true);
         for(int i = 0; i < files.length; i++){
-            String content = Image2Str.image2str(files[i], threshold, isScale);
+            String content = Image2Str.image2str(files[i], threshold, xstart, ystart, isScale);
             area.setText(content);
-            Thread.sleep(25L);
+            Thread.sleep(40L);
         }
     }
 
-    public void showStrImage(String filePath, int threshold, boolean isScale) throws IOException, InterruptedException {
+    public void showStrImage(String filePath, int threshold, int xstart, int ystart, boolean isScale) throws IOException, InterruptedException {
         File file = new File(filePath);
-        String content = Image2Str.image2str(file, threshold, isScale);
+        String content = Image2Str.image2str(file, threshold, xstart, ystart, isScale);
         area.setText(content);
     }
 

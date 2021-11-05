@@ -23,6 +23,8 @@ import JiyiCarnival.util.input.Input;
 import JiyiCarnival.util.time.Clock;
 import JiyiCarnival.util.visitor.Visitor;
 
+import java.io.IOException;
+
 public class ZoneProcessor {
     private Visitor visitor = new Visitor();
     private Ticket ticket = new Ticket();
@@ -31,7 +33,7 @@ public class ZoneProcessor {
         this.ticket = ticket;
         this.visitor = visitor;
     }
-    public void freeRoute() throws InterruptedException {
+    public void freeRoute() throws InterruptedException, IOException {
         int choice = 1;
         while(choice>0 && !Clock.isClosed()) {
             System.out.println("-----------------------");
@@ -116,7 +118,7 @@ public class ZoneProcessor {
             }
         }
     }
-    public void fantasyWorld() throws InterruptedException {
+    public void fantasyWorld() throws InterruptedException, IOException {
         System.out.println("欢迎来到幻想世界!");
         int choice = 1;
         while(choice>0 && !Clock.isClosed()){
@@ -149,7 +151,7 @@ public class ZoneProcessor {
             }
         }
     }
-    public void hollywood() throws InterruptedException {
+    public void hollywood() throws InterruptedException, IOException {
         System.out.println("欢迎来到好莱坞!");
         int choice = 1;
         while(choice>0 && !Clock.isClosed()){

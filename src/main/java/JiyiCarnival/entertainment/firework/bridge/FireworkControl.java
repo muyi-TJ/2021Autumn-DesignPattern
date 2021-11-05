@@ -1,7 +1,10 @@
 package JiyiCarnival.entertainment.firework.bridge;
 
 import JiyiCarnival.util.control.Controller;
+import JiyiCarnival.util.strvideo.StrVideo;
 import JiyiCarnival.util.time.Clock;
+
+import java.io.IOException;
 
 /**
  * @author WKATZZL
@@ -11,7 +14,7 @@ public class FireworkControl extends Controller {
     /**
      * 流程控制
      */
-    public void flowControl() throws InterruptedException {
+    public void flowControl() throws InterruptedException, IOException {
         if(!Clock.timeCheck(18, 22)){
             Clock.printNowTime();
             System.out.print("尊敬的游客，很抱歉！现在不在观看烟花的时间哦！");
@@ -26,7 +29,9 @@ public class FireworkControl extends Controller {
         redHeartFirework.letOffPrint();
         redFlowerFirework.letOffPrint();
         blueHeartFirework.letOffPrint();
+        StrVideo strVideo = new StrVideo("src\\main\\java\\JiyiCarnival\\imgs\\firework");
+        strVideo.play(255, 70, 0, true);
+        strVideo.close();
         Clock.addTime(60);
-        //TODO 可加入字符动画
     }
 }

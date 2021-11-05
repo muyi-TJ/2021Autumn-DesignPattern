@@ -1,7 +1,10 @@
 package JiyiCarnival.entertainment.hotairballoon.adapter;
 
 import JiyiCarnival.Output;
+import JiyiCarnival.util.strvideo.StrVideo;
 import JiyiCarnival.util.visitor.Visitor;
+
+import java.io.IOException;
 
 /**
  * @author WKATZZL
@@ -70,10 +73,12 @@ public class HotAirBalloonAdapter implements Flyable
      * 游客乘坐热气球飞行 游乐园模式
      */
     @Override
-    public void fly(){
+    public void fly() throws IOException, InterruptedException {
         System.out.println(visitor.getName() + "您准备好了吗？");
         System.out.println("济忆号马上就要起航啦！");
-        // TODO 插入字符动画
+        StrVideo strVideo = new StrVideo("src\\main\\java\\JiyiCarnival\\imgs\\hotairballoon");
+        strVideo.play(255, 0, 10, true);
+        strVideo.close();
         System.out.println("祝您游玩愉快！再见！");
     }
 

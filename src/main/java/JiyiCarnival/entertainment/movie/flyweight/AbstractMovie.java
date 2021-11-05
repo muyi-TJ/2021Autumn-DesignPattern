@@ -2,6 +2,8 @@ package JiyiCarnival.entertainment.movie.flyweight;
 
 import JiyiCarnival.util.visitor.Visitor;
 
+import java.io.IOException;
+
 /**
  * @author ajt
  * 电影类的抽象接口
@@ -42,5 +44,5 @@ public abstract class AbstractMovie
      * 业务操作：在放映厅放电影 游乐园模式
      * @param visitor 游客
      */
-    public abstract void play(Visitor visitor) throws InterruptedException;
+    public abstract void play(Visitor visitor) throws InterruptedException, IOException;
 }
