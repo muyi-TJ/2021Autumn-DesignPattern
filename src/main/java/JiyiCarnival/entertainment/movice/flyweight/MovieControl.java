@@ -13,7 +13,7 @@ public class MovieControl extends Controller {
             System.out.println("请注意查看公告栏上各游乐地点的开放时间！");
             return;
         }
-        Movice movice = new Movice(names);
+        Movie movice = new Movie(names);
         movice.play(JiyiCarnival.getVisitor());
         Clock.addTime(90);
     }
